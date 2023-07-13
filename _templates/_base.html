@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
-	<title>DevConf - Bootstrap 5 Template For Tech Conference or Events</title>
+	<title>SREday 2023 - London, 14-15 Sep</title>
 	
 	<!-- Meta -->
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Bootstrap 5 Tech Conference Template">
-	<meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
+	<meta name="description" content="SREday conference">
 	<link rel="shortcut icon" href="favicon.ico"> 
 	
 	<!-- Google Font -->
@@ -30,7 +29,7 @@
 				<nav class="main-nav navbar navbar-expand-lg">
 					<div class="site-logo"><a class="scrollto" href="#hero-block"><img class="logo-icon" src="assets/images/logo-white.svg" alt="logo"></a></div>    
 					
-					<div class="navbar-btn order-lg-2"><a class="btn btn-secondary" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/devconf-free-bootstrap-4-conference-template-for-tech-conferences-and-events/" target="_blank">Tickets</a></div>
+					<div class="navbar-btn order-lg-2"><a class="btn btn-secondary" href="{{ tickets_url }}" target="_blank">Tickets</a></div>
 					
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
@@ -68,10 +67,10 @@
 		<div class="hero-block-mask"></div>
 		<div class="container">
 			<div class="hero-text-block">
-				<h1 class="hero-heading mb-2">DevConf 2028</h1>
-				<div class="hero-meta mb-3"><i class="far fa-calendar-alt me-2"></i>12 - 15 Oct <i class="fas fa-map-marker-alt mx-2"></i>New York, USA</div>
-				<div class="hero-intro mb-4">The #1 Bootstrap Template for <br>Tech Conferences and Events.</div>
-				<div class="hero-cta"><a class="btn btn-primary btn-lg" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/devconf-free-bootstrap-4-conference-template-for-tech-conferences-and-events/" target="_blank">Get Tickets</a></div>
+				<h1 class="hero-heading mb-2">SREday 2023</h1>
+				<div class="hero-meta mb-3"><i class="far fa-calendar-alt me-2"></i>14 - 15 Sep <i class="fas fa-map-marker-alt mx-2"></i>London, UK</div>
+				<div class="hero-intro mb-4">Best SRE conference in London</div>
+				<div class="hero-cta"><a class="btn btn-primary btn-lg" href="{{ tickets_url }}" target="_blank">Get Tickets</a></div>
 				
 			</div><!--//hero-text-block-->
 		</div><!--//container-->
@@ -83,26 +82,26 @@
 			<div class="row">
 				<div class="col-6 col-md-3">
 					<div class="item">
-						<div class="number">2000+</div>
-						<div class="unit">Attendees</div>
-					</div><!--//item-->
-				</div><!--//col-->
-				<div class="col-6 col-md-3">
-					<div class="item">
-						<div class="number">3</div>
-						<div class="unit">Days</div>
-					</div><!--//item-->
-				</div><!--//col-->
-				<div class="col-6 col-md-3">
-					<div class="item">
 						<div class="number">60+</div>
 						<div class="unit">Talks</div>
 					</div><!--//item-->
 				</div><!--//col-->
 				<div class="col-6 col-md-3">
 					<div class="item">
-						<div class="number">10+</div>
+						<div class="number">3</div>
 						<div class="unit">Workshops</div>
+					</div><!--//item-->
+				</div><!--//col-->
+				<div class="col-6 col-md-3">
+					<div class="item">
+						<div class="number">150+</div>
+						<div class="unit">Attendees</div>
+					</div><!--//item-->
+				</div><!--//col-->
+				<div class="col-6 col-md-3">
+					<div class="item">
+						<div class="number">2</div>
+						<div class="unit">Days</div>
 					</div><!--//item-->
 				</div><!--//col-->
 			</div>
@@ -119,20 +118,20 @@
     <div class="container text-center">
         
         <ul class="social-list list-inline mb-4"> 
-            <li class="list-inline-item me-3"><a href="#"><i class="fas fa-envelope"></i></a></li>
-            <li class="list-inline-item me-3"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
-            <li class="list-inline-item me-3"><a href="#"><i class="fab fa-instagram fa-fw"></i></a></li>
-            <li class="list-inline-item me-0"><a href="#"><i class="fab fa-youtube fa-fw"></i></a></li>
+            <li class="list-inline-item me-3"><a href="{{ mailto }}"><i class="fas fa-envelope"></i></a></li>
+            <li class="list-inline-item me-3"><a href="{{ twitter_url }}"><i class="fab fa-twitter fa-fw"></i></a></li>
+            <li class="list-inline-item me-0"><a href="https://www.youtube.com/playlist?list=PL2CAJ_jforK7w-EyvCQjEfRQhf9gjL4Aw"><i class="fab fa-youtube fa-fw"></i></a></li>
         </ul><!--//social-list-->
         
         
-        <ul class="footer-links list-inline mx-auto mb-4">
+        <!-- <ul class="footer-links list-inline mx-auto mb-4">
             <li class="list-inline-item"><a href="#">Code of Conduct</a></li>
             <li class="list-inline-item">|</li>
             <li class="list-inline-item"><a href="#">Terms</a></li>
             <li class="list-inline-item">|</li>
             <li class="list-inline-item me-0"><a href="#">Privacy</a></li>
-        </ul><!--//footer-link-->
+        </ul> -->
+        <!--//footer-link-->
         
          <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
         <small class="copyright">Designed with <i class="fas fa-heart" style="color: #EC645E;"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
