@@ -6,31 +6,49 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
   <loc>https://www.sreday.com/</loc>
-  <lastmod>2024-05-08T17:45:20.429118+00:00</lastmod>
+  <lastmod>2024-05-08T17:55:10.160920+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Uma_Mukkara_Harness_Keynote</loc>
-  <lastmod>2024-05-08T17:45:20.429118+00:00</lastmod>
+  <lastmod>2024-05-08T17:55:10.160920+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Steve_McGhee_Google_Keynote</loc>
-  <lastmod>2024-05-08T17:45:20.429118+00:00</lastmod>
-  <priority>0.75</priority>
-</url>
-
-<url>
-  <loc>https://www.sreday.com/Miko_Pawlikowski_SRE_Author_Keynote</loc>
-  <lastmod>2024-05-08T17:45:20.429118+00:00</lastmod>
+  <lastmod>2024-05-08T17:55:10.160920+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Ian_Eyberg_NanoVMs_Talk</loc>
-  <lastmod>2024-05-08T17:45:20.429118+00:00</lastmod>
+  <lastmod>2024-05-08T17:55:10.160920+00:00</lastmod>
+  <priority>0.75</priority>
+</url>
+
+<url>
+  <loc>https://www.sreday.com/Thais_Melo_Google_Talk</loc>
+  <lastmod>2024-05-08T17:55:10.160920+00:00</lastmod>
+  <priority>0.75</priority>
+</url>
+
+<url>
+  <loc>https://www.sreday.com/Justin_Garrison_Sidero_Labs_Talk</loc>
+  <lastmod>2024-05-08T17:55:10.160920+00:00</lastmod>
+  <priority>0.75</priority>
+</url>
+
+<url>
+  <loc>https://www.sreday.com/Kyle_Forster_RunWhen_Talk</loc>
+  <lastmod>2024-05-08T17:55:10.160920+00:00</lastmod>
+  <priority>0.75</priority>
+</url>
+
+<url>
+  <loc>https://www.sreday.com/Miko_Pawlikowski_SRE_Author_Talk</loc>
+  <lastmod>2024-05-08T17:55:10.160920+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
