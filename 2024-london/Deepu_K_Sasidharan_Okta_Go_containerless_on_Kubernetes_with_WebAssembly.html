@@ -205,154 +205,24 @@
 <!-- CONTENT -->
 
 
-<section id="about" class="about-section section">
-
+<section id="speakers-section" class="speakers-section section">
   <div class="container">
-    <div class="event-countdown text-center mb-3">
-    
-      <h4 class="countdown-intro mb-2 text-center mb-3">Event Starts In:</h4>
-      <div id="countdown-box" class="countdown-box"></div>
-    
-    </div>
-  </div>
-  <script>
-    /* ======= Countdown ========= */
-    // set the date we're counting down to
-    var target_date = new Date("Sep 19, 2024").getTime();
-     
-    // variables for time units
-    var days, hours, minutes, seconds;
-     
-    // get tag element
-    var countdown =  document.getElementById("countdown-box");
-    var days_span = document.createElement("SPAN");
-    days_span.className = 'days';
-    countdown.appendChild(days_span);
-    var hours_span = document.createElement("SPAN");
-    hours_span.className = 'hours';
-    countdown.appendChild(hours_span);
-    var minutes_span = document.createElement("SPAN");
-    minutes_span.className = 'minutes';
-    countdown.appendChild(minutes_span);
-    var secs_span = document.createElement("SPAN");
-    secs_span.className = 'secs';
-    countdown.appendChild(secs_span);
-     
-    // update the tag with id "countdown" every 1 second
-    setInterval(function () {
-     
-        // find the amount of "seconds" between now and target
-        var current_date = new Date().getTime();
-        var seconds_left = (target_date - current_date) / 1000;
-     
-        // do some time calculations
-        days = parseInt(seconds_left / 86400);
-        seconds_left = seconds_left % 86400;
-         
-        hours = parseInt(seconds_left / 3600);
-        seconds_left = seconds_left % 3600;
-         
-        minutes = parseInt(seconds_left / 60);
-        seconds = parseInt(seconds_left % 60);
-         
-        // format countdown string + set tag value.
-        days_span.innerHTML = '<span class="number">' + days + '</span>' + '<span class="unit">Days</span>';
-        hours_span.innerHTML = '<span class="number">' + hours + '</span>' + '<span class="unit">Hrs</span>';
-        minutes_span.innerHTML = '<span class="number">' + minutes + '</span>' + '<span class="unit">Mins</span>';
-        secs_span.innerHTML = '<span class="number">' + seconds + '</span>' + '<span class="unit">Secs</span>'; 
-     
-    }, 1000);
-    </script>
-</section>
-
-<section id="tickets" class="tickets-section section">
-  <div class="container">
-    <h3 class="section-heading text-center mb-3">Tickets</h3>
-
-    <div class="row pricing mb-5">
-      <div class="col-12">
-        <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
-        <stripe-pricing-table pricing-table-id="prctbl_1OVy6nJtBTQTETX6hlbQxJo7"
-        publishable-key="pk_live_51O6dr8JtBTQTETX6CFtamSDbTOOYiRaScJ7OAyrplt8Ii75MjRWN8MqJsQjNBwS9ogbKXMmh4BDbPqhRqeiTpUsf00Oi0jL56F">
-        </stripe-pricing-table>
-      </div>
-    </div>
-    <div class="row mb-5">
-      <div class="col-12 text-center">
-        <h2 class="section-heading text-center mb-5">+FREE colocated event</h2>
-        
-        <a href="https://www.siderolabs.com/taloscon/" target="_blank" >
-          <img src="./assets/images/taloscon_mid.png" class="img-fluid"/>
-        </a>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-<section id="schedule" class="schedule-section section theme-bg-light">
-  <div class="container">
-    <h2 class="section-heading text-center mb-5">Schedule (WIP - subject to change)</h2>
-
-    <h4 class="section-heading text-center mb-5">Day 1</h4>
-
-    
-    <!-- Nav tabs -->
-    <ul class="schedule-nav nav nav-pills nav-fill" id="myTab" role="tablist">
-
-    </ul>
-    
-    <!-- Tab panes -->
-    <div class="schedule-tab-content tab-content">
-
-
-    </div><!--//schedule-tab-content-->
-
-
-    <h4 class="section-heading text-center mb-5">Day 2</h4>
-
-
-    <!-- Nav tabs -->
-    <ul class="schedule-nav nav nav-pills nav-fill" id="myTab" role="tablist">
-
-    </ul>
-
-    <!-- Tab panes -->
-    <div class="schedule-tab-content tab-content">
-
-
-    </div><!--//schedule-tab-content-->
-
-
-
-    <div class="schedule-cta text-center mx-auto"><a href="#tickets" class="btn btn-secondary btn-lg d-block d-md-inline-block">Buy Tickets</a></div>
-  </div>
-</section>
-
-
-
-<section id="speakers" class="speakers-section section">
-  <div class="container">
-    <h3 class="section-heading text-center mb-3">Speakers</h3>
+    <h1 class="section-heading text-center mb-3">Go containerless on Kubernetes with WebAssembly</h1>
     <div class="row">
 
-      
-
       <div class="col-6 col-lg-3 mb-4">
-        <div class="card rounded">
-          <a href="#modal-speaker-1" data-bs-toggle="modal" data-bs-target="#modal-speaker-1"><img src="./assets/images/profiles/Miko Pawlikowski.png" class="card-img-top rounded-0" alt=""></a>
+        <div class="card rounded-0">
+          <img src="./assets/images/profiles/Deepu K Sasidharan.png" class="card-img-top rounded-0" alt="">
           <div class="card-body">
-            <h5 class="card-title mb-2">Miko Pawlikowski</h5>
+            <h5 class="card-title mb-2">Deepu K Sasidharan</h5>
             <div class="card-text mb-3">
-              <div class="meta">SRE Author</div>
+              <div class="meta">Okta</div>
             </div><!--//card-text-->
-            <a href="./Miko_Pawlikowski_SRE_Author_Keynote_SRE_in_2024">Read more &rarr;</a>
           </div><!--//card-->
           <div class="card-footer text-muted">
             <ul class="social-list list-inline mb-0">
-              <li class="list-inline-item"><a  href="https://twitter.com/@mikopawlikowski"><i class="fab fa-twitter fa-fw"></i></a></li>
-              <li class="list-inline-item"><a  href="https://www.linkedin.com/in/mikolajpawlikowski/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+              <li class="list-inline-item"><a  href="https://twitter.com/@deepu105"><i class="fab fa-twitter fa-fw"></i></a></li>
+              <li class="list-inline-item"><a  href="https://www.linkedin.com/in/deepu05/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
               
               
             </ul><!--//social-list-->
@@ -360,73 +230,34 @@
         </div><!--//card-->
       </div><!--//col-->
 
-      
-
-      <div class="col-6 col-lg-3 mb-4">
-        <div class="card rounded">
-          <a href="#modal-speaker-0" data-bs-toggle="modal" data-bs-target="#modal-speaker-0"><img src="./assets/images/profiles/Riccardo Carlesso.png" class="card-img-top rounded-0" alt=""></a>
+      <div class="col-6 col-lg-9 mb-4">
+        <div class="card rounded-0">
           <div class="card-body">
-            <h5 class="card-title mb-2">Riccardo Carlesso</h5>
-            <div class="card-text mb-3">
-              <div class="meta">Google</div>
-            </div><!--//card-text-->
-            <a href="./Riccardo_Carlesso_Google_Keynote_SRE_Gone_Wrong_Top_7_Errors_and_How_to_Avoid_Them">Read more &rarr;</a>
+
+              <div class="desc p-2 p-lg-3">
+                <p><p>Discover how WebAssembly is revolutionizing the cloud-native world! Its efficiency and security make it a fantastic alternative to containers. Join me as I demystify WebAssembly and its importance, and show you how to get started with tools like Krustlet and WasmEdge. Ready for an exciting ride?</p></p>
+              </div>
+              <div class="desc p-2 p-lg-3">
+                <p><p><strong>WebAssembly</strong> is not just innovating the Web—it's transforming Kubernetes and the cloud-native world with unmatched efficiency and security. Imagine a world beyond containers; that's what WebAssembly offers. If it sounds daunting, don’t worry—I'm here to make it crystal clear. Discover why WebAssembly matters, how it works, and the incredible benefits it brings.</p>
+<p>We'll dive into getting started with WebAssembly on Kubernetes using tools like Krustlet and WasmEdge. Explore real implementations, exciting use cases, and hands-on examples. Ready for an exhilarating journey into the future of cloud-native? Let's go!</p></p>
+              </div>
+              <div class="desc p-2 p-lg-3">
+                <p><p>Deepu K Sasidharan is a Software Engineer by passion and profession. He is a Java Champion working as a Staff Developer Advocate at Okta. He is the co-chair of JHipster and the creator of KDash and JDL Studio. He is a polyglot programmer working with Java, Rust, JavaScript, Go, and so on. He is also a cloud technology advocate and an open-source software aficionado. He has authored books on Full-stack development and frequently writes about Java, Rust, JavaScript, Go, DevOps, Kubernetes, Linux, and so on, on his blog.</p></p>
+              </div>
+
           </div><!--//card-->
           <div class="card-footer text-muted">
-            <ul class="social-list list-inline mb-0">
-              <li class="list-inline-item"><a  href="https://twitter.com/@RiccardoCarles2"><i class="fab fa-twitter fa-fw"></i></a></li>
-              <li class="list-inline-item"><a  href="https://www.linkedin.com/in/riccardocarlesso/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-              
-              
-            </ul><!--//social-list-->
           </div>
         </div><!--//card-->
-      </div><!--//col-->
-
-      
-
-      
+      </div><!--//col--> 
 
     </div><!--//row-->
-    <div class="speakers-cta text-center py-3"><a class="btn btn-primary btn-lg" href="#tickets">Get Tickets</a></div>
   </div><!--//container-->
 
 </section><!--//speakers-section-->
 
-<section id="venue" class="venue-section section  theme-bg-primary text-white">
-  <div class="container">
-    <h3 class="section-heading text-center mb-5 text-white">Venue</h3>
-    <div class="row gx-5 py-lg-5">
-      <div class="col-12 col-lg-7 h-100">
-        <div class="desc">
-          <h4 class="text-white mb-3">Everyman Canary Wharf</h4>
-          <p>
-            Crossrail Place,<br />
-            Canary Wharf,<br />
-            E14 5AR, London, UK<br />
-            Level -2<br />
-             <br />
-            Tube access<br />
-            Jubilee, Elizabeth and DLR lines: Canary Wharf station<br />
-          </p>
 
-          <div class="row pt-3">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.3841988883164!2d-0.020629122093954937!3d51.50616707181291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487602b73a00cddb%3A0x8a0668cd288be896!2sEveryman%20Canary%20Wharf!5e0!3m2!1sen!2suk!4v1689427207813!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div><!--//row-->
-        </div><!--//desc-->
-      </div><!--//col-->
-      <div class="col-12 col-xl-3 col-lg-4 offset-lg-1 position-relative h-100 mt-5 mt-lg-0">
-        <div class="figures-holder">
-          <div class="figure figure-1"><img class="shadow" src="assets/images/venue/venue-1.jpg" alt=""></div>
-          <div class="figure figure-2"><img class="shadow" src="assets/images/venue/venue-2.jpg" alt=""></div>
-          <div class="figure figure-3"><img class="shadow" src="assets/images/venue/venue-3.jpg" alt=""></div>
-        </div><!--//figures-holder-->
-      </div><!--//col-->
-    </div><!--//row-->
-  </div><!--//container-->
-</section><!--//venue-section-->
-
-<section id="sponsors" class="sponsors-section section">
+<section id="sponsors-section" class="sponsors-section section">
   <div class="container">
     <h3 class="section-heading text-center mb-3">Sponsors &amp; Partners</h3>
     <div class="section-intro text-center single-col-max mx-auto mb-5">Want to become a sponsor? Get in touch!</div>
@@ -456,97 +287,6 @@
     <div class="sponsors-cta text-center pt-5"><a class="btn-primary btn btn-lg" href="mailto:mark@sreday.com">Become A Sponsor</a></div>
   </div><!--//container-->
 </section><!--//sponsors-section-->
-
-
-
-<!-- Modal Speaker 0 -->
-<div class="modal modal-speaker modal-speaker-0" id="modal-speaker-0" tabindex="-1" role="dialog" aria-labelledby="speaker-0-ModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-      <div class="modal-content">
-          <div class="modal-header">
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
-              <h4 id="speaker-0-ModalLabel" class="modal-title sr-only"
->Riccardo Carlesso</h4>
-          </div>
-          <div class="modal-body p-0">
-              <div class="theme-bg-light p-5">
-                  <div class="row">
-                      <div class="col-12 col-md-auto text-center">
-                          <img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto" src="./assets/images/profiles/Riccardo Carlesso.png" alt="" />
-                      </div>
-
-                      <div class="col text-center text-md-start mx-auto">
-                          <h2 class="name mb-2">Riccardo Carlesso</h2>
-                          <div class="meta mb-2">Google</div>
-                          <ul class="social-list list-inline mb-0">
-                            <li class="list-inline-item"><a  href="https://twitter.com/@RiccardoCarles2"><i class="fab fa-twitter fa-fw"></i></a></li>
-                            <li class="list-inline-item"><a  href="https://www.linkedin.com/in/riccardocarlesso/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-                            
-                            
-                          </ul><!--//social-list-->
-                      </div><!--//col-->
-                  </div><!--//row-->
-              </div>
-              <div class="desc p-2 p-lg-3">
-                <p><p>Think SRE adoption is a smooth journey? Think again! In this eye-opening talk, Riccardo reveals the top 7 blunders companies make when implementing SRE, drawing from years of hands-on experience and the insights captured in the "Enterprise Roadmap to SRE" book. Discover the hilarious (and sometimes painful) mistakes that can derail your SRE journey, and learn how to sidestep them with practical, actionable strategies.</p>
-<p>Key takeaways:
-* SRE Essentials: Demystify SRE and understand its core principles.
-* The Top 7 Errors: Learn from the most frequent and impactful mistakes companies make when adopting SRE, as highlighted in "Enterprise Roadmap to SRE".
-* Unlock Success: Leave equipped with the knowledge and strategies to navigate the SRE adoption minefield and achieve true reliability and efficiency.</p></p>
-              </div>
-              <div class="desc p-2 p-lg-3">
-                <p><p>Coming soon...</p></p>
-              </div>
-              <div class="desc p-2 p-lg-3">
-                <p></p>
-              </div>
-          </div><!--//modal-body-->
-      </div><!--//modal-content-->
-  </div><!--//modal-dialog-->
-</div><!--//modal-->
-
-<!-- Modal Speaker 1 -->
-<div class="modal modal-speaker modal-speaker-1" id="modal-speaker-1" tabindex="-1" role="dialog" aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-      <div class="modal-content">
-          <div class="modal-header">
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
-              <h4 id="speaker-1-ModalLabel" class="modal-title sr-only"
->Miko Pawlikowski</h4>
-          </div>
-          <div class="modal-body p-0">
-              <div class="theme-bg-light p-5">
-                  <div class="row">
-                      <div class="col-12 col-md-auto text-center">
-                          <img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto" src="./assets/images/profiles/Miko Pawlikowski.png" alt="" />
-                      </div>
-
-                      <div class="col text-center text-md-start mx-auto">
-                          <h2 class="name mb-2">Miko Pawlikowski</h2>
-                          <div class="meta mb-2">SRE Author</div>
-                          <ul class="social-list list-inline mb-0">
-                            <li class="list-inline-item"><a  href="https://twitter.com/@mikopawlikowski"><i class="fab fa-twitter fa-fw"></i></a></li>
-                            <li class="list-inline-item"><a  href="https://www.linkedin.com/in/mikolajpawlikowski/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-                            
-                            
-                          </ul><!--//social-list-->
-                      </div><!--//col-->
-                  </div><!--//row-->
-              </div>
-              <div class="desc p-2 p-lg-3">
-                <p></p>
-              </div>
-              <div class="desc p-2 p-lg-3">
-                <p><p>Come and explore the landscape of SRE as it is in 2024, with the new trends, techniques and tools on the horizon.</p></p>
-              </div>
-              <div class="desc p-2 p-lg-3">
-                <p></p>
-              </div>
-          </div><!--//modal-body-->
-      </div><!--//modal-content-->
-  </div><!--//modal-dialog-->
-</div><!--//modal-->
-
 
 
 
