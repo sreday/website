@@ -173,21 +173,27 @@
 	<div class="stats-block theme-bg-primary text-white py-4 text-center">
 		<div class="container">
 			<div class="row">
-				<div class="col-6 col-md-4">
+				<div class="col-6 col-md-3">
 					<div class="item">
 						<div class="number">1</div>
-						<div class="unit">Day</div>
+						<div class="unit">Days</div>
 					</div><!--//item-->
 				</div><!--//col-->
-				<div class="col-6 col-md-4">
+				<div class="col-6 col-md-3">
 					<div class="item">
-						<div class="number">10+</div>
+						<div class="number">20+</div>
 						<div class="unit">Speakers</div>
 					</div><!--//item-->
 				</div><!--//col-->
-				<div class="col-6 col-md-4">
+				<div class="col-6 col-md-3">
 					<div class="item">
-						<div class="number">150+</div>
+						<div class="number">2</div>
+						<div class="unit">Tracks</div>
+					</div><!--//item-->
+				</div><!--//col-->
+				<div class="col-6 col-md-3">
+					<div class="item">
+						<div class="number">100</div>
 						<div class="unit">Attendees</div>
 					</div><!--//item-->
 				</div><!--//col-->
@@ -263,34 +269,34 @@
   <div class="container">
     <h3 class="section-heading text-center mb-3">Tickets</h3>
 
-    <div class="row pricing mb-5">
+    
+    <div class="row pricing mb-5 mt-10">
       <div class="col-12 text-center">
-        
         <div id="eventbrite-widget-container-815159422777"></div>
 
-        <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+<script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
 
-        <script type="text/javascript">
-            var exampleCallback = function() {
-                console.log('Order complete!');
-            };
+<script type="text/javascript">
+    var exampleCallback = function() {
+        console.log('Order complete!');
+    };
 
-            window.EBWidgets.createWidget({
-                // Required
-                widgetType: 'checkout',
-                eventId: '815159422777',
-                iframeContainerId: 'eventbrite-widget-container-815159422777',
+    window.EBWidgets.createWidget({
+        // Required
+        widgetType: 'checkout',
+        eventId: '815159422777',
+        iframeContainerId: 'eventbrite-widget-container-815159422777',
 
-                // Optional
-                iframeContainerHeight: 500,  // Widget height in pixels. Defaults to a minimum of 425px if not provided
-                onOrderComplete: exampleCallback  // Method called when an order has successfully completed
-            });
-        </script>
+        // Optional
+        iframeContainerHeight: 500,  // Widget height in pixels. Defaults to a minimum of 425px if not provided
+        onOrderComplete: exampleCallback  // Method called when an order has successfully completed
+    });
+</script>
 
-				<a class="btn btn-primary" href="https://www.eventbrite.com/e/sreday-amsterdam-2024-tickets-815159422777" target="_blank">Get Tickets on Eventbrite</a>
-
+<a class="btn btn-primary" href="https://www.eventbrite.com/e/sreday-amsterdam-2024-tickets-815159422777" target="_blank">Get Tickets on Eventbrite</a> 
       </div>
     </div>
+    
 
   </div>
 </section>
@@ -298,7 +304,8 @@
 
 <section id="schedule" class="schedule-section section theme-bg-light">
   <div class="container">
-    <h2 class="section-heading text-center mb-5">Schedule (WIP)</h2>
+    <h2 class="section-heading text-center mb-5">Schedule</h2>
+
 
 
     <h4 class="section-heading text-center mb-5">Day 1</h4>
@@ -308,11 +315,20 @@
     <ul class="schedule-nav nav nav-pills nav-fill" id="myTab" role="tablist">
 
       <li class="nav-item me-2">
-        <a class="nav-link active" id="tab-1" data-bs-toggle="tab" href="#tab-1-content" role="tab" aria-controls="tab-1-content"
+        <a class="nav-link active" id="tab-0-1" data-bs-toggle="tab" href="#tab-0-1-content" role="tab" aria-controls="tab-1-content"
           aria-selected="true"
         >
-          <span class="heading">Screen 1</span>
-          <span class="meta">1</span>
+          <span class="heading">main stage</span>
+          <span class="meta">track 1</span>
+        </a>
+      </li>
+
+      <li class="nav-item me-2">
+        <a class="nav-link " id="tab-0-2" data-bs-toggle="tab" href="#tab-0-2-content" role="tab" aria-controls="tab-2-content"
+          aria-selected="false"
+        >
+          <span class="heading">second stage</span>
+          <span class="meta">track 2</span>
         </a>
       </li>
 
@@ -322,7 +338,7 @@
     <div class="schedule-tab-content tab-content">
 
 
-      <div class="tab-pane active" id="tab-1-content" role="tabpanel" aria-labelledby="tab-1">
+      <div class="tab-pane active" id="tab-0-1-content" role="tabpanel" aria-labelledby="tab-0-1">
 
 
         <div class="item item-talk">
@@ -401,49 +417,13 @@
           <div class="meta">
             <h4 class="time mb-3">11:00</h4>
             <div class="profile">
-              <a href="#modal-speaker-5" data-bs-toggle="modal" data-bs-target="#modal-speaker-5"><img class="profile-image rounded-circle  mb-2" src="./assets/images/profiles/Sarah Gruneisen.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-5" data-bs-toggle="modal" data-bs-target="#modal-speaker-5">Sarah Gruneisen</a></div>
+              <a href="#modal-speaker-5" data-bs-toggle="modal" data-bs-target="#modal-speaker-5"><img class="profile-image rounded-circle  mb-2" src="./assets/images/profiles/Ashley Sawatsky.png" alt=""></a>
+              <div class="name"><a class="theme-link" href="#modal-speaker-5" data-bs-toggle="modal" data-bs-target="#modal-speaker-5">Ashley Sawatsky</a></div>
             </div><!--//profile-->
           </div><!--//meta-->
           <div class="content">
             <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-5" data-bs-toggle="modal" data-bs-target="#modal-speaker-5">Synergy in Diversity: Crafting Inclusive Teams for Unstoppable Innovation</a>
-            </h3>
-            <div class="location mb-3"></i>Avagasso Coaching</div>
-            <div class="desc">Discover why diversity is not just a moral imperative but a critical driver of innovation and financial success. In today's competitive landscape, companies need to leverage every advantage to stay ahead. This session will reveal how diverse teams can unlock groundbreaking innovation, leading to...<br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">11:30</h4>
-            <div class="profile">
-              <a href="#modal-speaker-6" data-bs-toggle="modal" data-bs-target="#modal-speaker-6"><img class="profile-image rounded-circle  mb-2" src="./assets/images/profiles/Rekha Daswani.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-6" data-bs-toggle="modal" data-bs-target="#modal-speaker-6">Rekha Daswani</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-6" data-bs-toggle="modal" data-bs-target="#modal-speaker-6">Coming soon...</a>
-            </h3>
-            <div class="location mb-3"></i>Capgemini</div>
-            <div class="desc">Coming soon...<br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">12:00</h4>
-            <div class="profile">
-              <a href="#modal-speaker-7" data-bs-toggle="modal" data-bs-target="#modal-speaker-7"><img class="profile-image rounded-circle  mb-2" src="./assets/images/profiles/Ashley Sawatsky.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-7" data-bs-toggle="modal" data-bs-target="#modal-speaker-7">Ashley Sawatsky</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-7" data-bs-toggle="modal" data-bs-target="#modal-speaker-7">Making Better Decisions in Incidents (Why Playbooks Aren’t the Answer)</a>
+              <a class="theme-link" href="#modal-speaker-5" data-bs-toggle="modal" data-bs-target="#modal-speaker-5">Making Better Decisions in Incidents (Why Playbooks Aren’t the Answer)</a>
             </h3>
             <div class="location mb-3"></i>Rootly</div>
             <div class="desc">While playbooks help document information and build consistency, they can also become bloated and overly prescriptive. This talk provides strategies for building adaptive incident response programs that work in complex, real-world incidents.<br /><br /></div>
@@ -453,18 +433,54 @@
 
         <div class="item item-talk">
           <div class="meta">
-            <h4 class="time mb-3">12:30</h4>
+            <h4 class="time mb-3">11:30</h4>
             <div class="profile">
-              <a href="#modal-speaker-8" data-bs-toggle="modal" data-bs-target="#modal-speaker-8"><img class="profile-image rounded-circle  mb-2" src="./assets/images/profiles/Alina Boshchenko.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-8" data-bs-toggle="modal" data-bs-target="#modal-speaker-8">Alina Boshchenko</a></div>
+              <a href="#modal-speaker-6" data-bs-toggle="modal" data-bs-target="#modal-speaker-6"><img class="profile-image rounded-circle  mb-2" src="./assets/images/profiles/Michael Cote.png" alt=""></a>
+              <div class="name"><a class="theme-link" href="#modal-speaker-6" data-bs-toggle="modal" data-bs-target="#modal-speaker-6">Michael Cote</a></div>
             </div><!--//profile-->
           </div><!--//meta-->
           <div class="content">
             <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-8" data-bs-toggle="modal" data-bs-target="#modal-speaker-8">How to collect application metrics if it needs to be done yesterday</a>
+              <a class="theme-link" href="#modal-speaker-6" data-bs-toggle="modal" data-bs-target="#modal-speaker-6">We Fear Change</a>
             </h3>
-            <div class="location mb-3"></i>JetBrains</div>
-            <div class="desc">How can we effectively identify and collect metrics of already long-standing production applications without spending a year on them? We will explore strategies to handle these challenges swiftly and develop a guideline for monitoring applications' performance and user experience.<br /><br /></div>
+            <div class="location mb-3"></i>VMware/Pivotal</div>
+            <div class="desc">Changing how 10 people work is difficult. Changing how 5,000 is near impossible. If you're trying to move beyond your initial success at transforming how your organization builds and runs software, you're experienced this problem. We'll look at common challenges and cover tactics to address them.<br /><br /></div>
+          </div><!--//content-->
+        </div><!--//item-->
+
+
+        <div class="item item-talk">
+          <div class="meta">
+            <h4 class="time mb-3">12:00</h4>
+            <div class="profile">
+              <a href="#modal-speaker-7" data-bs-toggle="modal" data-bs-target="#modal-speaker-7"><img class="profile-image rounded-circle  mb-2" src="./assets/images/profiles/Sarah Gruneisen.png" alt=""></a>
+              <div class="name"><a class="theme-link" href="#modal-speaker-7" data-bs-toggle="modal" data-bs-target="#modal-speaker-7">Sarah Gruneisen</a></div>
+            </div><!--//profile-->
+          </div><!--//meta-->
+          <div class="content">
+            <h3 class="title mb-3">
+              <a class="theme-link" href="#modal-speaker-7" data-bs-toggle="modal" data-bs-target="#modal-speaker-7">Synergy in Diversity: Crafting Inclusive Teams for Unstoppable Innovation</a>
+            </h3>
+            <div class="location mb-3"></i>Avagasso Coaching</div>
+            <div class="desc">Discover why diversity is not just a moral imperative but a critical driver of innovation and financial success. In today's competitive landscape, companies need to leverage every advantage to stay ahead. This session will reveal how diverse teams can unlock groundbreaking innovation, leading to...<br /><br /></div>
+          </div><!--//content-->
+        </div><!--//item-->
+
+
+        <div class="item item-talk">
+          <div class="meta">
+            <h4 class="time mb-3">12:30</h4>
+            <div class="profile">
+              <a href="#modal-speaker-8" data-bs-toggle="modal" data-bs-target="#modal-speaker-8"><img class="profile-image rounded-circle  mb-2" src="./assets/images/profiles/Rekha Daswani.png" alt=""></a>
+              <div class="name"><a class="theme-link" href="#modal-speaker-8" data-bs-toggle="modal" data-bs-target="#modal-speaker-8">Rekha Daswani</a></div>
+            </div><!--//profile-->
+          </div><!--//meta-->
+          <div class="content">
+            <h3 class="title mb-3">
+              <a class="theme-link" href="#modal-speaker-8" data-bs-toggle="modal" data-bs-target="#modal-speaker-8">Coming soon...</a>
+            </h3>
+            <div class="location mb-3"></i>Capgemini</div>
+            <div class="desc">Coming soon...<br /><br /></div>
           </div><!--//content-->
         </div><!--//item-->
 
@@ -491,13 +507,31 @@
           <div class="meta">
             <h4 class="time mb-3">14:00</h4>
             <div class="profile">
-              <a href="#modal-speaker-9" data-bs-toggle="modal" data-bs-target="#modal-speaker-9"><img class="profile-image rounded-circle  mb-2" src="./assets/images/profiles/Pini Reznik.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-9" data-bs-toggle="modal" data-bs-target="#modal-speaker-9">Pini Reznik</a></div>
+              <a href="#modal-speaker-9" data-bs-toggle="modal" data-bs-target="#modal-speaker-9"><img class="profile-image rounded-circle  mb-2" src="./assets/images/profiles/Alina Boshchenko.png" alt=""></a>
+              <div class="name"><a class="theme-link" href="#modal-speaker-9" data-bs-toggle="modal" data-bs-target="#modal-speaker-9">Alina Boshchenko</a></div>
             </div><!--//profile-->
           </div><!--//meta-->
           <div class="content">
             <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-9" data-bs-toggle="modal" data-bs-target="#modal-speaker-9">Carbon-Aware SRE: Optimizing Reliability and Sustainability</a>
+              <a class="theme-link" href="#modal-speaker-9" data-bs-toggle="modal" data-bs-target="#modal-speaker-9">How to collect application metrics if it needs to be done yesterday</a>
+            </h3>
+            <div class="location mb-3"></i>JetBrains</div>
+            <div class="desc">How can we effectively identify and collect metrics of already long-standing production applications without spending a year on them? We will explore strategies to handle these challenges swiftly and develop a guideline for monitoring applications' performance and user experience.<br /><br /></div>
+          </div><!--//content-->
+        </div><!--//item-->
+
+
+        <div class="item item-talk">
+          <div class="meta">
+            <h4 class="time mb-3">14:30</h4>
+            <div class="profile">
+              <a href="#modal-speaker-10" data-bs-toggle="modal" data-bs-target="#modal-speaker-10"><img class="profile-image rounded-circle  mb-2" src="./assets/images/profiles/Pini Reznik.png" alt=""></a>
+              <div class="name"><a class="theme-link" href="#modal-speaker-10" data-bs-toggle="modal" data-bs-target="#modal-speaker-10">Pini Reznik</a></div>
+            </div><!--//profile-->
+          </div><!--//meta-->
+          <div class="content">
+            <h3 class="title mb-3">
+              <a class="theme-link" href="#modal-speaker-10" data-bs-toggle="modal" data-bs-target="#modal-speaker-10">Carbon-Aware SRE: Optimizing Reliability and Sustainability</a>
             </h3>
             <div class="location mb-3"></i>re:cinq</div>
             <div class="desc">Coming soon...<br /><br /></div>
@@ -507,15 +541,15 @@
 
         <div class="item item-talk">
           <div class="meta">
-            <h4 class="time mb-3">14:30</h4>
+            <h4 class="time mb-3">15:00</h4>
             <div class="profile">
-              <a href="#modal-speaker-10" data-bs-toggle="modal" data-bs-target="#modal-speaker-10"><img class="profile-image rounded-circle  mb-2" src="./assets/images/profiles/Ahmet Atalay.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-10" data-bs-toggle="modal" data-bs-target="#modal-speaker-10">Ahmet Atalay</a></div>
+              <a href="#modal-speaker-11" data-bs-toggle="modal" data-bs-target="#modal-speaker-11"><img class="profile-image rounded-circle  mb-2" src="./assets/images/profiles/Ahmet Atalay.png" alt=""></a>
+              <div class="name"><a class="theme-link" href="#modal-speaker-11" data-bs-toggle="modal" data-bs-target="#modal-speaker-11">Ahmet Atalay</a></div>
             </div><!--//profile-->
           </div><!--//meta-->
           <div class="content">
             <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-10" data-bs-toggle="modal" data-bs-target="#modal-speaker-10">Serverless Chaos Engineering on AWS</a>
+              <a class="theme-link" href="#modal-speaker-11" data-bs-toggle="modal" data-bs-target="#modal-speaker-11">Serverless Chaos Engineering on AWS</a>
             </h3>
             <div class="location mb-3"></i>AWS</div>
             <div class="desc">Unlock the secrets to building resilient serverless applications! Discover how to use AWS isolation boundaries, dive into chaos engineering, and leverage AWS Fault Injection Service (AWS FIS) to ensure your application withstands any disruption. Join us for essential strategies and best practices!<br /><br /></div>
@@ -525,15 +559,15 @@
 
         <div class="item item-talk">
           <div class="meta">
-            <h4 class="time mb-3">15:00</h4>
+            <h4 class="time mb-3">15:30</h4>
             <div class="profile">
-              <a href="#modal-speaker-11" data-bs-toggle="modal" data-bs-target="#modal-speaker-11"><img class="profile-image rounded-circle  mb-2" src="./assets/images/profiles/Eric D. Schabell & Graziano Casto.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-11" data-bs-toggle="modal" data-bs-target="#modal-speaker-11">Eric D. Schabell & Graziano Casto</a></div>
+              <a href="#modal-speaker-12" data-bs-toggle="modal" data-bs-target="#modal-speaker-12"><img class="profile-image rounded-circle  mb-2" src="./assets/images/profiles/Eric D. Schabell & Graziano Casto.png" alt=""></a>
+              <div class="name"><a class="theme-link" href="#modal-speaker-12" data-bs-toggle="modal" data-bs-target="#modal-speaker-12">Eric D. Schabell & Graziano Casto</a></div>
             </div><!--//profile-->
           </div><!--//meta-->
           <div class="content">
             <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-11" data-bs-toggle="modal" data-bs-target="#modal-speaker-11">Finding observability and DevEx tranquility sailing the monitoring data seas</a>
+              <a class="theme-link" href="#modal-speaker-12" data-bs-toggle="modal" data-bs-target="#modal-speaker-12">Finding observability and DevEx tranquility sailing the monitoring data seas</a>
             </h3>
             <div class="location mb-3"></i>Chronosphere & Mia-Platform</div>
             <div class="desc">In rapidly expanding cloud-native ecosystem, managing distributed architectures feels like navigating stormy seas with waves of telemetry data. Yet this data can offer vital insights to sail smoothly. This session will explore strategies to avoid drowning, improving DevEx, and more.<br /><br /></div>
@@ -543,15 +577,15 @@
 
         <div class="item item-talk">
           <div class="meta">
-            <h4 class="time mb-3">15:30</h4>
+            <h4 class="time mb-3">16:00</h4>
             <div class="profile">
-              <a href="#modal-speaker-12" data-bs-toggle="modal" data-bs-target="#modal-speaker-12"><img class="profile-image rounded-circle  mb-2" src="./assets/images/profiles/Anand Shukla.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-12" data-bs-toggle="modal" data-bs-target="#modal-speaker-12">Anand Shukla</a></div>
+              <a href="#modal-speaker-13" data-bs-toggle="modal" data-bs-target="#modal-speaker-13"><img class="profile-image rounded-circle  mb-2" src="./assets/images/profiles/Anand Shukla.png" alt=""></a>
+              <div class="name"><a class="theme-link" href="#modal-speaker-13" data-bs-toggle="modal" data-bs-target="#modal-speaker-13">Anand Shukla</a></div>
             </div><!--//profile-->
           </div><!--//meta-->
           <div class="content">
             <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-12" data-bs-toggle="modal" data-bs-target="#modal-speaker-12">Who meltdown Chernobyl? - The elephant(foot) in the room</a>
+              <a class="theme-link" href="#modal-speaker-13" data-bs-toggle="modal" data-bs-target="#modal-speaker-13">Who meltdown Chernobyl? - The elephant(foot) in the room</a>
             </h3>
             <div class="location mb-3"></i>ING</div>
             <div class="desc"><br /><br /></div>
@@ -561,15 +595,15 @@
 
         <div class="item item-talk">
           <div class="meta">
-            <h4 class="time mb-3">16:00</h4>
+            <h4 class="time mb-3">16:30</h4>
             <div class="profile">
-              <a href="#modal-speaker-13" data-bs-toggle="modal" data-bs-target="#modal-speaker-13"><img class="profile-image rounded-circle  mb-2" src="./assets/images/profiles/Deepu K Sasidharan.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-13" data-bs-toggle="modal" data-bs-target="#modal-speaker-13">Deepu K Sasidharan</a></div>
+              <a href="#modal-speaker-14" data-bs-toggle="modal" data-bs-target="#modal-speaker-14"><img class="profile-image rounded-circle  mb-2" src="./assets/images/profiles/Deepu K Sasidharan.png" alt=""></a>
+              <div class="name"><a class="theme-link" href="#modal-speaker-14" data-bs-toggle="modal" data-bs-target="#modal-speaker-14">Deepu K Sasidharan</a></div>
             </div><!--//profile-->
           </div><!--//meta-->
           <div class="content">
             <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-13" data-bs-toggle="modal" data-bs-target="#modal-speaker-13">Go containerless on Kubernetes with WebAssembly</a>
+              <a class="theme-link" href="#modal-speaker-14" data-bs-toggle="modal" data-bs-target="#modal-speaker-14">Go containerless on Kubernetes with WebAssembly</a>
             </h3>
             <div class="location mb-3"></i>Okta</div>
             <div class="desc">Discover how WebAssembly is revolutionizing the cloud-native world! Its efficiency and security make it a fantastic alternative to containers. Join me as I demystify WebAssembly and its importance, and show you how to get started with tools like Krustlet and WasmEdge. Ready for an exciting ride?<br /><br /></div>
@@ -579,169 +613,7 @@
 
         <div class="item item-talk">
           <div class="meta">
-            <h4 class="time mb-3">16:30</h4>
-            <div class="profile">
-              <a href="#modal-speaker-14" data-bs-toggle="modal" data-bs-target="#modal-speaker-14"><img class="profile-image rounded-circle  mb-2" src="./assets/images/profiles/Michael Cote.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-14" data-bs-toggle="modal" data-bs-target="#modal-speaker-14">Michael Cote</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-14" data-bs-toggle="modal" data-bs-target="#modal-speaker-14">We Fear Change</a>
-            </h3>
-            <div class="location mb-3"></i>VMware/Pivotal</div>
-            <div class="desc">Changing how 10 people work is difficult. Changing how 5,000 is near impossible. If you're trying to move beyond your initial success at transforming how your organization builds and runs software, you're experienced this problem. We'll look at common challenges and cover tactics to address them.<br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
             <h4 class="time mb-3">17:00</h4>
-            <div class="profile">
-              <a href="#modal-speaker-15" data-bs-toggle="modal" data-bs-target="#modal-speaker-15"><img class="profile-image rounded-circle  mb-2" src="./assets/images/profiles/Prerit Munjal.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-15" data-bs-toggle="modal" data-bs-target="#modal-speaker-15">Prerit Munjal</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-15" data-bs-toggle="modal" data-bs-target="#modal-speaker-15">Reducing Observability Debt & Toil with Pixie in Action!</a>
-            </h3>
-            <div class="location mb-3"></i>Independent</div>
-            <div class="desc">O11y was meant to simplify our operations not amplify the complexities. On average an org uses 5 tools and 8 subs. for o11y. Pixie is a one-platform open-source tool which leverages eBPF for tracing, monitoring, and Profiling under one roof. Let’s simplify O11Y and focus on our business logic :)<br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">17:30</h4>
-            <div class="profile">
-              <a href="#modal-speaker-16" data-bs-toggle="modal" data-bs-target="#modal-speaker-16"><img class="profile-image rounded-circle  mb-2" src="./assets/images/profiles/Samuel Baruffi.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-16" data-bs-toggle="modal" data-bs-target="#modal-speaker-16">Samuel Baruffi</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-16" data-bs-toggle="modal" data-bs-target="#modal-speaker-16">Unleashing the Power of EKS: What's New and Best Practices</a>
-            </h3>
-            <div class="location mb-3"></i>AWS</div>
-            <div class="desc">Unlock the full potential of EKS with the latest features and best practices. From cluster health monitoring to simplified access management, IAM integration to powerful EKS add-ons, this talk will equip you with the tools to supercharge your Kubernetes experience on AWS. Plus, we'll dive into...<br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">18:00</h4>
-            <div class="profile">
-              <a href="#modal-speaker-17" data-bs-toggle="modal" data-bs-target="#modal-speaker-17"><img class="profile-image rounded-circle  mb-2" src="./assets/images/profiles/Yan Cui.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-17" data-bs-toggle="modal" data-bs-target="#modal-speaker-17">Yan Cui</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-17" data-bs-toggle="modal" data-bs-target="#modal-speaker-17">Money-saving tips for the frugal serverless developer</a>
-            </h3>
-            <div class="location mb-3"></i>Lumigo</div>
-            <div class="desc">Dive into the world of serverless and explore common, costly mistakes and learn actionable tips for cutting down waste and reducing your AWS bill. Whether you're looking to cut down on CloudWatch costs or improve cost-efficiency for your serverless application, we've got some helpful tips for you.<br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">18:30</h4>
-            <div class="profile">
-              <a href="#modal-speaker-18" data-bs-toggle="modal" data-bs-target="#modal-speaker-18"><img class="profile-image rounded-circle  mb-2" src="./assets/images/profiles/Pawel Zajaczkowski.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-18" data-bs-toggle="modal" data-bs-target="#modal-speaker-18">Pawel Zajaczkowski</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-18" data-bs-toggle="modal" data-bs-target="#modal-speaker-18">Impostor syndrome in Tech</a>
-            </h3>
-            <div class="location mb-3"></i>Xebia</div>
-            <div class="desc">It’s a very important topic. A tremendous amount of people struggle with impostor syndrome, waste their potential and degrade their mental health. The material is useful even for people familiar with impostor syndrome, as I’m presenting over 20 particular tips and associated psychological mechanisms<br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">19:00</h4>
-            <div class="profile">
-              <a href="#modal-speaker-19" data-bs-toggle="modal" data-bs-target="#modal-speaker-19"><img class="profile-image rounded-circle  mb-2" src="./assets/images/profiles/Birol Yildiz.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-19" data-bs-toggle="modal" data-bs-target="#modal-speaker-19">Birol Yildiz</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-19" data-bs-toggle="modal" data-bs-target="#modal-speaker-19">Elevating Monitoring Ecosystems: Integrating Alerting & Incident Management for Optimal Response</a>
-            </h3>
-            <div class="location mb-3"></i>ilert</div>
-            <div class="desc">This talk will be helpful for DevOps engineers looking to optimize their incident management and increase uptime.<br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">19:30</h4>
-            <div class="profile">
-              <a href="#modal-speaker-20" data-bs-toggle="modal" data-bs-target="#modal-speaker-20"><img class="profile-image rounded-circle  mb-2" src="./assets/images/profiles/Yoann Fouquet.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-20" data-bs-toggle="modal" data-bs-target="#modal-speaker-20">Yoann Fouquet</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-20" data-bs-toggle="modal" data-bs-target="#modal-speaker-20">8 years in Booking.com SRE journey - Lessons learns</a>
-            </h3>
-            <div class="location mb-3"></i>Booking</div>
-            <div class="desc">Looking at scaling SRE? You might need more than SREs. Let’s dive in Booking.com’s SRE journey and discuss our successes and failures in supporting reliability in a continuously growing infrastructure - from the on-premise monoliths of the start, to the thousands of services in hybrid cloud today.<br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">20:00</h4>
-            <div class="profile">
-              <a href="#modal-speaker-21" data-bs-toggle="modal" data-bs-target="#modal-speaker-21"><img class="profile-image rounded-circle  mb-2" src="./assets/images/profiles/Yishai Beeri.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-21" data-bs-toggle="modal" data-bs-target="#modal-speaker-21">Yishai Beeri</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-21" data-bs-toggle="modal" data-bs-target="#modal-speaker-21">Are Your Delivery Teams Really Prepared for the GenAI Revolution?!</a>
-            </h3>
-            <div class="location mb-3"></i>LinearB</div>
-            <div class="desc">The Bots are Coming! and our software delivery pipelines are not ready. I will cover research about how dev orgs are preparing for GenAI in software delivery, and will show where existing delivery pipelines will break. Finally, I will review the fundamentals of preparing for this massive challenge.<br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">20:30</h4>
-            <div class="profile">
-              <a href="#modal-speaker-22" data-bs-toggle="modal" data-bs-target="#modal-speaker-22"><img class="profile-image rounded-circle  mb-2" src="./assets/images/profiles/Birol Ertekin.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-22" data-bs-toggle="modal" data-bs-target="#modal-speaker-22">Birol Ertekin</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-22" data-bs-toggle="modal" data-bs-target="#modal-speaker-22">How we went from two major outages to 99.99% reliability in 6 months</a>
-            </h3>
-            <div class="location mb-3"></i>Twingate</div>
-            <div class="desc">Many believe that robust engineering processes automatically lead to a reliable product. Yet, our experience proved this assumption can be both misguided and costly. Join Twingate's Director of Engineering, Birol Ertekin, as he reveals the surprising lessons learned from managing two major...<br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">21:00</h4>
             <div class="profile">
               <a href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"><img class="profile-image rounded-circle  mb-2" src="" alt=""></a>
               <div class="name"><a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"></a></div>
@@ -779,9 +651,230 @@
       </div><!--//tab-1-content-->
 
 
+      <div class="tab-pane " id="tab-0-2-content" role="tabpanel" aria-labelledby="tab-0-2">
+
+
+        <div class="item item-talk">
+          <div class="meta">
+            <h4 class="time mb-3">10:30</h4>
+            <div class="profile">
+              <a href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"><img class="profile-image rounded-circle  mb-2" src="" alt=""></a>
+              <div class="name"><a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"></a></div>
+            </div><!--//profile-->
+          </div><!--//meta-->
+          <div class="content">
+            <h3 class="title mb-3">
+              <a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-">Coffee break</a>
+            </h3>
+            <div class="location mb-3"></i>Main lobby</div>
+            <div class="desc"><br /><br /></div>
+          </div><!--//content-->
+        </div><!--//item-->
+
+
+        <div class="item item-talk">
+          <div class="meta">
+            <h4 class="time mb-3">11:00</h4>
+            <div class="profile">
+              <a href="#modal-speaker-15" data-bs-toggle="modal" data-bs-target="#modal-speaker-15"><img class="profile-image rounded-circle  mb-2" src="./assets/images/profiles/Prerit Munjal.png" alt=""></a>
+              <div class="name"><a class="theme-link" href="#modal-speaker-15" data-bs-toggle="modal" data-bs-target="#modal-speaker-15">Prerit Munjal</a></div>
+            </div><!--//profile-->
+          </div><!--//meta-->
+          <div class="content">
+            <h3 class="title mb-3">
+              <a class="theme-link" href="#modal-speaker-15" data-bs-toggle="modal" data-bs-target="#modal-speaker-15">Reducing Observability Debt & Toil with Pixie in Action!</a>
+            </h3>
+            <div class="location mb-3"></i>Independent</div>
+            <div class="desc">O11y was meant to simplify our operations not amplify the complexities. On average an org uses 5 tools and 8 subs. for o11y. Pixie is a one-platform open-source tool which leverages eBPF for tracing, monitoring, and Profiling under one roof. Let’s simplify O11Y and focus on our business logic :)<br /><br /></div>
+          </div><!--//content-->
+        </div><!--//item-->
+
+
+        <div class="item item-talk">
+          <div class="meta">
+            <h4 class="time mb-3">11:30</h4>
+            <div class="profile">
+              <a href="#modal-speaker-16" data-bs-toggle="modal" data-bs-target="#modal-speaker-16"><img class="profile-image rounded-circle  mb-2" src="./assets/images/profiles/Samuel Baruffi.png" alt=""></a>
+              <div class="name"><a class="theme-link" href="#modal-speaker-16" data-bs-toggle="modal" data-bs-target="#modal-speaker-16">Samuel Baruffi</a></div>
+            </div><!--//profile-->
+          </div><!--//meta-->
+          <div class="content">
+            <h3 class="title mb-3">
+              <a class="theme-link" href="#modal-speaker-16" data-bs-toggle="modal" data-bs-target="#modal-speaker-16">Unleashing the Power of EKS: What's New and Best Practices</a>
+            </h3>
+            <div class="location mb-3"></i>AWS</div>
+            <div class="desc">Unlock the full potential of EKS with the latest features and best practices. From cluster health monitoring to simplified access management, IAM integration to powerful EKS add-ons, this talk will equip you with the tools to supercharge your Kubernetes experience on AWS. Plus, we'll dive into...<br /><br /></div>
+          </div><!--//content-->
+        </div><!--//item-->
+
+
+        <div class="item item-talk">
+          <div class="meta">
+            <h4 class="time mb-3">12:00</h4>
+            <div class="profile">
+              <a href="#modal-speaker-17" data-bs-toggle="modal" data-bs-target="#modal-speaker-17"><img class="profile-image rounded-circle  mb-2" src="./assets/images/profiles/Yan Cui.png" alt=""></a>
+              <div class="name"><a class="theme-link" href="#modal-speaker-17" data-bs-toggle="modal" data-bs-target="#modal-speaker-17">Yan Cui</a></div>
+            </div><!--//profile-->
+          </div><!--//meta-->
+          <div class="content">
+            <h3 class="title mb-3">
+              <a class="theme-link" href="#modal-speaker-17" data-bs-toggle="modal" data-bs-target="#modal-speaker-17">Money-saving tips for the frugal serverless developer</a>
+            </h3>
+            <div class="location mb-3"></i>Lumigo</div>
+            <div class="desc">Dive into the world of serverless and explore common, costly mistakes and learn actionable tips for cutting down waste and reducing your AWS bill. Whether you're looking to cut down on CloudWatch costs or improve cost-efficiency for your serverless application, we've got some helpful tips for you.<br /><br /></div>
+          </div><!--//content-->
+        </div><!--//item-->
+
+
+        <div class="item item-talk">
+          <div class="meta">
+            <h4 class="time mb-3">12:30</h4>
+            <div class="profile">
+              <a href="#modal-speaker-18" data-bs-toggle="modal" data-bs-target="#modal-speaker-18"><img class="profile-image rounded-circle  mb-2" src="./assets/images/profiles/Pawel Zajaczkowski.png" alt=""></a>
+              <div class="name"><a class="theme-link" href="#modal-speaker-18" data-bs-toggle="modal" data-bs-target="#modal-speaker-18">Pawel Zajaczkowski</a></div>
+            </div><!--//profile-->
+          </div><!--//meta-->
+          <div class="content">
+            <h3 class="title mb-3">
+              <a class="theme-link" href="#modal-speaker-18" data-bs-toggle="modal" data-bs-target="#modal-speaker-18">Impostor syndrome in Tech</a>
+            </h3>
+            <div class="location mb-3"></i>Xebia</div>
+            <div class="desc">It’s a very important topic. A tremendous amount of people struggle with impostor syndrome, waste their potential and degrade their mental health. The material is useful even for people familiar with impostor syndrome, as I’m presenting over 20 particular tips and associated psychological mechanisms<br /><br /></div>
+          </div><!--//content-->
+        </div><!--//item-->
+
+
+        <div class="item item-talk">
+          <div class="meta">
+            <h4 class="time mb-3">13:00</h4>
+            <div class="profile">
+              <a href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"><img class="profile-image rounded-circle  mb-2" src="" alt=""></a>
+              <div class="name"><a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"></a></div>
+            </div><!--//profile-->
+          </div><!--//meta-->
+          <div class="content">
+            <h3 class="title mb-3">
+              <a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-">Lunch & networking</a>
+            </h3>
+            <div class="location mb-3"></i>Main lobby</div>
+            <div class="desc"><br /><br /></div>
+          </div><!--//content-->
+        </div><!--//item-->
+
+
+        <div class="item item-talk">
+          <div class="meta">
+            <h4 class="time mb-3">14:00</h4>
+            <div class="profile">
+              <a href="#modal-speaker-19" data-bs-toggle="modal" data-bs-target="#modal-speaker-19"><img class="profile-image rounded-circle  mb-2" src="./assets/images/profiles/Birol Yildiz.png" alt=""></a>
+              <div class="name"><a class="theme-link" href="#modal-speaker-19" data-bs-toggle="modal" data-bs-target="#modal-speaker-19">Birol Yildiz</a></div>
+            </div><!--//profile-->
+          </div><!--//meta-->
+          <div class="content">
+            <h3 class="title mb-3">
+              <a class="theme-link" href="#modal-speaker-19" data-bs-toggle="modal" data-bs-target="#modal-speaker-19">Elevating Monitoring Ecosystems: Integrating Alerting & Incident Management for Optimal Response</a>
+            </h3>
+            <div class="location mb-3"></i>ilert</div>
+            <div class="desc">This talk will be helpful for DevOps engineers looking to optimize their incident management and increase uptime.<br /><br /></div>
+          </div><!--//content-->
+        </div><!--//item-->
+
+
+        <div class="item item-talk">
+          <div class="meta">
+            <h4 class="time mb-3">14:30</h4>
+            <div class="profile">
+              <a href="#modal-speaker-20" data-bs-toggle="modal" data-bs-target="#modal-speaker-20"><img class="profile-image rounded-circle  mb-2" src="./assets/images/profiles/Yoann Fouquet.png" alt=""></a>
+              <div class="name"><a class="theme-link" href="#modal-speaker-20" data-bs-toggle="modal" data-bs-target="#modal-speaker-20">Yoann Fouquet</a></div>
+            </div><!--//profile-->
+          </div><!--//meta-->
+          <div class="content">
+            <h3 class="title mb-3">
+              <a class="theme-link" href="#modal-speaker-20" data-bs-toggle="modal" data-bs-target="#modal-speaker-20">8 years in Booking.com SRE journey - Lessons learns</a>
+            </h3>
+            <div class="location mb-3"></i>Booking</div>
+            <div class="desc">Looking at scaling SRE? You might need more than SREs. Let’s dive in Booking.com’s SRE journey and discuss our successes and failures in supporting reliability in a continuously growing infrastructure - from the on-premise monoliths of the start, to the thousands of services in hybrid cloud today.<br /><br /></div>
+          </div><!--//content-->
+        </div><!--//item-->
+
+
+        <div class="item item-talk">
+          <div class="meta">
+            <h4 class="time mb-3">15:00</h4>
+            <div class="profile">
+              <a href="#modal-speaker-21" data-bs-toggle="modal" data-bs-target="#modal-speaker-21"><img class="profile-image rounded-circle  mb-2" src="./assets/images/profiles/Yishai Beeri.png" alt=""></a>
+              <div class="name"><a class="theme-link" href="#modal-speaker-21" data-bs-toggle="modal" data-bs-target="#modal-speaker-21">Yishai Beeri</a></div>
+            </div><!--//profile-->
+          </div><!--//meta-->
+          <div class="content">
+            <h3 class="title mb-3">
+              <a class="theme-link" href="#modal-speaker-21" data-bs-toggle="modal" data-bs-target="#modal-speaker-21">Are Your Delivery Teams Really Prepared for the GenAI Revolution?!</a>
+            </h3>
+            <div class="location mb-3"></i>LinearB</div>
+            <div class="desc">The Bots are Coming! and our software delivery pipelines are not ready. I will cover research about how dev orgs are preparing for GenAI in software delivery, and will show where existing delivery pipelines will break. Finally, I will review the fundamentals of preparing for this massive challenge.<br /><br /></div>
+          </div><!--//content-->
+        </div><!--//item-->
+
+
+        <div class="item item-talk">
+          <div class="meta">
+            <h4 class="time mb-3">15:30</h4>
+            <div class="profile">
+              <a href="#modal-speaker-22" data-bs-toggle="modal" data-bs-target="#modal-speaker-22"><img class="profile-image rounded-circle  mb-2" src="./assets/images/profiles/Birol Ertekin.png" alt=""></a>
+              <div class="name"><a class="theme-link" href="#modal-speaker-22" data-bs-toggle="modal" data-bs-target="#modal-speaker-22">Birol Ertekin</a></div>
+            </div><!--//profile-->
+          </div><!--//meta-->
+          <div class="content">
+            <h3 class="title mb-3">
+              <a class="theme-link" href="#modal-speaker-22" data-bs-toggle="modal" data-bs-target="#modal-speaker-22">How we went from two major outages to 99.99% reliability in 6 months</a>
+            </h3>
+            <div class="location mb-3"></i>Twingate</div>
+            <div class="desc">Many believe that robust engineering processes automatically lead to a reliable product. Yet, our experience proved this assumption can be both misguided and costly. Join Twingate's Director of Engineering, Birol Ertekin, as he reveals the surprising lessons learned from managing two major...<br /><br /></div>
+          </div><!--//content-->
+        </div><!--//item-->
+
+
+        <div class="item item-talk">
+          <div class="meta">
+            <h4 class="time mb-3">16:00</h4>
+            <div class="profile">
+              <a href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"><img class="profile-image rounded-circle  mb-2" src="" alt=""></a>
+              <div class="name"><a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"></a></div>
+            </div><!--//profile-->
+          </div><!--//meta-->
+          <div class="content">
+            <h3 class="title mb-3">
+              <a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-">Networking & sponsor crawl</a>
+            </h3>
+            <div class="location mb-3"></i>Main lobby</div>
+            <div class="desc"><br /><br /></div>
+          </div><!--//content-->
+        </div><!--//item-->
+
+
+        <div class="item item-talk">
+          <div class="meta">
+            <h4 class="time mb-3">17:00</h4>
+            <div class="profile">
+              <a href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"><img class="profile-image rounded-circle  mb-2" src="" alt=""></a>
+              <div class="name"><a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"></a></div>
+            </div><!--//profile-->
+          </div><!--//meta-->
+          <div class="content">
+            <h3 class="title mb-3">
+              <a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-">Venue closes & pub</a>
+            </h3>
+            <div class="location mb-3"></i></div>
+            <div class="desc"><br /><br /></div>
+          </div><!--//content-->
+        </div><!--//item-->
+
+
+
+      </div><!--//tab-2-content-->
+
+
     </div><!--//schedule-tab-content-->
-
-
 
 
 
@@ -793,66 +886,14 @@
 
 <section id="speakers" class="speakers-section section">
   <div class="container">
-    <h3 class="section-heading text-center mb-3">MCs</h3>
+    <h3 class="section-heading text-center mb-3">Speakers</h3>
     <div class="row">
 
       
 
       <div class="col-6 col-lg-3 mb-4">
         <div class="card rounded">
-          <a href="#modal-speaker-3" data-bs-toggle="modal" data-bs-target="#modal-speaker-3"><img src="./assets/images/profiles/Alessandro Vozza.png" class="card-img-top rounded-0" alt=""></a>
-          <div class="card-body">
-            <h5 class="card-title mb-2">Alessandro Vozza</h5>
-            <div class="card-text mb-3">
-              <div class="meta">Kubespaces</div>
-            </div><!--//card-text-->
-            <a href="./Alessandro_Vozza_Kubespaces_MC_of_the_conference">Read more &rarr;</a>
-          </div><!--//card-->
-          <div class="card-footer text-muted">
-            <ul class="social-list list-inline mb-0">
-              <li class="list-inline-item"><a  href="https://twitter.com/@bongo"><i class="fab fa-twitter fa-fw"></i></a></li>
-              <li class="list-inline-item"><a  href="https://www.linkedin.com/in/alessandrovozza/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-              
-              
-            </ul><!--//social-list-->
-          </div>
-        </div><!--//card-->
-      </div><!--//col-->
-
-      
-
-      <div class="col-6 col-lg-3 mb-4">
-        <div class="card rounded">
-          <a href="#modal-speaker-4" data-bs-toggle="modal" data-bs-target="#modal-speaker-4"><img src="./assets/images/profiles/Fahd Ekadioin.png" class="card-img-top rounded-0" alt=""></a>
-          <div class="card-body">
-            <h5 class="card-title mb-2">Fahd Ekadioin</h5>
-            <div class="card-text mb-3">
-              <div class="meta">Google</div>
-            </div><!--//card-text-->
-            <a href="./Fahd_Ekadioin_Google_MC_of_the_conference">Read more &rarr;</a>
-          </div><!--//card-->
-          <div class="card-footer text-muted">
-            <ul class="social-list list-inline mb-0">
-              <li class="list-inline-item"><a  href="https://twitter.com/@fahdekadioin"><i class="fab fa-twitter fa-fw"></i></a></li>
-              <li class="list-inline-item"><a  href="https://www.linkedin.com/in/fahdekadioin/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-              
-              
-            </ul><!--//social-list-->
-          </div>
-        </div><!--//card-->
-      </div><!--//col-->
-
-      
-
-    </div><!--//row-->
-    <h3 class="section-heading text-center mb-3 mt-5">People alphabetically</h3>
-    <div class="row">
-
-      
-
-      <div class="col-6 col-lg-3 mb-4">
-        <div class="card rounded">
-          <a href="#modal-speaker-10" data-bs-toggle="modal" data-bs-target="#modal-speaker-10"><img src="./assets/images/profiles/Ahmet Atalay.png" class="card-img-top rounded-0" alt=""></a>
+          <a href="#modal-speaker-11" data-bs-toggle="modal" data-bs-target="#modal-speaker-11"><img src="./assets/images/profiles/Ahmet Atalay.png" class="card-img-top rounded-0" alt=""></a>
           <div class="card-body">
             <h5 class="card-title mb-2">Ahmet Atalay</h5>
             <div class="card-text mb-3">
@@ -875,7 +916,7 @@
 
       <div class="col-6 col-lg-3 mb-4">
         <div class="card rounded">
-          <a href="#modal-speaker-8" data-bs-toggle="modal" data-bs-target="#modal-speaker-8"><img src="./assets/images/profiles/Alina Boshchenko.png" class="card-img-top rounded-0" alt=""></a>
+          <a href="#modal-speaker-9" data-bs-toggle="modal" data-bs-target="#modal-speaker-9"><img src="./assets/images/profiles/Alina Boshchenko.png" class="card-img-top rounded-0" alt=""></a>
           <div class="card-body">
             <h5 class="card-title mb-2">Alina Boshchenko</h5>
             <div class="card-text mb-3">
@@ -898,7 +939,7 @@
 
       <div class="col-6 col-lg-3 mb-4">
         <div class="card rounded">
-          <a href="#modal-speaker-12" data-bs-toggle="modal" data-bs-target="#modal-speaker-12"><img src="./assets/images/profiles/Anand Shukla.png" class="card-img-top rounded-0" alt=""></a>
+          <a href="#modal-speaker-13" data-bs-toggle="modal" data-bs-target="#modal-speaker-13"><img src="./assets/images/profiles/Anand Shukla.png" class="card-img-top rounded-0" alt=""></a>
           <div class="card-body">
             <h5 class="card-title mb-2">Anand Shukla</h5>
             <div class="card-text mb-3">
@@ -921,7 +962,7 @@
 
       <div class="col-6 col-lg-3 mb-4">
         <div class="card rounded">
-          <a href="#modal-speaker-7" data-bs-toggle="modal" data-bs-target="#modal-speaker-7"><img src="./assets/images/profiles/Ashley Sawatsky.png" class="card-img-top rounded-0" alt=""></a>
+          <a href="#modal-speaker-5" data-bs-toggle="modal" data-bs-target="#modal-speaker-5"><img src="./assets/images/profiles/Ashley Sawatsky.png" class="card-img-top rounded-0" alt=""></a>
           <div class="card-body">
             <h5 class="card-title mb-2">Ashley Sawatsky</h5>
             <div class="card-text mb-3">
@@ -990,7 +1031,7 @@
 
       <div class="col-6 col-lg-3 mb-4">
         <div class="card rounded">
-          <a href="#modal-speaker-13" data-bs-toggle="modal" data-bs-target="#modal-speaker-13"><img src="./assets/images/profiles/Deepu K Sasidharan.png" class="card-img-top rounded-0" alt=""></a>
+          <a href="#modal-speaker-14" data-bs-toggle="modal" data-bs-target="#modal-speaker-14"><img src="./assets/images/profiles/Deepu K Sasidharan.png" class="card-img-top rounded-0" alt=""></a>
           <div class="card-body">
             <h5 class="card-title mb-2">Deepu K Sasidharan</h5>
             <div class="card-text mb-3">
@@ -1013,7 +1054,7 @@
 
       <div class="col-6 col-lg-3 mb-4">
         <div class="card rounded">
-          <a href="#modal-speaker-11" data-bs-toggle="modal" data-bs-target="#modal-speaker-11"><img src="./assets/images/profiles/Eric D. Schabell & Graziano Casto.png" class="card-img-top rounded-0" alt=""></a>
+          <a href="#modal-speaker-12" data-bs-toggle="modal" data-bs-target="#modal-speaker-12"><img src="./assets/images/profiles/Eric D. Schabell & Graziano Casto.png" class="card-img-top rounded-0" alt=""></a>
           <div class="card-body">
             <h5 class="card-title mb-2">Eric D. Schabell & Graziano Casto</h5>
             <div class="card-text mb-3">
@@ -1059,7 +1100,7 @@
 
       <div class="col-6 col-lg-3 mb-4">
         <div class="card rounded">
-          <a href="#modal-speaker-14" data-bs-toggle="modal" data-bs-target="#modal-speaker-14"><img src="./assets/images/profiles/Michael Cote.png" class="card-img-top rounded-0" alt=""></a>
+          <a href="#modal-speaker-6" data-bs-toggle="modal" data-bs-target="#modal-speaker-6"><img src="./assets/images/profiles/Michael Cote.png" class="card-img-top rounded-0" alt=""></a>
           <div class="card-body">
             <h5 class="card-title mb-2">Michael Cote</h5>
             <div class="card-text mb-3">
@@ -1128,7 +1169,7 @@
 
       <div class="col-6 col-lg-3 mb-4">
         <div class="card rounded">
-          <a href="#modal-speaker-9" data-bs-toggle="modal" data-bs-target="#modal-speaker-9"><img src="./assets/images/profiles/Pini Reznik.png" class="card-img-top rounded-0" alt=""></a>
+          <a href="#modal-speaker-10" data-bs-toggle="modal" data-bs-target="#modal-speaker-10"><img src="./assets/images/profiles/Pini Reznik.png" class="card-img-top rounded-0" alt=""></a>
           <div class="card-body">
             <h5 class="card-title mb-2">Pini Reznik</h5>
             <div class="card-text mb-3">
@@ -1174,7 +1215,7 @@
 
       <div class="col-6 col-lg-3 mb-4">
         <div class="card rounded">
-          <a href="#modal-speaker-6" data-bs-toggle="modal" data-bs-target="#modal-speaker-6"><img src="./assets/images/profiles/Rekha Daswani.png" class="card-img-top rounded-0" alt=""></a>
+          <a href="#modal-speaker-8" data-bs-toggle="modal" data-bs-target="#modal-speaker-8"><img src="./assets/images/profiles/Rekha Daswani.png" class="card-img-top rounded-0" alt=""></a>
           <div class="card-body">
             <h5 class="card-title mb-2">Rekha Daswani</h5>
             <div class="card-text mb-3">
@@ -1243,7 +1284,7 @@
 
       <div class="col-6 col-lg-3 mb-4">
         <div class="card rounded">
-          <a href="#modal-speaker-5" data-bs-toggle="modal" data-bs-target="#modal-speaker-5"><img src="./assets/images/profiles/Sarah Gruneisen.png" class="card-img-top rounded-0" alt=""></a>
+          <a href="#modal-speaker-7" data-bs-toggle="modal" data-bs-target="#modal-speaker-7"><img src="./assets/images/profiles/Sarah Gruneisen.png" class="card-img-top rounded-0" alt=""></a>
           <div class="card-body">
             <h5 class="card-title mb-2">Sarah Gruneisen</h5>
             <div class="card-text mb-3">
@@ -1333,7 +1374,6 @@
 
       
 
-
       
 
     </div><!--//row-->
@@ -1343,42 +1383,40 @@
 </section><!--//speakers-section-->
 
 <section id="venue" class="venue-section section  theme-bg-primary text-white">
-  <div class="container">
-    <h3 class="section-heading text-center mb-5 text-white">Venue</h3>
-    <div class="row gx-5 py-lg-5">
-      <div class="col-12 col-lg-7 h-100">
-        <div class="desc">
-          <h4 class="text-white mb-3"><a href="https://pongbar.nl/eng/" target="_blank">Pongbar</a></h4>
-          <p>
-            JAN VAN GALENSTRAAT 315<br />
-            1056CB AMSTERDAM<br/>
-          </p>
-
-          <div class="row pt-3">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2435.935626634325!2d4.843369477759883!3d52.37158724720557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c609cbb288f895%3A0x18992102a17aff6c!2sPONG%20-%20Ping%20Pong%20bar!5e0!3m2!1sen!2suk!4v1711120803027!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div><!--//row-->
-        </div><!--//desc-->
-      </div><!--//col-->
-      <div class="col-12 col-xl-3 col-lg-4 offset-lg-1 position-relative h-100 mt-5 mt-lg-0">
-        <div class="figures-holder">
-          <div class="figure figure-1"><img class="shadow" src="assets/images/venue/venue-1.jpg" alt=""></div>
-          <div class="figure figure-2"><img class="shadow" src="assets/images/venue/venue-2.jpg" alt=""></div>
-          <div class="figure figure-3"><img class="shadow" src="assets/images/venue/venue-3.jpg" alt=""></div>
-        </div><!--//figures-holder-->
-      </div><!--//col-->
-    </div><!--//row-->
-  </div><!--//container-->
-</section><!--//venue-section-->
+    <div class="container">
+      <h3 class="section-heading text-center mb-5 text-white">Venue</h3>
+      <div class="row gx-5 py-lg-5">
+        <div class="col-12 col-lg-7 h-100">
+          <div class="desc">
+            <h4 class="text-white mb-3"><a href="https://pongbar.nl/eng/" target="_blank">Pongbar</a></h4>
+            <p>
+              JAN VAN GALENSTRAAT 315<br />
+              1056CB AMSTERDAM<br/>
+            </p>
+  
+            <div class="row pt-3">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2435.935626634325!2d4.843369477759883!3d52.37158724720557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c609cbb288f895%3A0x18992102a17aff6c!2sPONG%20-%20Ping%20Pong%20bar!5e0!3m2!1sen!2suk!4v1711120803027!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div><!--//row-->
+          </div><!--//desc-->
+        </div><!--//col-->
+        <div class="col-12 col-xl-3 col-lg-4 offset-lg-1 position-relative h-100 mt-5 mt-lg-0">
+          <div class="figures-holder">
+            <div class="figure figure-1"><img class="shadow" src="assets/images/venue/venue-1.jpg" alt=""></div>
+            <div class="figure figure-2"><img class="shadow" src="assets/images/venue/venue-2.jpg" alt=""></div>
+            <div class="figure figure-3"><img class="shadow" src="assets/images/venue/venue-3.jpg" alt=""></div>
+          </div><!--//figures-holder-->
+        </div><!--//col-->
+      </div><!--//row-->
+    </div><!--//container-->
+  </section><!--//venue-section-->
 
 <section id="sponsors" class="sponsors-section section">
   <div class="container">
     <h3 class="section-heading text-center mb-3">Sponsors &amp; Partners</h3>
-    <div class="section-intro text-center single-col-max mx-auto">SREDAY is working in partnership with <a href="https://www.ttthinking.com/" target="_blank">ttthinking</a> to bring magic to the community</div>
+    <div class="section-intro text-center single-col-max mx-auto mb-5">Want to become a sponsor? Get in touch!</div>
     <div class="row logos justify-content-center">
+      
       <div class="logo-item col-6 col-md-4 col-lg-2"><a href="https://www.ttthinking.com/" target="_blank"><img src="./assets/images/sponsors/ttthinking.png" alt=""></a></div>
-    </div><!--//row-->
-    <div class="section-intro text-center single-col-max mx-auto mb-5">Meet our amazing sponsors:<div>
-    <div class="row logos justify-content-center">
       
       <div class="logo-item col-6 col-md-4 col-lg-2"><a href="https://kubespaces.io/" target="_blank"><img src="./assets/images/sponsors/kubespaces.png" alt=""></a></div>
       
@@ -1401,90 +1439,6 @@
 
 
 
-<!-- Modal Speaker 3 -->
-<div class="modal modal-speaker modal-speaker-3" id="modal-speaker-3" tabindex="-1" role="dialog" aria-labelledby="speaker-3-ModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-      <div class="modal-content">
-          <div class="modal-header">
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
-              <h4 id="speaker-3-ModalLabel" class="modal-title sr-only"
->Alessandro Vozza</h4>
-          </div>
-          <div class="modal-body p-0">
-              <div class="theme-bg-light p-5">
-                  <div class="row">
-                      <div class="col-12 col-md-auto text-center">
-                          <img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto" src="./assets/images/profiles/Alessandro Vozza.png" alt="" />
-                      </div>
-
-                      <div class="col text-center text-md-start mx-auto">
-                          <h2 class="name mb-2">Alessandro Vozza</h2>
-                          <div class="meta mb-2">Kubespaces</div>
-                          <ul class="social-list list-inline mb-0">
-                            <li class="list-inline-item"><a  href="https://twitter.com/@bongo"><i class="fab fa-twitter fa-fw"></i></a></li>
-                            <li class="list-inline-item"><a  href="https://www.linkedin.com/in/alessandrovozza/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-                            
-                            
-                          </ul><!--//social-list-->
-                      </div><!--//col-->
-                  </div><!--//row-->
-              </div>
-              <div class="desc p-2 p-lg-3">
-                <p><p>Coming soon...</p></p>
-              </div>
-              <div class="desc p-2 p-lg-3">
-                <p><p>Coming soon...</p></p>
-              </div>
-              <div class="desc p-2 p-lg-3">
-                <p></p>
-              </div>
-          </div><!--//modal-body-->
-      </div><!--//modal-content-->
-  </div><!--//modal-dialog-->
-</div><!--//modal-->
-
-<!-- Modal Speaker 4 -->
-<div class="modal modal-speaker modal-speaker-4" id="modal-speaker-4" tabindex="-1" role="dialog" aria-labelledby="speaker-4-ModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-      <div class="modal-content">
-          <div class="modal-header">
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
-              <h4 id="speaker-4-ModalLabel" class="modal-title sr-only"
->Fahd Ekadioin</h4>
-          </div>
-          <div class="modal-body p-0">
-              <div class="theme-bg-light p-5">
-                  <div class="row">
-                      <div class="col-12 col-md-auto text-center">
-                          <img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto" src="./assets/images/profiles/Fahd Ekadioin.png" alt="" />
-                      </div>
-
-                      <div class="col text-center text-md-start mx-auto">
-                          <h2 class="name mb-2">Fahd Ekadioin</h2>
-                          <div class="meta mb-2">Google</div>
-                          <ul class="social-list list-inline mb-0">
-                            <li class="list-inline-item"><a  href="https://twitter.com/@fahdekadioin"><i class="fab fa-twitter fa-fw"></i></a></li>
-                            <li class="list-inline-item"><a  href="https://www.linkedin.com/in/fahdekadioin/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-                            
-                            
-                          </ul><!--//social-list-->
-                      </div><!--//col-->
-                  </div><!--//row-->
-              </div>
-              <div class="desc p-2 p-lg-3">
-                <p><p>Coming soon...</p></p>
-              </div>
-              <div class="desc p-2 p-lg-3">
-                <p><p>Coming soon...</p></p>
-              </div>
-              <div class="desc p-2 p-lg-3">
-                <p></p>
-              </div>
-          </div><!--//modal-body-->
-      </div><!--//modal-content-->
-  </div><!--//modal-dialog-->
-</div><!--//modal-->
-
 <!-- Modal Speaker 5 -->
 <div class="modal modal-speaker modal-speaker-5" id="modal-speaker-5" tabindex="-1" role="dialog" aria-labelledby="speaker-5-ModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -1492,6 +1446,93 @@
           <div class="modal-header">
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
               <h4 id="speaker-5-ModalLabel" class="modal-title sr-only"
+>Ashley Sawatsky</h4>
+          </div>
+          <div class="modal-body p-0">
+              <div class="theme-bg-light p-5">
+                  <div class="row">
+                      <div class="col-12 col-md-auto text-center">
+                          <img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto" src="./assets/images/profiles/Ashley Sawatsky.png" alt="" />
+                      </div>
+
+                      <div class="col text-center text-md-start mx-auto">
+                          <h2 class="name mb-2">Ashley Sawatsky</h2>
+                          <div class="meta mb-2">Rootly</div>
+                          <ul class="social-list list-inline mb-0">
+                            <li class="list-inline-item"><a  href="https://twitter.com/@AshleyOnCall"><i class="fab fa-twitter fa-fw"></i></a></li>
+                            <li class="list-inline-item"><a  href="https://www.linkedin.com/in/ashsawatsky/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+                            
+                            
+                          </ul><!--//social-list-->
+                      </div><!--//col-->
+                  </div><!--//row-->
+              </div>
+              <div class="desc p-2 p-lg-3">
+                <p><p>While playbooks help document information and build consistency, they can also become bloated and overly prescriptive. This talk provides strategies for building adaptive incident response programs that work in complex, real-world incidents.</p></p>
+              </div>
+              <div class="desc p-2 p-lg-3">
+                <p><p>How many of us have walked away from a retrospective where “update X playbook” accounted for the bulk of the post-incident learning? As we establish and evolve our incident response programs, playbooks are a useful tool to document information and build consistency. But they also can easily become a dumping ground for rigid process and oversimplified approaches that don’t work in the ambiguous and complex real world incidents we experience. In this talk, I’ll break down three pillars for building incident response programs that build consistency and alignment while leaving room for judgment and agility. Pillar 1: Severity Levels (How to establish severity levels that reflect your business priorities)
+Pillar 2: Heuristics (Mental shortcuts for ambiguous decision-making)
+Pillar 3: Tooling (Eliminating toil to leave room for the important decisions)</p></p>
+              </div>
+              <div class="desc p-2 p-lg-3">
+                <p><p>Ashley Sawatsky is an expert in incident management and communication, with a focus on the SaaS world. In her 6+ years of experience building and scaling Shopify's incident response program, she developed the ability to fluently translate the technical aspects of SRE incident response to Legal, PR, Customer Support, and Executive stakeholders. Now, she works at Rootly as Senior Developer Relations Advocate, where she engages with the SRE and incident response communities, and consults with customers from the world's largest tech companies—like Canva, Figma, NVIDIA, and more—on their incident response strategies.</p></p>
+              </div>
+          </div><!--//modal-body-->
+      </div><!--//modal-content-->
+  </div><!--//modal-dialog-->
+</div><!--//modal-->
+
+<!-- Modal Speaker 6 -->
+<div class="modal modal-speaker modal-speaker-6" id="modal-speaker-6" tabindex="-1" role="dialog" aria-labelledby="speaker-6-ModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 id="speaker-6-ModalLabel" class="modal-title sr-only"
+>Michael Cote</h4>
+          </div>
+          <div class="modal-body p-0">
+              <div class="theme-bg-light p-5">
+                  <div class="row">
+                      <div class="col-12 col-md-auto text-center">
+                          <img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto" src="./assets/images/profiles/Michael Cote.png" alt="" />
+                      </div>
+
+                      <div class="col text-center text-md-start mx-auto">
+                          <h2 class="name mb-2">Michael Cote</h2>
+                          <div class="meta mb-2">VMware/Pivotal</div>
+                          <ul class="social-list list-inline mb-0">
+                            <li class="list-inline-item"><a  href="https://twitter.com/@cote"><i class="fab fa-twitter fa-fw"></i></a></li>
+                            <li class="list-inline-item"><a  href="https://www.linkedin.com/in/michaelcote/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+                            
+                            
+                          </ul><!--//social-list-->
+                      </div><!--//col-->
+                  </div><!--//row-->
+              </div>
+              <div class="desc p-2 p-lg-3">
+                <p><p>Changing how 10 people work is difficult. Changing how 5,000 is near impossible. If you're trying to move beyond your initial success at transforming how your organization builds and runs software, you're experienced this problem. We'll look at common challenges and cover tactics to address them.</p></p>
+              </div>
+              <div class="desc p-2 p-lg-3">
+                <p><p>Changing how 10 people work is difficult, changing how 100 work is very difficult. And, barring Planck's principle, changing how 5,000 or more people work is, typically, impossible. When it comes to improving how large organizations build, release, and run software, scaling to thousands of people is the real challenge. If you're trying to move beyond your initial success at transforming how your organization builds and runs software, you've experienced this scaling challenge. Thankfully, most of the problems in this challenge are common challenges. Though you may feel cursed and alone, in our experience talking with hundreds of organizations, most of the problems are the same.
+This talk will look at several of these common challenges and cover tactics to address them. Part of applying a tactic successfully is understanding why the challenge exists in the first place, which the talk starts with.</p></p>
+              </div>
+              <div class="desc p-2 p-lg-3">
+                <p><p><a href="https://cote.io/">Michael Coté</a> studies how large organizations get better at building software to run better and grow their business. His <a href="https://cote.io/books/">books</a> <a href="https://www.oreilly.com/library/view/changing-mindsets-the/9781098105839/?utm_source=cote&amp;utm_campaign=devrel&amp;utm_content=bioblock"><em>Changing Mindsets</em></a>, <a href="https://tanzu.vmware.com/content/ebooks/monolithic-transformation?utm_source=cote&amp;utm_campaign=devrel&amp;utm_content=bioblock"><em>Monolithic Transformation</em></a>, and <a href="https://content.pivotal.io/ebooks/the-business-bottleneck?utm_source=cote&amp;utm_campaign=devrel&amp;utm_content=bioblock"><em>The Business Bottleneck</em></a> cover these topics. He's been an industry analyst at RedMonk and 451 Research, done corporate strategy and M&amp;A, and was a programmer. He also co-hosts several podcasts, including <a href="https://www.softwaredefinedtalk.com/">Software Defined Talk</a>. His daily-ish newsletter is at <a href="https://newsletter.cote.io/">newsletter.cote.io</a>.</p></p>
+              </div>
+          </div><!--//modal-body-->
+      </div><!--//modal-content-->
+  </div><!--//modal-dialog-->
+</div><!--//modal-->
+
+<!-- Modal Speaker 7 -->
+<div class="modal modal-speaker modal-speaker-7" id="modal-speaker-7" tabindex="-1" role="dialog" aria-labelledby="speaker-7-ModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 id="speaker-7-ModalLabel" class="modal-title sr-only"
 >Sarah Gruneisen</h4>
           </div>
           <div class="modal-body p-0">
@@ -1542,13 +1583,13 @@ By creating a supportive ecosystem that integrates System, Agile, Personal Devel
   </div><!--//modal-dialog-->
 </div><!--//modal-->
 
-<!-- Modal Speaker 6 -->
-<div class="modal modal-speaker modal-speaker-6" id="modal-speaker-6" tabindex="-1" role="dialog" aria-labelledby="speaker-6-ModalLabel" aria-hidden="true">
+<!-- Modal Speaker 8 -->
+<div class="modal modal-speaker modal-speaker-8" id="modal-speaker-8" tabindex="-1" role="dialog" aria-labelledby="speaker-8-ModalLabel" aria-hidden="true">
   <div class="modal-dialog">
       <div class="modal-content">
           <div class="modal-header">
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
-              <h4 id="speaker-6-ModalLabel" class="modal-title sr-only"
+              <h4 id="speaker-8-ModalLabel" class="modal-title sr-only"
 >Rekha Daswani</h4>
           </div>
           <div class="modal-body p-0">
@@ -1584,57 +1625,13 @@ By creating a supportive ecosystem that integrates System, Agile, Personal Devel
   </div><!--//modal-dialog-->
 </div><!--//modal-->
 
-<!-- Modal Speaker 7 -->
-<div class="modal modal-speaker modal-speaker-7" id="modal-speaker-7" tabindex="-1" role="dialog" aria-labelledby="speaker-7-ModalLabel" aria-hidden="true">
+<!-- Modal Speaker 9 -->
+<div class="modal modal-speaker modal-speaker-9" id="modal-speaker-9" tabindex="-1" role="dialog" aria-labelledby="speaker-9-ModalLabel" aria-hidden="true">
   <div class="modal-dialog">
       <div class="modal-content">
           <div class="modal-header">
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
-              <h4 id="speaker-7-ModalLabel" class="modal-title sr-only"
->Ashley Sawatsky</h4>
-          </div>
-          <div class="modal-body p-0">
-              <div class="theme-bg-light p-5">
-                  <div class="row">
-                      <div class="col-12 col-md-auto text-center">
-                          <img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto" src="./assets/images/profiles/Ashley Sawatsky.png" alt="" />
-                      </div>
-
-                      <div class="col text-center text-md-start mx-auto">
-                          <h2 class="name mb-2">Ashley Sawatsky</h2>
-                          <div class="meta mb-2">Rootly</div>
-                          <ul class="social-list list-inline mb-0">
-                            <li class="list-inline-item"><a  href="https://twitter.com/@AshleyOnCall"><i class="fab fa-twitter fa-fw"></i></a></li>
-                            <li class="list-inline-item"><a  href="https://www.linkedin.com/in/ashsawatsky/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-                            
-                            
-                          </ul><!--//social-list-->
-                      </div><!--//col-->
-                  </div><!--//row-->
-              </div>
-              <div class="desc p-2 p-lg-3">
-                <p><p>While playbooks help document information and build consistency, they can also become bloated and overly prescriptive. This talk provides strategies for building adaptive incident response programs that work in complex, real-world incidents.</p></p>
-              </div>
-              <div class="desc p-2 p-lg-3">
-                <p><p>How many of us have walked away from a retrospective where “update X playbook” accounted for the bulk of the post-incident learning? As we establish and evolve our incident response programs, playbooks are a useful tool to document information and build consistency. But they also can easily become a dumping ground for rigid process and oversimplified approaches that don’t work in the ambiguous and complex real world incidents we experience. In this talk, I’ll break down three pillars for building incident response programs that build consistency and alignment while leaving room for judgment and agility. Pillar 1: Severity Levels (How to establish severity levels that reflect your business priorities)
-Pillar 2: Heuristics (Mental shortcuts for ambiguous decision-making)
-Pillar 3: Tooling (Eliminating toil to leave room for the important decisions)</p></p>
-              </div>
-              <div class="desc p-2 p-lg-3">
-                <p><p>Ashley Sawatsky is an expert in incident management and communication, with a focus on the SaaS world. In her 6+ years of experience building and scaling Shopify's incident response program, she developed the ability to fluently translate the technical aspects of SRE incident response to Legal, PR, Customer Support, and Executive stakeholders. Now, she works at Rootly as Senior Developer Relations Advocate, where she engages with the SRE and incident response communities, and consults with customers from the world's largest tech companies—like Canva, Figma, NVIDIA, and more—on their incident response strategies.</p></p>
-              </div>
-          </div><!--//modal-body-->
-      </div><!--//modal-content-->
-  </div><!--//modal-dialog-->
-</div><!--//modal-->
-
-<!-- Modal Speaker 8 -->
-<div class="modal modal-speaker modal-speaker-8" id="modal-speaker-8" tabindex="-1" role="dialog" aria-labelledby="speaker-8-ModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-      <div class="modal-content">
-          <div class="modal-header">
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
-              <h4 id="speaker-8-ModalLabel" class="modal-title sr-only"
+              <h4 id="speaker-9-ModalLabel" class="modal-title sr-only"
 >Alina Boshchenko</h4>
           </div>
           <div class="modal-body p-0">
@@ -1671,13 +1668,13 @@ I am a serial hackathonner and my interests also extend to mentorship, where I g
   </div><!--//modal-dialog-->
 </div><!--//modal-->
 
-<!-- Modal Speaker 9 -->
-<div class="modal modal-speaker modal-speaker-9" id="modal-speaker-9" tabindex="-1" role="dialog" aria-labelledby="speaker-9-ModalLabel" aria-hidden="true">
+<!-- Modal Speaker 10 -->
+<div class="modal modal-speaker modal-speaker-10" id="modal-speaker-10" tabindex="-1" role="dialog" aria-labelledby="speaker-10-ModalLabel" aria-hidden="true">
   <div class="modal-dialog">
       <div class="modal-content">
           <div class="modal-header">
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
-              <h4 id="speaker-9-ModalLabel" class="modal-title sr-only"
+              <h4 id="speaker-10-ModalLabel" class="modal-title sr-only"
 >Pini Reznik</h4>
           </div>
           <div class="modal-body p-0">
@@ -1713,13 +1710,13 @@ I am a serial hackathonner and my interests also extend to mentorship, where I g
   </div><!--//modal-dialog-->
 </div><!--//modal-->
 
-<!-- Modal Speaker 10 -->
-<div class="modal modal-speaker modal-speaker-10" id="modal-speaker-10" tabindex="-1" role="dialog" aria-labelledby="speaker-10-ModalLabel" aria-hidden="true">
+<!-- Modal Speaker 11 -->
+<div class="modal modal-speaker modal-speaker-11" id="modal-speaker-11" tabindex="-1" role="dialog" aria-labelledby="speaker-11-ModalLabel" aria-hidden="true">
   <div class="modal-dialog">
       <div class="modal-content">
           <div class="modal-header">
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
-              <h4 id="speaker-10-ModalLabel" class="modal-title sr-only"
+              <h4 id="speaker-11-ModalLabel" class="modal-title sr-only"
 >Ahmet Atalay</h4>
           </div>
           <div class="modal-body p-0">
@@ -1756,13 +1753,13 @@ AWS offers isolation boundaries like Availability Zones and Regions to ensure hi
   </div><!--//modal-dialog-->
 </div><!--//modal-->
 
-<!-- Modal Speaker 11 -->
-<div class="modal modal-speaker modal-speaker-11" id="modal-speaker-11" tabindex="-1" role="dialog" aria-labelledby="speaker-11-ModalLabel" aria-hidden="true">
+<!-- Modal Speaker 12 -->
+<div class="modal modal-speaker modal-speaker-12" id="modal-speaker-12" tabindex="-1" role="dialog" aria-labelledby="speaker-12-ModalLabel" aria-hidden="true">
   <div class="modal-dialog">
       <div class="modal-content">
           <div class="modal-header">
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
-              <h4 id="speaker-11-ModalLabel" class="modal-title sr-only"
+              <h4 id="speaker-12-ModalLabel" class="modal-title sr-only"
 >Eric D. Schabell & Graziano Casto</h4>
           </div>
           <div class="modal-body p-0">
@@ -1802,13 +1799,13 @@ Graziano is a Developer Relations Engineer at Mia-Platform, specializing in cont
   </div><!--//modal-dialog-->
 </div><!--//modal-->
 
-<!-- Modal Speaker 12 -->
-<div class="modal modal-speaker modal-speaker-12" id="modal-speaker-12" tabindex="-1" role="dialog" aria-labelledby="speaker-12-ModalLabel" aria-hidden="true">
+<!-- Modal Speaker 13 -->
+<div class="modal modal-speaker modal-speaker-13" id="modal-speaker-13" tabindex="-1" role="dialog" aria-labelledby="speaker-13-ModalLabel" aria-hidden="true">
   <div class="modal-dialog">
       <div class="modal-content">
           <div class="modal-header">
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
-              <h4 id="speaker-12-ModalLabel" class="modal-title sr-only"
+              <h4 id="speaker-13-ModalLabel" class="modal-title sr-only"
 >Anand Shukla</h4>
           </div>
           <div class="modal-body p-0">
@@ -1846,13 +1843,13 @@ Prior to joining Atradius, I was a IT Area Lead/Head of Engineering in Channels 
   </div><!--//modal-dialog-->
 </div><!--//modal-->
 
-<!-- Modal Speaker 13 -->
-<div class="modal modal-speaker modal-speaker-13" id="modal-speaker-13" tabindex="-1" role="dialog" aria-labelledby="speaker-13-ModalLabel" aria-hidden="true">
+<!-- Modal Speaker 14 -->
+<div class="modal modal-speaker modal-speaker-14" id="modal-speaker-14" tabindex="-1" role="dialog" aria-labelledby="speaker-14-ModalLabel" aria-hidden="true">
   <div class="modal-dialog">
       <div class="modal-content">
           <div class="modal-header">
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
-              <h4 id="speaker-13-ModalLabel" class="modal-title sr-only"
+              <h4 id="speaker-14-ModalLabel" class="modal-title sr-only"
 >Deepu K Sasidharan</h4>
           </div>
           <div class="modal-body p-0">
@@ -1883,49 +1880,6 @@ We'll dive into getting started with WebAssembly on Kubernetes using tools like 
               </div>
               <div class="desc p-2 p-lg-3">
                 <p><p>Deepu K Sasidharan is a Software Engineer by passion and profession. He is a Java Champion working as a Staff Developer Advocate at Okta. He is the co-chair of JHipster and the creator of KDash and JDL Studio. He is a polyglot programmer working with Java, Rust, JavaScript, Go, and so on. He is also a cloud technology advocate and an open-source software aficionado. He has authored books on Full-stack development and frequently writes about Java, Rust, JavaScript, Go, DevOps, Kubernetes, Linux, and so on, on his blog.</p></p>
-              </div>
-          </div><!--//modal-body-->
-      </div><!--//modal-content-->
-  </div><!--//modal-dialog-->
-</div><!--//modal-->
-
-<!-- Modal Speaker 14 -->
-<div class="modal modal-speaker modal-speaker-14" id="modal-speaker-14" tabindex="-1" role="dialog" aria-labelledby="speaker-14-ModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-      <div class="modal-content">
-          <div class="modal-header">
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
-              <h4 id="speaker-14-ModalLabel" class="modal-title sr-only"
->Michael Cote</h4>
-          </div>
-          <div class="modal-body p-0">
-              <div class="theme-bg-light p-5">
-                  <div class="row">
-                      <div class="col-12 col-md-auto text-center">
-                          <img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto" src="./assets/images/profiles/Michael Cote.png" alt="" />
-                      </div>
-
-                      <div class="col text-center text-md-start mx-auto">
-                          <h2 class="name mb-2">Michael Cote</h2>
-                          <div class="meta mb-2">VMware/Pivotal</div>
-                          <ul class="social-list list-inline mb-0">
-                            <li class="list-inline-item"><a  href="https://twitter.com/@cote"><i class="fab fa-twitter fa-fw"></i></a></li>
-                            <li class="list-inline-item"><a  href="https://www.linkedin.com/in/michaelcote/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-                            
-                            
-                          </ul><!--//social-list-->
-                      </div><!--//col-->
-                  </div><!--//row-->
-              </div>
-              <div class="desc p-2 p-lg-3">
-                <p><p>Changing how 10 people work is difficult. Changing how 5,000 is near impossible. If you're trying to move beyond your initial success at transforming how your organization builds and runs software, you're experienced this problem. We'll look at common challenges and cover tactics to address them.</p></p>
-              </div>
-              <div class="desc p-2 p-lg-3">
-                <p><p>Changing how 10 people work is difficult, changing how 100 work is very difficult. And, barring Planck's principle, changing how 5,000 or more people work is, typically, impossible. When it comes to improving how large organizations build, release, and run software, scaling to thousands of people is the real challenge. If you're trying to move beyond your initial success at transforming how your organization builds and runs software, you've experienced this scaling challenge. Thankfully, most of the problems in this challenge are common challenges. Though you may feel cursed and alone, in our experience talking with hundreds of organizations, most of the problems are the same.
-This talk will look at several of these common challenges and cover tactics to address them. Part of applying a tactic successfully is understanding why the challenge exists in the first place, which the talk starts with.</p></p>
-              </div>
-              <div class="desc p-2 p-lg-3">
-                <p><p><a href="https://cote.io/">Michael Coté</a> studies how large organizations get better at building software to run better and grow their business. His <a href="https://cote.io/books/">books</a> <a href="https://www.oreilly.com/library/view/changing-mindsets-the/9781098105839/?utm_source=cote&amp;utm_campaign=devrel&amp;utm_content=bioblock"><em>Changing Mindsets</em></a>, <a href="https://tanzu.vmware.com/content/ebooks/monolithic-transformation?utm_source=cote&amp;utm_campaign=devrel&amp;utm_content=bioblock"><em>Monolithic Transformation</em></a>, and <a href="https://content.pivotal.io/ebooks/the-business-bottleneck?utm_source=cote&amp;utm_campaign=devrel&amp;utm_content=bioblock"><em>The Business Bottleneck</em></a> cover these topics. He's been an industry analyst at RedMonk and 451 Research, done corporate strategy and M&amp;A, and was a programmer. He also co-hosts several podcasts, including <a href="https://www.softwaredefinedtalk.com/">Software Defined Talk</a>. His daily-ish newsletter is at <a href="https://newsletter.cote.io/">newsletter.cote.io</a>.</p></p>
               </div>
           </div><!--//modal-body-->
       </div><!--//modal-content-->
@@ -2424,7 +2378,6 @@ Key takeaways:
             <li class="list-inline-item me-3"><a target="_blank" href="https://twitter.com/sreday_com"><i class="fab fa-twitter fa-fw"></i></a></li>
             <li class="list-inline-item me-0"><a target="_blank" href="https://www.youtube.com/@sreday"><i class="fab fa-youtube fa-fw"></i></a></li>
         </ul>
-        
         
         <!-- <ul class="footer-links list-inline mx-auto mb-4">
             <li class="list-inline-item"><a href="#">Code of Conduct</a></li>
