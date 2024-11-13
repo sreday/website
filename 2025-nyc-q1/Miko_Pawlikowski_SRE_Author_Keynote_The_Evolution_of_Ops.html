@@ -192,130 +192,19 @@
 <!-- CONTENT -->
 
 
-<section id="about" class="about-section section">
-
+<section id="speakers-section" class="speakers-section section">
   <div class="container">
-    <div class="event-countdown text-center mb-3">
-    
-      <h4 class="countdown-intro mb-2 text-center mb-3">Event Starts In:</h4>
-      <div id="countdown-box" class="countdown-box"></div>
-    
-    </div>
-  </div>
-  <script>
-    /* ======= Countdown ========= */
-    // set the date we're counting down to
-    var target_date = new Date("Feb 28, 2025").getTime();
-     
-    // variables for time units
-    var days, hours, minutes, seconds;
-     
-    // get tag element
-    var countdown =  document.getElementById("countdown-box");
-    var days_span = document.createElement("SPAN");
-    days_span.className = 'days';
-    countdown.appendChild(days_span);
-    var hours_span = document.createElement("SPAN");
-    hours_span.className = 'hours';
-    countdown.appendChild(hours_span);
-    var minutes_span = document.createElement("SPAN");
-    minutes_span.className = 'minutes';
-    countdown.appendChild(minutes_span);
-    var secs_span = document.createElement("SPAN");
-    secs_span.className = 'secs';
-    countdown.appendChild(secs_span);
-     
-    // update the tag with id "countdown" every 1 second
-    setInterval(function () {
-     
-        // find the amount of "seconds" between now and target
-        var current_date = new Date().getTime();
-        var seconds_left = (target_date - current_date) / 1000;
-     
-        // do some time calculations
-        days = parseInt(seconds_left / 86400);
-        seconds_left = seconds_left % 86400;
-         
-        hours = parseInt(seconds_left / 3600);
-        seconds_left = seconds_left % 3600;
-         
-        minutes = parseInt(seconds_left / 60);
-        seconds = parseInt(seconds_left % 60);
-         
-        // format countdown string + set tag value.
-        days_span.innerHTML = '<span class="number">' + days + '</span>' + '<span class="unit">Days</span>';
-        hours_span.innerHTML = '<span class="number">' + hours + '</span>' + '<span class="unit">Hrs</span>';
-        minutes_span.innerHTML = '<span class="number">' + minutes + '</span>' + '<span class="unit">Mins</span>';
-        secs_span.innerHTML = '<span class="number">' + seconds + '</span>' + '<span class="unit">Secs</span>'; 
-     
-    }, 1000);
-    </script>
-</section>
-
-<section id="tickets" class="tickets-section section">
-  <div class="container">
-    <h3 class="section-heading text-center mb-3">Tickets</h3>
-
-    
-    <div class="row pricing mb-5 mt-10">
-      <div class="col-12 text-center">
-         
-      </div>
-    </div>
-    
-
-  </div>
-</section>
-
-
-<section id="schedule" class="schedule-section section theme-bg-light">
-  <div class="container">
-    <h2 class="section-heading text-center mb-5">Schedule</h2>
-    <h4 class="section-heading text-center mb-5">Coming soon</h4>
-  </div>
-</section>
-
-
-
-<section id="speakers" class="speakers-section section">
-  <div class="container">
-    <h3 class="section-heading text-center mb-3">Speakers</h3>
+    <h1 class="section-heading text-center mb-3">Keynote: The Evolution of Ops</h1>
     <div class="row">
 
-      
-
       <div class="col-6 col-lg-3 mb-4">
-        <div class="card rounded">
-          <a href="#modal-speaker-0" data-bs-toggle="modal" data-bs-target="#modal-speaker-0"><img src="./assets/images/profiles/Ale Paredes.png" class="card-img-top rounded-0" alt=""></a>
-          <div class="card-body">
-            <h5 class="card-title mb-2">Ale Paredes</h5>
-            <div class="card-text mb-3">
-              <div class="meta">Viam</div>
-            </div><!--//card-text-->
-            <a href="./Ale_Paredes_Viam_Panel_Discussion">Read more &rarr;</a>
-          </div><!--//card-->
-          <div class="card-footer text-muted">
-            <ul class="social-list list-inline mb-0">
-              
-              <li class="list-inline-item"><a  href="https://www.linkedin.com/in/ale7714/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-              
-              
-            </ul><!--//social-list-->
-          </div>
-        </div><!--//card-->
-      </div><!--//col-->
-
-      
-
-      <div class="col-6 col-lg-3 mb-4">
-        <div class="card rounded">
-          <a href="#modal-speaker-1" data-bs-toggle="modal" data-bs-target="#modal-speaker-1"><img src="./assets/images/profiles/Miko Pawlikowski.png" class="card-img-top rounded-0" alt=""></a>
+        <div class="card rounded-0">
+          <img src="./assets/images/profiles/Miko Pawlikowski.png" class="card-img-top rounded-0" alt="">
           <div class="card-body">
             <h5 class="card-title mb-2">Miko Pawlikowski</h5>
             <div class="card-text mb-3">
               <div class="meta">SRE Author</div>
             </div><!--//card-text-->
-            <a href="./Miko_Pawlikowski_SRE_Author_Keynote_The_Evolution_of_Ops">Read more &rarr;</a>
           </div><!--//card-->
           <div class="card-footer text-muted">
             <ul class="social-list list-inline mb-0">
@@ -328,56 +217,33 @@
         </div><!--//card-->
       </div><!--//col-->
 
-      
-
-      
-
-      <div class="col-6 col-lg-3 mb-4">
-        <div class="card">
+      <div class="col-6 col-lg-9 mb-4">
+        <div class="card rounded-0">
           <div class="card-body">
-            <h4>More coming soon</h4>
-          </div><!--//card-->
-        </div><!--//card-->
-      </div><!--//col-->
 
-      
+              <div class="desc p-2 p-lg-3">
+                <p><p>Let's explore how the Ops landscape has evolved in recent years and examine key trends shaping its future.</p></p>
+              </div>
+              <div class="desc p-2 p-lg-3">
+                <p></p>
+              </div>
+              <div class="desc p-2 p-lg-3">
+                <p></p>
+              </div>
+
+          </div><!--//card-->
+          <div class="card-footer text-muted">
+          </div>
+        </div><!--//card-->
+      </div><!--//col--> 
 
     </div><!--//row-->
-    <div class="speakers-cta text-center py-3"><a class="btn btn-primary btn-lg" href="#tickets">Get Tickets</a></div>
   </div><!--//container-->
 
 </section><!--//speakers-section-->
 
-<section id="venue" class="venue-section section  theme-bg-primary text-white">
-    <div class="container">
-      <h3 class="section-heading text-center mb-5 text-white">Venue</h3>
-      <div class="row gx-5 py-lg-5">
-        <div class="col-12 col-lg-7 h-100">
-          <div class="desc">
-            <h4 class="text-white mb-3">The offices of Viam</h4>
-            <p>
-              1900 Broadway, 6th Floor, <br />
-              New York, NY 10023 <br />
-            </p>
-  
-            <div class="row pt-3">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1004.234234253616!2d-73.98249453032727!3d40.77181311385228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258f56fb5f9f7%3A0xb7f1884fd17857e6!2s1900%20Broadway%2C%20New%20York%2C%20NY%2010023!5e1!3m2!1sen!2sus!4v1731041527458!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div><!--//row-->
-          </div><!--//desc-->
-        </div><!--//col-->
-        <div class="col-12 col-xl-3 col-lg-4 offset-lg-1 position-relative h-100 mt-5 mt-lg-0">
-          <div class="figures-holder">
-            <div class="figure figure-1"><img class="shadow" src="assets/images/venue/venue-1.jpg" alt=""></div>
-            <div class="figure figure-2"><img class="shadow" src="assets/images/venue/venue-2.jpg" alt=""></div>
-            <div class="figure figure-3"><img class="shadow" src="assets/images/venue/venue-3.jpg" alt=""></div>
-          </div><!--//figures-holder-->
-        </div><!--//col-->
-      </div><!--//row-->
-    </div><!--//container-->
-  </section><!--//venue-section-->
-  
 
-<section id="sponsors" class="sponsors-section section">
+<section id="sponsors-section" class="sponsors-section section">
   <div class="container">
     <h3 class="section-heading text-center mb-3">Sponsors &amp; Partners</h3>
     <div class="section-intro text-center single-col-max mx-auto mb-5">Want to become a sponsor? Get in touch!</div>
@@ -391,93 +257,6 @@
     <div class="sponsors-cta text-center pt-5"><a class="btn-primary btn btn-lg" href="mailto:mark@sreday.com">Become A Sponsor</a></div>
   </div><!--//container-->
 </section><!--//sponsors-section-->
-
-
-
-<!-- Modal Speaker 0 -->
-<div class="modal modal-speaker modal-speaker-0" id="modal-speaker-0" tabindex="-1" role="dialog" aria-labelledby="speaker-0-ModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-      <div class="modal-content">
-          <div class="modal-header">
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
-              <h4 id="speaker-0-ModalLabel" class="modal-title sr-only"
->Ale Paredes</h4>
-          </div>
-          <div class="modal-body p-0">
-              <div class="theme-bg-light p-5">
-                  <div class="row">
-                      <div class="col-12 col-md-auto text-center">
-                          <img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto" src="./assets/images/profiles/Ale Paredes.png" alt="" />
-                      </div>
-
-                      <div class="col text-center text-md-start mx-auto">
-                          <h2 class="name mb-2">Ale Paredes</h2>
-                          <div class="meta mb-2">Viam</div>
-                          <ul class="social-list list-inline mb-0">
-                            
-                            <li class="list-inline-item"><a  href="https://www.linkedin.com/in/ale7714/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-                            
-                            
-                          </ul><!--//social-list-->
-                      </div><!--//col-->
-                  </div><!--//row-->
-              </div>
-              <div class="desc p-2 p-lg-3">
-                <p><p>Join us for an exclusive panel featuring top DevOps and SRE engineers who are at the cutting edge of blending hardware and software. They’ll dive deep into the unique challenges of managing infrastructure, optimizing performance, and ensuring flawless integration between the physical and digital realms. Expect insider tips, innovative solutions, and a firsthand look at what it takes to excel in this dynamic field—perfect for anyone looking to elevate their DevOps and SRE game!</p></p>
-              </div>
-              <div class="desc p-2 p-lg-3">
-                <p></p>
-              </div>
-              <div class="desc p-2 p-lg-3">
-                <p><p>Currently, Ale is the Director of Engineering at Viam. With a strong background in tech leadership, she has driven impactful projects at companies like Stripe and Code Climate, advancing product scalability, reliability, and team performance. As the co-founder of Latinas in Tech NYC, Ale advocates for diversity and inclusion in the tech industry. She is passionate about fostering a collaborative environment where everyone can grow their skills, deliver impactful solutions, and build resilient, scalable systems.</p></p>
-              </div>
-          </div><!--//modal-body-->
-      </div><!--//modal-content-->
-  </div><!--//modal-dialog-->
-</div><!--//modal-->
-
-<!-- Modal Speaker 1 -->
-<div class="modal modal-speaker modal-speaker-1" id="modal-speaker-1" tabindex="-1" role="dialog" aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-      <div class="modal-content">
-          <div class="modal-header">
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
-              <h4 id="speaker-1-ModalLabel" class="modal-title sr-only"
->Miko Pawlikowski</h4>
-          </div>
-          <div class="modal-body p-0">
-              <div class="theme-bg-light p-5">
-                  <div class="row">
-                      <div class="col-12 col-md-auto text-center">
-                          <img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto" src="./assets/images/profiles/Miko Pawlikowski.png" alt="" />
-                      </div>
-
-                      <div class="col text-center text-md-start mx-auto">
-                          <h2 class="name mb-2">Miko Pawlikowski</h2>
-                          <div class="meta mb-2">SRE Author</div>
-                          <ul class="social-list list-inline mb-0">
-                            <li class="list-inline-item"><a  href="https://twitter.com/@mikopawlikowski"><i class="fab fa-twitter fa-fw"></i></a></li>
-                            <li class="list-inline-item"><a  href="https://www.linkedin.com/in/mikolajpawlikowski/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-                            
-                            
-                          </ul><!--//social-list-->
-                      </div><!--//col-->
-                  </div><!--//row-->
-              </div>
-              <div class="desc p-2 p-lg-3">
-                <p><p>Let's explore how the Ops landscape has evolved in recent years and examine key trends shaping its future.</p></p>
-              </div>
-              <div class="desc p-2 p-lg-3">
-                <p></p>
-              </div>
-              <div class="desc p-2 p-lg-3">
-                <p></p>
-              </div>
-          </div><!--//modal-body-->
-      </div><!--//modal-content-->
-  </div><!--//modal-dialog-->
-</div><!--//modal-->
-
 
 
 
