@@ -6,19 +6,19 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
   <loc>https://www.sreday.com/</loc>
-  <lastmod>2024-11-15T15:41:49.361605+00:00</lastmod>
+  <lastmod>2024-11-15T15:59:59.805542+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Miko_Pawlikowski_SRE_Author_Keynote_The_Evolution_of_Ops</loc>
-  <lastmod>2024-11-15T15:41:49.361605+00:00</lastmod>
+  <lastmod>2024-11-15T15:59:59.805542+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/James_Eastham_Datadog_So_You_Want_to_Maintain_a_Reliable_Event_Driven_System</loc>
-  <lastmod>2024-11-15T15:41:49.361605+00:00</lastmod>
+  <lastmod>2024-11-15T15:59:59.805542+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
