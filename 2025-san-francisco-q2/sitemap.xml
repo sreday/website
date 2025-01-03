@@ -6,31 +6,31 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
   <loc>https://www.sreday.com/</loc>
-  <lastmod>2025-01-03T13:05:06.310176+00:00</lastmod>
+  <lastmod>2025-01-03T13:26:43.465743+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Miko_Pawlikowski_SRE_Author_Keynote_The_Evolution_of_Ops</loc>
-  <lastmod>2025-01-03T13:05:06.310176+00:00</lastmod>
+  <lastmod>2025-01-03T13:26:43.465743+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Erez_Rusovsky_Sawmills_CAP_Theorem_Reloaded_AKA_How_to_Optimize_Distribution_of_Telemetry_Data</loc>
-  <lastmod>2025-01-03T13:05:06.310176+00:00</lastmod>
+  <lastmod>2025-01-03T13:26:43.465743+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Francois_Martel_Neubird_AI_AI_Teammates_for_SREs_How_will_they_impact_SRE_Teams</loc>
-  <lastmod>2025-01-03T13:05:06.310176+00:00</lastmod>
+  <lastmod>2025-01-03T13:26:43.465743+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Gunnar_Grosch_AWS_Coming_soon</loc>
-  <lastmod>2025-01-03T13:05:06.310176+00:00</lastmod>
+  <lastmod>2025-01-03T13:26:43.465743+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
