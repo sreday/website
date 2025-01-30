@@ -194,24 +194,24 @@
 
 <section id="speakers-section" class="speakers-section section">
   <div class="container">
-    <h1 class="section-heading text-center mb-3">Why we skipped SRE and switched to Platform Engineering?</h1>
+    <h1 class="section-heading text-center mb-3">Streamlining Telemetry Data: Building a Telemetry Pipeline to Handle High-Cardinality Metrics</h1>
     <div class="row">
 
       <div class="col-6 col-lg-3 mb-4">
         <div class="card rounded-0">
-          <img src="../speakers/Kristina Kondrashevich & Gang Luo.png" class="card-img-top rounded-0" alt="">
+          <img src="../speakers/Jon Duarte.png" class="card-img-top rounded-0" alt="">
           <div class="card-body">
-            <h5 class="card-title mb-2">Kristina Kondrashevich & Gang Luo</h5>
+            <h5 class="card-title mb-2">Jon Duarte</h5>
             <div class="card-text mb-3">
-              <div class="meta">Electrolux Group</div>
+              <div class="meta">Mezmo</div>
             </div><!--//card-text-->
           </div><!--//card-->
           <div class="card-footer text-muted">
             <ul class="social-list list-inline mb-0">
               
-              <li class="list-inline-item"><a  href="https://www.linkedin.com/in/kristina-kondrashevich/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+              <li class="list-inline-item"><a  href="https://www.linkedin.com/in/jonjpbm/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
               
-              <li class="list-inline-item"><a  href="https://www.linkedin.com/in/gangluo/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+              
             </ul><!--//social-list-->
           </div>
         </div><!--//card-->
@@ -222,14 +222,20 @@
           <div class="card-body">
 
               <div class="desc p-2 p-lg-3">
-                <p><p>We work in the IoT space at Electrolux Group, leader in Home Appliance industry, scaling from 10 to 300 developers with just 5 Ops engineers in 4 years. Along the way, we faced challenges in promoting SRE principles to development teams. This led us to transition from SRE to Platform Engineering. In this talk, we’ll share how we built an Internal Developer Platform (IDP) integrated with our cloud and toolchains, embedding SRE principles into its foundation. This platform enables developers to autonomously create and manage infrastructure and services while adhering to best practices and security standards. This newfound autonomy boosted developer productivity, enabling them to spin up new regions in a single day, rather than relying on approval processes. In this talk, we'll discuss Electrolux's journey from a traditional SRE model to platform engineering. We'll cover the challenges they faced with their initial SRE model, including scalability and a lack of self-service capabilities for developers. We'll then delve into how they addressed these challenges by automating common requests, moving workload to SaaS solutions, and building an internal developer platform. Finally, we'll explore how they open-sourced their developer platform, making it available to the wider community</p></p>
+                <p><p>All services emit telemetry data, but ensuring it is useful can be challenging. Too much, and you have a lot of noise; too little, and you can’t properly identify and troubleshoot issues. In 2023, it became clear to us at Mezmo that we had complex high cardinality metrics, needed to improve our observability practices, and consolidate our multiple Prometheus instances. We wanted that elusive “single pane of glass” experience.</p>
+<p>This session will detail our transformation from a Sysdig-centric approach to a more flexible, centralized observability strategy. We'll explore how we:</p>
+<ul>
+<li>Migrated from Sysdig to OpenTelemetry Collector</li>
+<li>Implemented data transformation techniques to enhance metric context</li>
+<li>Consolidated Prometheus instances</li>
+<li>Developed targeted data identification and processing methods</li>
+</ul></p>
               </div>
               <div class="desc p-2 p-lg-3">
                 <p></p>
               </div>
               <div class="desc p-2 p-lg-3">
-                <p><p><a href="https://www.linkedin.com/in/kristina-kondrashevich/"><strong>Kristina Kondrashevich</strong></a> is SRE Product Manager at Electrolux. In my life, I have been responsible for writing code, managing teams, and improving delivery processes. Today, as a PM, I support my Platform team to bring traditional product management practices into our way of working. My primary objective is to prioritize the satisfaction of developers within my organization, viewing them as consumers and striving to enhance their overall experience. I like to read and have a profound love for lifelong learning. Exploring new ideas, concepts, and perspectives is something that truly ignites my curiosity.</p>
-<p><a href="https://www.linkedin.com/in/gangluo/"><strong>Gang Luo</strong></a> has spent over six years building and leading distributed teams, introducing Chaos Engineering, and adopting cloud-native and SRE best practices to enhance service reliability and scalability. His tenure at Salesforce included designing large-scale automated testing and deployment platforms, saving significant resources while maintaining exceptional system performance and availability. Gang holds a Master's in Software Engineering and Management from Linköping University and has earned multiple awards for his technical contributions and innovation.</p></p>
+                <p><p>Jon Duarte is a Site Reliability Engineer II at Mezmo with expertise in Terraform, Kubernetes, and GitHub. His career journey includes roles as a Linux application support engineer and Microsoft SQL DevOps Database Administrator at iHeartMedia. Jon holds a BBA in Infrastructure Assurance with a minor in Information Systems from The University of Texas at San Antonio. Known for his curiosity and problem-solving skills, Jon is dedicated to continuous learning and improvement.</p></p>
               </div>
 
           </div><!--//card-->
