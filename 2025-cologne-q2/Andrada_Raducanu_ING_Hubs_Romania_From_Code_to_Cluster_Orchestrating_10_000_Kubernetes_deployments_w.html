@@ -194,7 +194,7 @@
 				</div><!--//col-->
 				<div class="col-6 col-md-3">
 					<div class="item">
-						<div class="number">2</div>
+						<div class="number">1</div>
 						<div class="unit">Tracks</div>
 					</div><!--//item-->
 				</div><!--//col-->
@@ -214,22 +214,22 @@
 
 <section id="speakers-section" class="speakers-section section">
   <div class="container">
-    <h1 class="section-heading text-center mb-3">Building a distributed persistent queue on FoundationDB</h1>
+    <h1 class="section-heading text-center mb-3">From Code to Cluster: Orchestrating 10,000+ Kubernetes deployments with 1 pipeline</h1>
     <div class="row">
 
       <div class="col-6 col-lg-3 mb-4">
         <div class="card rounded-0">
-          <img src="../speakers/Himank Chaudhary.png" class="card-img-top rounded-0" alt="">
+          <img src="../speakers/Andrada Raducanu.png" class="card-img-top rounded-0" alt="">
           <div class="card-body">
-            <h5 class="card-title mb-2">Himank Chaudhary</h5>
+            <h5 class="card-title mb-2">Andrada Raducanu</h5>
             <div class="card-text mb-3">
-              <div class="meta">Tigris Data</div>
+              <div class="meta">ING Hubs Romania</div>
             </div><!--//card-text-->
           </div><!--//card-->
           <div class="card-footer text-muted">
             <ul class="social-list list-inline mb-0">
-              <li class="list-inline-item"><a  href="https://twitter.com/@HimankChaudhary"><i class="fab fa-twitter fa-fw"></i></a></li>
-              <li class="list-inline-item"><a  href="https://www.linkedin.com/in/himankchaudhary/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+              
+              <li class="list-inline-item"><a  href="https://www.linkedin.com/in/andrada-raducanu-518122115/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
               
               
             </ul><!--//social-list-->
@@ -242,14 +242,13 @@
           <div class="card-body">
 
               <div class="desc p-2 p-lg-3">
-                <p><p>Tigris is a globally distributed object storage system where objects are stored all over the world. The system needs to have asynchronous tasks to keep objects cached, redundantly stored, and moved around in response to changes in access patterns.</p>
-<p>To solve this, we built an asynchronous task system on top of FoundationDB, just like our metadata. This simplifies our architecture by letting us enqueue tasks in the same transaction as we insert data, providing us atomicity with all or nothing semantics. This wouldn’t be as easy if we used an external system because we’d need distributed coordination between our database and our message queue. We also wanted to take advantage of our existing FoundationDB clusters and expertise to avoid having to make things too complicated for our SREs. Today I’ll cover how FoundationDB makes this easy, the other advantages it’s given us, and some lessons we learned in the process.</p></p>
+                <p><p>There is a sea of tools one can use for the critical phase of Deployment during your SDLC. To keep our environment secure and reliable, ING chose to work with Kubernetes and Azure DevOps. In this talk, we will share the success story of how 1200 in-house developed APIs reached 10 000+ Production deployments in half a year, using one single pipeline. In order to stay in control, we use Open Policy Agent. To ensure the reliability and the resilience of the APIs, we use tools like: QuotaAutoscaler (ING open source CRD) and HorizontalPodAustoscaler, native rollback mechanisms with Helm, automatic certificates using CertManager and Prometheus monitoring. The pipeline deploys code in Azure Kubernetes Service and on-prem Kubernetes clusters. This solution was built as a platform, designed to be agnostic to the target system, reducing the cognitive load on the teams and allowing them to focus on the application development. We call this The Kingsroad.</p></p>
               </div>
               <div class="desc p-2 p-lg-3">
                 <p></p>
               </div>
               <div class="desc p-2 p-lg-3">
-                <p><p>Himank is the CTO and co-founder of Tigris Data. His primary focus is building the distributed systems that make Tigris’ object storage system scale along with its users. Prior to Tigris he worked at Uber on the distributed databases team that stored petabytes of data and enabled millions of queries per second across multiple clouds. Himank holds a master’s degree with a specialization in distributed systems.</p></p>
+                <p><p>Andrada Răducanu is an Operations Engineer, with 7+ years of experience in IT infrastructure and cloud operations. Previously, she worked at VOIS as a System Engineer Specialist and taught programming to children at Edusfera Association. She combines technical expertise with a passion for IT education.</p></p>
               </div>
 
           </div><!--//card-->
