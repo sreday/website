@@ -6,25 +6,25 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
   <loc>https://www.sreday.com/</loc>
-  <lastmod>2025-05-15T07:36:41.641712+00:00</lastmod>
+  <lastmod>2025-05-15T07:49:56.504449+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Miko_Pawlikowski_SRE_Author_Keynote_The_Evolution_of_Ops</loc>
-  <lastmod>2025-05-15T07:36:41.641712+00:00</lastmod>
+  <lastmod>2025-05-15T07:49:56.504449+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Yash_Verma_Independent_Radius_The_Cloud_Native_Wingman_You_Need_to_Know_About</loc>
-  <lastmod>2025-05-15T07:36:41.641712+00:00</lastmod>
+  <lastmod>2025-05-15T07:49:56.504449+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Mert_Polat_Sufle_The_Invisible_Layer_Securing_Kubernetes_with_eBPF__Cilium__and_Tetragon</loc>
-  <lastmod>2025-05-15T07:36:41.641712+00:00</lastmod>
+  <lastmod>2025-05-15T07:49:56.504449+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
