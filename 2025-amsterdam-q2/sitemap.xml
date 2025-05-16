@@ -6,25 +6,25 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
   <loc>https://www.sreday.com/</loc>
-  <lastmod>2025-05-15T07:49:56.050691+00:00</lastmod>
+  <lastmod>2025-05-16T12:43:29.222779+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Miko_Pawlikowski_SRE_Author_Keynote_The_Evolution_of_Ops</loc>
-  <lastmod>2025-05-15T07:49:56.050691+00:00</lastmod>
+  <lastmod>2025-05-16T12:43:29.222779+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Sohan_Maheshwar_AuthZed_How_Google_built_a_Consistent__Global_Authorization_System_and_you_can_too</loc>
-  <lastmod>2025-05-15T07:49:56.050691+00:00</lastmod>
+  <lastmod>2025-05-16T12:43:29.222779+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Frederic_G_Marand_OSInet_TLA_Your_Secret_Weapon_Against_Concurrency_Hell</loc>
-  <lastmod>2025-05-15T07:49:56.050691+00:00</lastmod>
+  <lastmod>2025-05-16T12:43:29.222779+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
