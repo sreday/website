@@ -6,43 +6,43 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
   <loc>https://www.sreday.com/</loc>
-  <lastmod>2025-05-16T16:20:19.503195+00:00</lastmod>
+  <lastmod>2025-05-17T08:20:37.083784+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Miko_Pawlikowski_SRE_Author_Keynote_The_Evolution_of_Ops</loc>
-  <lastmod>2025-05-16T16:20:19.503195+00:00</lastmod>
+  <lastmod>2025-05-17T08:20:37.083784+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Dave_McAllister_NGINX_15_NGINX_Metrics_to_Monitor</loc>
-  <lastmod>2025-05-16T16:20:19.503195+00:00</lastmod>
+  <lastmod>2025-05-17T08:20:37.083784+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Simon_Hanmer_GlobalLogic_Breaking_Bad_Systems_a_short_journey_through_chaos_engineering</loc>
-  <lastmod>2025-05-16T16:20:19.503195+00:00</lastmod>
+  <lastmod>2025-05-17T08:20:37.083784+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Mert_Polat_Sufle_The_Dirty_Side_of_DevSecOps_Container_Image_Forensics_with_Syft__Grype__and_Trivy</loc>
-  <lastmod>2025-05-16T16:20:19.503195+00:00</lastmod>
+  <lastmod>2025-05-17T08:20:37.083784+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Amit_Kushwaha_SambaNova_Systems_Empowering_Developers_through_OpenSource_AI</loc>
-  <lastmod>2025-05-16T16:20:19.503195+00:00</lastmod>
+  <lastmod>2025-05-17T08:20:37.083784+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Sean_Behan_Oracle_Securing_the_Airgap_Wait__It_Needs_to_Be_Secured</loc>
-  <lastmod>2025-05-16T16:20:19.503195+00:00</lastmod>
+  <lastmod>2025-05-17T08:20:37.083784+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
