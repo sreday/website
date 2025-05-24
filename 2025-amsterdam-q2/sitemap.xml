@@ -6,37 +6,37 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
   <loc>https://www.sreday.com/</loc>
-  <lastmod>2025-05-18T22:32:06.517449+00:00</lastmod>
+  <lastmod>2025-05-24T10:59:13.359761+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Miko_Pawlikowski_SRE_Author_Keynote_The_Evolution_of_Ops</loc>
-  <lastmod>2025-05-18T22:32:06.517449+00:00</lastmod>
+  <lastmod>2025-05-24T10:59:13.359761+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Sohan_Maheshwar_AuthZed_How_Google_built_a_Consistent__Global_Authorization_System_and_you_can_too</loc>
-  <lastmod>2025-05-18T22:32:06.517449+00:00</lastmod>
+  <lastmod>2025-05-24T10:59:13.359761+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Frederic_G_Marand_OSInet_TLA_Your_Secret_Weapon_Against_Concurrency_Hell</loc>
-  <lastmod>2025-05-18T22:32:06.517449+00:00</lastmod>
+  <lastmod>2025-05-24T10:59:13.359761+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Martin_McLarnon_Coralogix_Using_OpenTelemetry_to_Improve_Service_Level_Objectives</loc>
-  <lastmod>2025-05-18T22:32:06.517449+00:00</lastmod>
+  <lastmod>2025-05-24T10:59:13.359761+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Dharani_Sowndharya_Equal_Experts_Zero_to_Hero_Building_BattleReady_Terraform_Test_Suites_with_AI_in_</loc>
-  <lastmod>2025-05-18T22:32:06.517449+00:00</lastmod>
+  <lastmod>2025-05-24T10:59:13.359761+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
