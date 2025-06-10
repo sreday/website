@@ -6,115 +6,115 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
   <loc>https://www.sreday.com/</loc>
-  <lastmod>2025-06-10T17:24:27.527650+00:00</lastmod>
+  <lastmod>2025-06-10T20:27:40.723957+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Miko_Pawlikowski_SRE_Author_Keynote_The_Evolution_of_Ops</loc>
-  <lastmod>2025-06-10T17:24:27.527650+00:00</lastmod>
+  <lastmod>2025-06-10T20:27:40.723957+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Peter_Marshall_Imply_Keynote_TBD</loc>
-  <lastmod>2025-06-10T17:24:27.527650+00:00</lastmod>
+  <lastmod>2025-06-10T20:27:40.723957+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Dave_McAllister_NGINX_15_NGINX_Metrics_to_Monitor</loc>
-  <lastmod>2025-06-10T17:24:27.527650+00:00</lastmod>
+  <lastmod>2025-06-10T20:27:40.723957+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Simon_Hanmer_GlobalLogic_Breaking_Bad_Systems_a_short_journey_through_chaos_engineering</loc>
-  <lastmod>2025-06-10T17:24:27.527650+00:00</lastmod>
+  <lastmod>2025-06-10T20:27:40.723957+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Mert_Polat_Sufle_The_Dirty_Side_of_DevSecOps_Container_Image_Forensics_with_Syft__Grype__and_Trivy</loc>
-  <lastmod>2025-06-10T17:24:27.527650+00:00</lastmod>
+  <lastmod>2025-06-10T20:27:40.723957+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Amit_Kushwaha_SambaNova_Systems_Empowering_Developers_through_OpenSource_AI</loc>
-  <lastmod>2025-06-10T17:24:27.527650+00:00</lastmod>
+  <lastmod>2025-06-10T20:27:40.723957+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Sean_Behan_Oracle_Securing_the_Airgap_Wait__It_Needs_to_Be_Secured</loc>
-  <lastmod>2025-06-10T17:24:27.527650+00:00</lastmod>
+  <lastmod>2025-06-10T20:27:40.723957+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Sebastian_Coles_Seccl_Beyond_the_Pipeline_Getting_Startedand_Thrivingin_DevSecOps</loc>
-  <lastmod>2025-06-10T17:24:27.527650+00:00</lastmod>
+  <lastmod>2025-06-10T20:27:40.723957+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Dharani_Sowndharya_Equal_Experts_Zero_to_Hero_Building_BattleReady_Terraform_Test_Suites_with_AI_in_</loc>
-  <lastmod>2025-06-10T17:24:27.527650+00:00</lastmod>
+  <lastmod>2025-06-10T20:27:40.723957+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Denis_Stebunov_ivelum_You_Might_Not_Need_Staging</loc>
-  <lastmod>2025-06-10T17:24:27.527650+00:00</lastmod>
+  <lastmod>2025-06-10T20:27:40.723957+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Talia_Nassi_Postman_Theres_no_AI_without_APIs</loc>
-  <lastmod>2025-06-10T17:24:27.527650+00:00</lastmod>
+  <lastmod>2025-06-10T20:27:40.723957+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Divine_Odazie__Shivadeep_Gundoju_EverythingDevOps__ING_A_DBAs_Surprising_Journey_To_Databases_On_Kub</loc>
-  <lastmod>2025-06-10T17:24:27.527650+00:00</lastmod>
+  <lastmod>2025-06-10T20:27:40.723957+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Mitul_Jain_HM_Group_Move_from_Traditional_Ops_to_Integrated_SRE_Ops_at_a_Retail_organization</loc>
-  <lastmod>2025-06-10T17:24:27.527650+00:00</lastmod>
+  <lastmod>2025-06-10T20:27:40.723957+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Stephan_Mousset_ING_Going_Beyond_Code_Igniting_Sociotechnical_Systems_through_Reliability_Advocacy</loc>
-  <lastmod>2025-06-10T17:24:27.527650+00:00</lastmod>
+  <lastmod>2025-06-10T20:27:40.723957+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Roosevelt_Elias_Payble_Technologies_Reliability_at_the_Edge_Building_SRE_Culture_in_ResourceConstrai</loc>
-  <lastmod>2025-06-10T17:24:27.527650+00:00</lastmod>
+  <lastmod>2025-06-10T20:27:40.723957+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Ceyda_Duzgec_Sufle_Beginners_Guide_to_Terragrunt</loc>
-  <lastmod>2025-06-10T17:24:27.527650+00:00</lastmod>
+  <lastmod>2025-06-10T20:27:40.723957+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Mayank_Goyal_Zoom_Kepler__Optimized_power_usage_monitoring_for_Kubernetes</loc>
-  <lastmod>2025-06-10T17:24:27.527650+00:00</lastmod>
+  <lastmod>2025-06-10T20:27:40.723957+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Leena_Mooneeram__Jorge_Lainfiesta_Chainalysis__Rootly_Driving_Platform_Adoption_with_Embedded_SREs</loc>
-  <lastmod>2025-06-10T17:24:27.527650+00:00</lastmod>
+  <lastmod>2025-06-10T20:27:40.723957+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
