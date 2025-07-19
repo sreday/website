@@ -218,15 +218,15 @@
           <div class="card-body">
 
               <div class="desc p-2 p-lg-3">
-                <p><p>Are your observability signals trapped in separate pillars? Logs in one place, metrics in another, both losing context? At ClickHouse, we faced this challenge at a massive scale. Our solution was to abandon the traditional model and embrace a new philosophy: store everything, aggregate nothing.</p>
-<p>This talk charts our journey to 100 PB and 500 trillion rows, centered on the concept of "wide events." Instead of shipping a simple log message and a separate, pre-aggregated metric, we store a single, context-rich event containing every possible dimension. This shift from three pillars to a single warehouse of high-cardinality telemetry was a game-changer.</p>
-<p>The key to this model is using ClickHouse itself as our observability backend. This unlocks unbounded query flexibility through full SQL. When an engineer asks "what's the p95 pod replacement time after termination?", we don't say "let me ship a new metric." We write a SQL query.</p>
-<p>This talk will cover:</p>
-<p>The Wide-Event Philosophy: Why logging rich, structured events is more powerful than juggling separate logs and metrics, and how it defeats cardinality fears.</p>
-<p>Unbounded SQL-based Querying: We’ll show real-world examples of complex diagnostic queries (like using ASOF JOIN to correlate disparate Kubernetes events) that are impossible in traditional log-search tools.</p>
-<p>The Enabler - SysEx: How our custom, high-performance exporter made this firehose of wide-event data technically and financially viable, handling 20x the volume of OTel with 90% less CPU.</p>
-<p>Beyond Dashboards: How this approach allows us to use data science tools like Plotly and Jupyter directly on our observability data for deeper, more flexible analysis.</p>
-<p>Join us to see how treating observability as a data warehouse problem, powered by ClickHouse, gives you the speed and flexibility to answer any question about your systems, past or present.</p></p>
+                <p><p>Are your observability signals trapped in separate pillars? Logs in one place, metrics in another, both losing context? At ClickHouse, we faced this challenge at a massive scale. Our solution was to abandon the traditional model and embrace a new philosophy: store everything, aggregate nothing.
+This talk charts our journey to 100 PB and 500 trillion rows, centered on the concept of "wide events." Instead of shipping a simple log message and a separate, pre-aggregated metric, we store a single, context-rich event containing every possible dimension. This shift from three pillars to a single warehouse of high-cardinality telemetry was a game-changer.
+The key to this model is using ClickHouse itself as our observability backend. This unlocks unbounded query flexibility through full SQL. When an engineer asks "what's the p95 pod replacement time after termination?", we don't say "let me ship a new metric." We write a SQL query.
+This talk will cover:
+The Wide-Event Philosophy: Why logging rich, structured events is more powerful than juggling separate logs and metrics, and how it defeats cardinality fears.
+Unbounded SQL-based Querying: We’ll show real-world examples of complex diagnostic queries (like using ASOF JOIN to correlate disparate Kubernetes events) that are impossible in traditional log-search tools.
+The Enabler - SysEx: How our custom, high-performance exporter made this firehose of wide-event data technically and financially viable, handling 20x the volume of OTel with 90% less CPU.
+Beyond Dashboards: How this approach allows us to use data science tools like Plotly and Jupyter directly on our observability data for deeper, more flexible analysis.
+Join us to see how treating observability as a data warehouse problem, powered by ClickHouse, gives you the speed and flexibility to answer any question about your systems, past or present.</p></p>
               </div>
               <div class="desc p-2 p-lg-3">
                 <p></p>
