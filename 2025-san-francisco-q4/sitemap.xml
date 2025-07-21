@@ -6,25 +6,25 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
   <loc>https://www.sreday.com/</loc>
-  <lastmod>2025-07-21T06:40:22.378506+00:00</lastmod>
+  <lastmod>2025-07-21T06:41:20.448475+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Miko_Pawlikowski_SRE_Author_Keynote_The_Evolution_of_Ops</loc>
-  <lastmod>2025-07-21T06:40:22.378506+00:00</lastmod>
+  <lastmod>2025-07-21T06:41:20.448475+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Sureshkumar_Karuppuchamy_eBay_From_Dashboard_to_Defense_Automating_Resilience_at_Large_Scale</loc>
-  <lastmod>2025-07-21T06:40:22.378506+00:00</lastmod>
+  <lastmod>2025-07-21T06:41:20.448475+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Gangadharan_Venkataraman_Starbucks_Building_Bulletproof_ML_Inference_Platforms_SRE_Principles_for_Re</loc>
-  <lastmod>2025-07-21T06:40:22.378506+00:00</lastmod>
+  <lastmod>2025-07-21T06:41:20.448475+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
