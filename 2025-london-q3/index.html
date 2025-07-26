@@ -949,6 +949,29 @@
 
       <div class="col-6 col-lg-3 mb-4">
         <div class="card rounded">
+          <a href="#modal-speaker-37" data-bs-toggle="modal" data-bs-target="#modal-speaker-37"><img src="../speakers/Roman Khavronenko.png" class="card-img-top rounded-0" alt=""></a>
+          <div class="card-body">
+            <h5 class="card-title mb-2">Roman Khavronenko</h5>
+            <div class="card-text mb-3">
+              <div class="meta">VictoriaMetrics</div>
+            </div><!--//card-text-->
+            <a href="./Roman_Khavronenko_VictoriaMetrics_Aggregating_Metrics_InFlight_Challenges_and_Opportunities">Read more &rarr;</a>
+          </div><!--//card-->
+          <div class="card-footer text-muted">
+            <ul class="social-list list-inline mb-0">
+              
+              <li class="list-inline-item"><a  href="https://www.linkedin.com/in/roman-khavronenko-47b51a63/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+              
+              
+            </ul><!--//social-list-->
+          </div>
+        </div><!--//card-->
+      </div><!--//col-->
+
+      
+
+      <div class="col-6 col-lg-3 mb-4">
+        <div class="card rounded">
           <a href="#modal-speaker-15" data-bs-toggle="modal" data-bs-target="#modal-speaker-15"><img src="../speakers/Roosevelt Elias.png" class="card-img-top rounded-0" alt=""></a>
           <div class="card-body">
             <h5 class="card-title mb-2">Roosevelt Elias</h5>
@@ -2932,6 +2955,49 @@ Now he is working as a Developer Experience Engineer at Grafana Labs, building t
               </div>
               <div class="desc p-2 p-lg-3">
                 <p><p>I am a Specialist Solution Architect for Analytics at Amazon Web Services, specializing in Amazon OpenSearch Service. My role is to guide customers through essential concepts and design principles for optimal cloud-based analytics, search and GenAI deployments. When not architecting solutions, I enjoy discovering new destinations and exploring diverse culinary experiences.</p></p>
+              </div>
+          </div><!--//modal-body-->
+      </div><!--//modal-content-->
+  </div><!--//modal-dialog-->
+</div><!--//modal-->
+
+<!-- Modal Speaker 37 -->
+<div class="modal modal-speaker modal-speaker-37" id="modal-speaker-37" tabindex="-1" role="dialog" aria-labelledby="speaker-37-ModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 id="speaker-37-ModalLabel" class="modal-title sr-only"
+>Roman Khavronenko</h4>
+          </div>
+          <div class="modal-body p-0">
+              <div class="theme-bg-light p-5">
+                  <div class="row">
+                      <div class="col-12 col-md-auto text-center">
+                          <img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto" src="../speakers/Roman Khavronenko.png" alt="" />
+                      </div>
+
+                      <div class="col text-center text-md-start mx-auto">
+                          <h2 class="name mb-2">Roman Khavronenko</h2>
+                          <div class="meta mb-2">VictoriaMetrics</div>
+                          <ul class="social-list list-inline mb-0">
+                            
+                            <li class="list-inline-item"><a  href="https://www.linkedin.com/in/roman-khavronenko-47b51a63/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+                            
+                            
+                          </ul><!--//social-list-->
+                      </div><!--//col-->
+                  </div><!--//row-->
+              </div>
+              <div class="desc p-2 p-lg-3">
+                <p><p>One of the common practices for improving the query speed in Prometheus is to create recording rules for commonly used queries. While this usually works great, recording rules have a cost: The raw metrics still need to be stored in the Prometheus, even if we don't need them Recording rule need to be executed on interval basis, putting extra pressure on the Prometheus Adding a recording rule always means storing&amp;processing more data</p>
+<p>But what if we could do the pre-aggregation before metrics get into the Prometheus? Can we aggregate on scrape time? Or could clients do the aggregation before pushing data to Prometheus? At VictoriaMetrics we already started working on something we call Stream Aggregation. An ability for metrics collector to perform in-memory aggregations before forwarding data elsewhere (Prometheus including). It has many challenges related to time series nature of aggregated samples, network delays, horizontal scaling, etc. I'd like to share our experience with the community, as this may be a life-quality improving feature.</p></p>
+              </div>
+              <div class="desc p-2 p-lg-3">
+                <p></p>
+              </div>
+              <div class="desc p-2 p-lg-3">
+                <p><p>Roman is a software engineer with experience in distributed systems, databases, monitoring, and high-performance microservices. Roman's passion is open source and he's proud to have contributions to Prometheus, Grafana, and ClickHouse. Currently, Roman is working on the open source time series database and monitoring solution VictoriaMetrics.</p></p>
               </div>
           </div><!--//modal-body-->
       </div><!--//modal-content-->
