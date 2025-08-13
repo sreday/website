@@ -6,13 +6,19 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
   <loc>https://www.sreday.com/</loc>
-  <lastmod>2025-08-13T17:11:38.297903+00:00</lastmod>
+  <lastmod>2025-08-13T17:15:18.761584+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 
 <url>
-  <loc>https://www.sreday.com/Miko_Pawlikowski_SRE_Author</loc>
-  <lastmod>2025-08-13T17:11:38.297903+00:00</lastmod>
+  <loc>https://www.sreday.com/Hemant_Kamatg_Ford_Motor_Company_From_Blind_Spots_to_Brilliance_The_Evolving_Landscape_of_Observabil</loc>
+  <lastmod>2025-08-13T17:15:18.761584+00:00</lastmod>
+  <priority>0.75</priority>
+</url>
+
+<url>
+  <loc>https://www.sreday.com/Meiyappan_Kannappa_Ford_Motor_Company_Is_Your_AI_Agent_a_Black_Box_Heres_How_to_Open_It</loc>
+  <lastmod>2025-08-13T17:15:18.761584+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
