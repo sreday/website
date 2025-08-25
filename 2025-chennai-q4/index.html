@@ -476,6 +476,29 @@
 
       <div class="col-6 col-lg-3 mb-4">
         <div class="card rounded">
+          <a href="#modal-speaker-12" data-bs-toggle="modal" data-bs-target="#modal-speaker-12"><img src="../speakers/Mahesh Venkataraman.png" class="card-img-top rounded-0" alt=""></a>
+          <div class="card-body">
+            <h5 class="card-title mb-2">Mahesh Venkataraman</h5>
+            <div class="card-text mb-3">
+              <div class="meta"></div>
+            </div><!--//card-text-->
+            <a href="./Mahesh_Venkataraman_STAMPing_Out_Outages_Applying_MITs_STAMP_STPA_to_Resilience_Engineering_in_SRE">Read more &rarr;</a>
+          </div><!--//card-->
+          <div class="card-footer text-muted">
+            <ul class="social-list list-inline mb-0">
+              <li class="list-inline-item"><a  href="https://twitter.com/maheshv713"><i class="fab fa-twitter fa-fw"></i></a></li>
+              <li class="list-inline-item"><a  href="https://www.linkedin.com/in/maheshvenkataraman/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+              
+              
+            </ul><!--//social-list-->
+          </div>
+        </div><!--//card-->
+      </div><!--//col-->
+
+      
+
+      <div class="col-6 col-lg-3 mb-4">
+        <div class="card rounded">
           <a href="#modal-speaker-1" data-bs-toggle="modal" data-bs-target="#modal-speaker-1"><img src="../speakers/Meiyappan Kannappa.png" class="card-img-top rounded-0" alt=""></a>
           <div class="card-body">
             <h5 class="card-title mb-2">Meiyappan Kannappa</h5>
@@ -1256,6 +1279,66 @@ The talk emphasizes <strong>GitHub Actions as a single platform for CI/CD</stron
               <div class="desc p-2 p-lg-3">
                 <p><p><strong>Akshat Goel</strong> is a Software Engineer II at Zomato with over three years of experience in building scalable systems. He holds a Bachelor's degree in Computer Science from IIT Ropar (2018–2022) and has a strong background in backend development and distributed systems.</p>
 <p><strong>Nishant Sarraff</strong> is an SDE-1 at Zomato with over three years of experience in developing scalable software solutions. He earned his B.Tech in Computer Science from IIT Jodhpur (2018–2022) and has expertise in backend systems and performance optimization.</p></p>
+              </div>
+          </div><!--//modal-body-->
+      </div><!--//modal-content-->
+  </div><!--//modal-dialog-->
+</div><!--//modal-->
+
+<!-- Modal Speaker 12 -->
+<div class="modal modal-speaker modal-speaker-12" id="modal-speaker-12" tabindex="-1" role="dialog" aria-labelledby="speaker-12-ModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 id="speaker-12-ModalLabel" class="modal-title sr-only"
+>Mahesh Venkataraman</h4>
+          </div>
+          <div class="modal-body p-0">
+              <div class="theme-bg-light p-5">
+                  <div class="row">
+                      <div class="col-12 col-md-auto text-center">
+                          <img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto" src="../speakers/Mahesh Venkataraman.png" alt="" />
+                      </div>
+
+                      <div class="col text-center text-md-start mx-auto">
+                          <h2 class="name mb-2">Mahesh Venkataraman</h2>
+                          <div class="meta mb-2"></div>
+                          <ul class="social-list list-inline mb-0">
+                            <li class="list-inline-item"><a  href="https://twitter.com/maheshv713"><i class="fab fa-twitter fa-fw"></i></a></li>
+                            <li class="list-inline-item"><a  href="https://www.linkedin.com/in/maheshvenkataraman/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+                            
+                            
+                          </ul><!--//social-list-->
+                      </div><!--//col-->
+                  </div><!--//row-->
+              </div>
+              <div class="desc p-2 p-lg-3">
+                <p><p>```markdown
+Why should SREs care about systems thinking applied in aviation safety engineering?  </p>
+<p>Modern distributed systems face the same challenges as complex safety-critical systems: emergent failures, cascading outages, and the gap between system design and runtime behavior. While traditional monitoring focuses on known failure modes, aviation safety engineering provides systematic approaches to identify unknown risks.  </p>
+<p>In this talk, you will learn how we applied MIT's <strong>System-Theoretic Process Analysis (STPA)</strong> — a methodology from aviation safety — to analyze reliability risks in a large-scale eCommerce platform processing millions of transactions daily.  </p>
+<p><strong>What you will learn:</strong><br />
+- How to map STPA concepts (hazards, constraints, control actions) to distributed systems components<br />
+- A systematic framework for identifying cascading failure scenarios before they occur<br />
+- Practical techniques for analyzing interactions between auto-scaling, load balancing, and circuit breakers<br />
+- How cascading failures were reduced using insights from this analysis<br />
+- Actionable methods you can apply to your own systems  </p>
+<p><strong>Real examples covered:</strong><br />
+- Circuit breaker coordination failures that created retry storms<br />
+- Auto-scaling feedback loops that amplified rather than dampened failures<br />
+- Security policy interactions that blocked legitimate traffic during incidents<br />
+- Configuration drift detection that prevented silent reliability degradation  </p>
+<p>This is not theoretical — we'll show concrete code examples, architecture diagrams, and actual incident data. You'll leave with a practical toolkit for systematic reliability analysis that goes beyond traditional SRE approaches.  </p>
+<p>Whether you are dealing with microservices, serverless architectures, or hybrid cloud deployments, this methodology will help you build and maintain more resilient systems by thinking systematically about failure modes and control structures.  </p>
+<p><strong>Perfect for:</strong> SREs, Platform Engineers, and Engineering Managers who want to move beyond reactive incident response to proactive reliability engineering.<br />
+```</p></p>
+              </div>
+              <div class="desc p-2 p-lg-3">
+                <p></p>
+              </div>
+              <div class="desc p-2 p-lg-3">
+                <p><p>Mahesh leads innovation in the area of application of artificial intelligence, data mining and machine learning in software engineering. He has led successful implementation of natural language processing driven test automation, usage and failure modeling using log analytics, empirical analysis of technical debt and application of knowledge graphs in discovering patterns and relationships for optimizing test suites and improve decision making for system integration projects. His passion is bridging the gap between theory and practice, between academia and industry and creative thinking in software. He is a regular keynote speaker in many conferences. He is currently working on addressing uncertainty in fault prognosis and diagnosis</p></p>
               </div>
           </div><!--//modal-body-->
       </div><!--//modal-content-->
