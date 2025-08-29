@@ -204,7 +204,7 @@
 				</div><!--//col-->
 				<div class="col-6 col-md-3">
 					<div class="item">
-						<div class="number">2</div>
+						<div class="number">6</div>
 						<div class="unit">Tracks</div>
 					</div><!--//item-->
 				</div><!--//col-->
@@ -224,22 +224,22 @@
 
 <section id="speakers-section" class="speakers-section section">
   <div class="container">
-    <h1 class="section-heading text-center mb-3">Building Bulletproof ML Inference Platforms: SRE Principles for Real-Time AI at Scale</h1>
+    <h1 class="section-heading text-center mb-3">Flexible Kubernetes Multitenancy with vCluster</h1>
     <div class="row">
 
       <div class="col-6 col-lg-3 mb-4">
         <div class="card rounded-0">
-          <img src="../speakers/Gangadharan Venkataraman.png" class="card-img-top rounded-0" alt="">
+          <img src="../speakers/Piotr Zaniewski.png" class="card-img-top rounded-0" alt="">
           <div class="card-body">
-            <h5 class="card-title mb-2">Gangadharan Venkataraman</h5>
+            <h5 class="card-title mb-2">Piotr Zaniewski</h5>
             <div class="card-text mb-3">
-              <div class="meta">Starbucks</div>
+              <div class="meta">vCluster Labs</div>
             </div><!--//card-text-->
           </div><!--//card-->
           <div class="card-footer text-muted">
             <ul class="social-list list-inline mb-0">
-              
-              <li class="list-inline-item"><a  href="https://www.linkedin.com/in/ganga5v/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+              <li class="list-inline-item"><a  href="https://twitter.com/Piotr1215"><i class="fab fa-twitter fa-fw"></i></a></li>
+              <li class="list-inline-item"><a  href="https://www.linkedin.com/in/piotr-zaniewski/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
               
               
             </ul><!--//social-list-->
@@ -252,13 +252,44 @@
           <div class="card-body">
 
               <div class="desc p-2 p-lg-3">
-                <p><p>Real-time machine learning inference platforms present unique SRE challenges that traditional monitoring and reliability practices often can't address. This talk provides a comprehensive framework for applying SRE principles to ML inference systems, drawing from hands-on experience scaling platforms that serve billions of daily predictions with sub-100ms latency requirements. We'll explore how to establish meaningful SLIs and SLOs for ML systems, where traditional availability metrics fall short in capturing model performance degradation, data drift, and inference quality issues. Learn practical approaches to incident response for ML platforms, including automated fallback mechanisms, circuit breakers for model failures, and graceful degradation strategies that maintain user experience during outages. The session covers essential reliability patterns including blue-green deployments for model updates, canary releases with statistical significance testing, and rollback strategies that account for model warming and feature pipeline dependencies. We'll examine monitoring and observability strategies that go beyond traditional metrics, incorporating model performance tracking, feature drift detection, and business impact correlation. Infrastructure reliability techniques will be demonstrated through real-world examples: implementing request batching for throughput optimization while maintaining latency SLAs, designing feature stores for consistency and disaster recovery, and orchestrating Kubernetes-based serving infrastructure with proper resource allocation and auto-scaling policies. Critical operational aspects include capacity planning for ML workloads with variable computational requirements, managing dependencies between feature generation pipelines and serving systems, and implementing effective on-call procedures for ML-specific incidents. Attendees will gain practical tools for building resilient ML inference platforms including monitoring dashboards, alerting strategies, and runbook templates. This session bridges the gap between traditional SRE practices and modern ML operations, providing actionable frameworks for maintaining reliable AI systems that deliver consistent business value while meeting stringent performance requirements.</p></p>
+                <p><p>In this session, we'll explore how to implement flexible multitenancy in Kubernetes using <strong>vCluster</strong>. You'll learn how to design platforms that can adapt to different isolation requirements, resource sharing needs, and trust models within a single cluster.</p>
+<p><strong>We'll explore:</strong></p>
+<ul>
+<li><strong>Multitenancy Spectrum</strong><br />
+  Understanding the three dimensions of multitenancy:  </li>
+<li><em>Isolation levels</em>: physical / logical / none  </li>
+<li><em>Resource sharing</em>: dedicated / pooled / shared  </li>
+<li>
+<p><em>Trust boundaries</em>: zero / partial / full  </p>
+</li>
+<li>
+<p><strong>Flexibility in Practice</strong><br />
+  How to mix and match different multitenancy models for different teams and workloads.</p>
+</li>
+<li>
+<p><strong>vCluster Deep Dive</strong><br />
+  How virtual clusters enable this flexibility while maintaining strong isolation boundaries.</p>
+</li>
+<li>
+<p><strong>Real-World Scenarios</strong><br />
+  Live demo showing how to implement different multitenancy patterns based on actual use cases.</p>
+</li>
+</ul>
+<p><strong>Key Takeaways</strong></p>
+<ul>
+<li>Understanding the multitenancy conceptual framework and its three core dimensions  </li>
+<li>Practical patterns for implementing flexible isolation strategies  </li>
+<li>How to choose the right multitenancy model for different team requirements  </li>
+<li>Hands-on experience with vCluster for creating adaptable multitenant environments</li>
+</ul>
+<p><strong>Why This Talk Matters</strong></p>
+<p>Most Kubernetes multitenancy discussions focus on a single approach — either namespace isolation or full cluster isolation. Real-world platforms need <strong>flexibility</strong> to accommodate different teams with varying security, resource, and trust requirements. This talk shows how to build platforms that can adapt to these diverse needs without compromising on security or operational efficiency.</p></p>
               </div>
               <div class="desc p-2 p-lg-3">
                 <p></p>
               </div>
               <div class="desc p-2 p-lg-3">
-                <p><p>Gangadharan Venkataraman is a highly accomplished technology leader based in Bellevue, Washington, with a strong record of envisioning, architecting, and delivering cutting-edge software and AI/ML solutions for leading global enterprises. With over 18 years of experience across diverse domains including e-commerce, telecommunications, healthcare, and enterprise technology, Gangadharan brings deep technical expertise and strategic leadership to every initiative. Currently serving as Senior Engineer - AI/ML Platform at Starbucks, he leads the design and optimization of large-scale machine learning infrastructure. He recently spearheaded the launch of ML Platform v2.0, drove the Databricks-to-Unity Catalog migration, and championed data governance enhancements, all to improve scalability, performance, and model reliability enterprise-wide. Previously, at UST Global (client: T-Mobile), Gangadharan led key modernization efforts, including Kubernetes-based Gen4 migrations and critical database upgrades for T-Mobile’s Customer Hub platform. Prior to that, he had a transformative 11+ year tenure at eBay, where as a Member of Technical Staff II, Core AI, he led the development of scalable ML infrastructure, real-time personalization pipelines, and video commerce platforms. His contributions powered over 30 billion daily inferences and $200M in annual GMV from event-triggered campaigns. Earlier roles at Computer Science Corporation and GE Healthcare saw him building resilient email platforms and clinical decision-support systems, with a strong focus on automation, compliance, and user-centric design. Gangadharan holds an M.S. in Computer Science from the Georgia Institute of Technology and a B.Tech in Information Technology from the University of Madras. His technical toolkit includes expertise in distributed systems, MLOps, big data pipelines, and cloud-native development using Java, Scala, Python, Kubernetes, and Azure. A recognized leader with a passion for innovation, Gangadharan thrives on solving complex problems, building high-performing teams, and delivering impactful products that scale.</p></p>
+                <p><p>An active contributor to OpenSource projects on GitHub, blogger and content creator, focusing on practical, scalable solutions in cloud-native environments. DevOps and Platform Engineering practitioner and advocate. Visit: cloudrumble.net</p></p>
               </div>
 
           </div><!--//card-->

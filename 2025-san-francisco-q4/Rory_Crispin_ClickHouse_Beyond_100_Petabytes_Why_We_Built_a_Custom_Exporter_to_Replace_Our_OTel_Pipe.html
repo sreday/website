@@ -224,22 +224,22 @@
 
 <section id="speakers-section" class="speakers-section section">
   <div class="container">
-    <h1 class="section-heading text-center mb-3">Keynote: What Observability Can Learn From BI: Decoupling for Speed, Scale, and Flexibility</h1>
+    <h1 class="section-heading text-center mb-3">Beyond 100 Petabytes: Why We Built a Custom Exporter to Replace Our OTel Pipeline</h1>
     <div class="row">
 
       <div class="col-6 col-lg-3 mb-4">
         <div class="card rounded-0">
-          <img src="../speakers/Peter Marshall.png" class="card-img-top rounded-0" alt="">
+          <img src="../speakers/Rory Crispin.png" class="card-img-top rounded-0" alt="">
           <div class="card-body">
-            <h5 class="card-title mb-2">Peter Marshall</h5>
+            <h5 class="card-title mb-2">Rory Crispin</h5>
             <div class="card-text mb-3">
-              <div class="meta">Imply</div>
+              <div class="meta">ClickHouse</div>
             </div><!--//card-text-->
           </div><!--//card-->
           <div class="card-footer text-muted">
             <ul class="social-list list-inline mb-0">
               
-              <li class="list-inline-item"><a  href="https://www.linkedin.com/in/petermarshallio/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+              <li class="list-inline-item"><a  href="https://www.linkedin.com/in/rory-crispin/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
               
               
             </ul><!--//social-list-->
@@ -252,15 +252,21 @@
           <div class="card-body">
 
               <div class="desc p-2 p-lg-3">
-                <p><p>Today’s observability platforms are often vertically integrated—binding data storage, query, and visualization layers into a single stack. This tight coupling drives up costs, makes integrations painful, and slows teams down. But it doesn’t have to be this way.
-In this talk, we’ll explore how SRE teams can benefit from a more modular approach to observability—one inspired by the evolution of Business Intelligence. Just as BI stacks evolved to separate ETL, data warehouses, and dashboards, observability stacks can be designed around clear boundaries: interoperable tools, technology-neutral query layers, and plug-and-play storage.
-You’ll learn why decoupled observability architecture is essential for cost control, agility, and tool flexibility—and how to move toward a stack that meets the real-world needs of today’s SRE teams.</p></p>
+                <p><p>Are your observability signals trapped in separate pillars? Logs in one place, metrics in another, both losing context? At ClickHouse, we faced this challenge at a massive scale. Our solution was to abandon the traditional model and embrace a new philosophy: store everything, aggregate nothing.
+This talk charts our journey to 100 PB and 500 trillion rows, centered on the concept of "wide events." Instead of shipping a simple log message and a separate, pre-aggregated metric, we store a single, context-rich event containing every possible dimension. This shift from three pillars to a single warehouse of high-cardinality telemetry was a game-changer.
+The key to this model is using ClickHouse itself as our observability backend. This unlocks unbounded query flexibility through full SQL. When an engineer asks "what's the p95 pod replacement time after termination?", we don't say "let me ship a new metric." We write a SQL query.
+This talk will cover:
+The Wide-Event Philosophy: Why logging rich, structured events is more powerful than juggling separate logs and metrics, and how it defeats cardinality fears.
+Unbounded SQL-based Querying: We’ll show real-world examples of complex diagnostic queries (like using ASOF JOIN to correlate disparate Kubernetes events) that are impossible in traditional log-search tools.
+The Enabler - SysEx: How our custom, high-performance exporter made this firehose of wide-event data technically and financially viable, handling 20x the volume of OTel with 90% less CPU.
+Beyond Dashboards: How this approach allows us to use data science tools like Plotly and Jupyter directly on our observability data for deeper, more flexible analysis.
+Join us to see how treating observability as a data warehouse problem, powered by ClickHouse, gives you the speed and flexibility to answer any question about your systems, past or present.</p></p>
               </div>
               <div class="desc p-2 p-lg-3">
                 <p></p>
               </div>
               <div class="desc p-2 p-lg-3">
-                <p><p>Peter Marshall is a technology leader and community builder with a background in developer relations, data architecture, and digital transformation. As Director of Developer Relations at Imply, he leads programs that grow and engage the global Apache Druid community through education, support, and events. With experience across startups, enterprises, and the public sector, Peter brings a blend of technical expertise and strategic vision to help organizations connect with developers and drive impact through open source.</p></p>
+                <p><p>Rory is a senior engineer on the observability team at ClickHouse, responsible for building and managing a 100+ petabyte observability platform. With over a decade of SRE experience, he focuses on monitoring ClickHouse Cloud, optimizing metrics pipelines and working with Grafana for visualization.</p></p>
               </div>
 
           </div><!--//card-->

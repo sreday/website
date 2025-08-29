@@ -204,7 +204,7 @@
 				</div><!--//col-->
 				<div class="col-6 col-md-3">
 					<div class="item">
-						<div class="number">2</div>
+						<div class="number">6</div>
 						<div class="unit">Tracks</div>
 					</div><!--//item-->
 				</div><!--//col-->
@@ -224,22 +224,22 @@
 
 <section id="speakers-section" class="speakers-section section">
   <div class="container">
-    <h1 class="section-heading text-center mb-3">Beyond 100 Petabytes: Why We Built a Custom Exporter to Replace Our OTel Pipeline</h1>
+    <h1 class="section-heading text-center mb-3">Echoes in the Core: Designing Resilient Platforms</h1>
     <div class="row">
 
       <div class="col-6 col-lg-3 mb-4">
         <div class="card rounded-0">
-          <img src="../speakers/Vlad Seliverstov.png" class="card-img-top rounded-0" alt="">
+          <img src="../speakers/Prithvi Raj.png" class="card-img-top rounded-0" alt="">
           <div class="card-body">
-            <h5 class="card-title mb-2">Vlad Seliverstov</h5>
+            <h5 class="card-title mb-2">Prithvi Raj</h5>
             <div class="card-text mb-3">
-              <div class="meta">ClickHouse</div>
+              <div class="meta">Mirantis</div>
             </div><!--//card-text-->
           </div><!--//card-->
           <div class="card-footer text-muted">
             <ul class="social-list list-inline mb-0">
               
-              <li class="list-inline-item"><a  href="https://www.linkedin.com/in/behemot/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+              <li class="list-inline-item"><a  href="https://www.linkedin.com/in/prithvi1307/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
               
               
             </ul><!--//social-list-->
@@ -252,13 +252,14 @@
           <div class="card-body">
 
               <div class="desc p-2 p-lg-3">
-                <p><p>Are your observability signals trapped in separate pillars? Logs in one place, metrics in another, both losing context? At ClickHouse, we faced this challenge at a massive scale. Our solution was to abandon the traditional model and embrace a new philosophy: store everything, aggregate nothing. This talk charts our journey to 100 PB and 500 trillion rows, centered on the concept of “wide events.” Instead of shipping a simple log message and a separate, pre-aggregated metric, we store a single, context-rich event containing every possible dimension. This shift from three pillars to a single warehouse of high-cardinality telemetry was a game-changer. The key to this model is using ClickHouse itself as our observability backend. This unlocks unbounded query flexibility through full SQL. When an engineer asks “what’s the p95 pod replacement time after termination?”, we don’t say “let me ship a new metric.” We write a SQL query.</p></p>
+                <p><p>In complex platform environments, incidents don’t always begin with loud failures, they start with subtle drifts, degraded assumptions, and silent breaks in mental models. This talk tells the story of a narrative-driven coordination system inspired by Resilience Engineering principles, and how we can build a more adaptive, human-aware internal platform. We’ll explore building distributed container systems using k0rdent and implementing a resilient infrastructure tackling surfaced weak signals, mapped operator intent, and supported resilient behaviors not just at runtime, but across platform workflows. Along the way, we’ll unpack real patterns from platform SRE practice: designing for graceful failure, enabling improvisation, and embedding recovery capacity into developer tools. Whether you’re building golden paths or operating shared infrastructure, this talk will show how narrative, adaptation, and feedback loops are key to resilient platforms and the teams who build them.</p></p>
               </div>
               <div class="desc p-2 p-lg-3">
                 <p></p>
               </div>
               <div class="desc p-2 p-lg-3">
-                <p><p>Vlad Seliverstov leads the internal observability team at ClickHouse, overseeing the monitoring of ClickHouse Cloud, which handles over 100 petabytes of data and 500 trillion events. With more than a decade of SRE experience at Datadog, Dropbox, and Facebook, Vlad now focuses on building and scaling ClickHouse’s in-house observability platform.</p></p>
+                <p><p>Prithvi Raj is a Community Manager &amp; Developer Advocate at Mirantis working with the Open Source Program Office team. He is a CNCF Ambassador with 5+ years of experience who helped scale a CNCF incubating project in LitmusChaos and runs the Platform &amp; Resilience Engineering Meetup group. He is an active member at SIG Project Reviews and is currently leading the community efforts for the k0s project, k0rdent, OpenSDN, and the other OSS initiatives Mirantis is contributing to.</p>
+<p>He is a co-organizer to KCD Bengaluru, and previously did Chaos Carnival, LitmusChaosCon and KCD Chennai. He was previously at Harness, ChaosNative, and MayaData.</p></p>
               </div>
 
           </div><!--//card-->
