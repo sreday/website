@@ -200,24 +200,24 @@
 
 <section id="speakers-section" class="speakers-section section">
   <div class="container">
-    <h1 class="section-heading text-center mb-3">STAMPing Out Outages: Applying MIT's STAMP/ STPA to Resilience Engineering in SRE</h1>
+    <h1 class="section-heading text-center mb-3">Mastering ECS at Scale: A Journey from Chaos to Control on 100% Spot Instances</h1>
     <div class="row">
 
       <div class="col-6 col-lg-3 mb-4">
         <div class="card rounded-0">
-          <img src="../speakers/Mahesh Venkataraman.png" class="card-img-top rounded-0" alt="">
+          <img src="../speakers/Sudip Chakraborty & Gaurav Chauhan.png" class="card-img-top rounded-0" alt="">
           <div class="card-body">
-            <h5 class="card-title mb-2">Mahesh Venkataraman</h5>
+            <h5 class="card-title mb-2">Sudip Chakraborty & Gaurav Chauhan</h5>
             <div class="card-text mb-3">
-              <div class="meta"></div>
+              <div class="meta">Zomato</div>
             </div><!--//card-text-->
           </div><!--//card-->
           <div class="card-footer text-muted">
             <ul class="social-list list-inline mb-0">
-              <li class="list-inline-item"><a  href="https://twitter.com/maheshv713"><i class="fab fa-twitter fa-fw"></i></a></li>
-              <li class="list-inline-item"><a  href="https://www.linkedin.com/in/maheshvenkataraman/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
               
+              <li class="list-inline-item"><a  href="https://www.linkedin.com/in/sudipchakraborty-iitkgp/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
               
+              <li class="list-inline-item"><a  href="https://www.linkedin.com/in/gaurav-chauhan-iit/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
             </ul><!--//social-list-->
           </div>
         </div><!--//card-->
@@ -228,31 +228,21 @@
           <div class="card-body">
 
               <div class="desc p-2 p-lg-3">
-                <p><p>```markdown
-Why should SREs care about systems thinking applied in aviation safety engineering?  </p>
-<p>Modern distributed systems face the same challenges as complex safety-critical systems: emergent failures, cascading outages, and the gap between system design and runtime behavior. While traditional monitoring focuses on known failure modes, aviation safety engineering provides systematic approaches to identify unknown risks.  </p>
-<p>In this talk, you will learn how we applied MIT's <strong>System-Theoretic Process Analysis (STPA)</strong> — a methodology from aviation safety — to analyze reliability risks in a large-scale eCommerce platform processing millions of transactions daily.  </p>
-<p><strong>What you will learn:</strong><br />
-- How to map STPA concepts (hazards, constraints, control actions) to distributed systems components<br />
-- A systematic framework for identifying cascading failure scenarios before they occur<br />
-- Practical techniques for analyzing interactions between auto-scaling, load balancing, and circuit breakers<br />
-- How cascading failures were reduced using insights from this analysis<br />
-- Actionable methods you can apply to your own systems  </p>
-<p><strong>Real examples covered:</strong><br />
-- Circuit breaker coordination failures that created retry storms<br />
-- Auto-scaling feedback loops that amplified rather than dampened failures<br />
-- Security policy interactions that blocked legitimate traffic during incidents<br />
-- Configuration drift detection that prevented silent reliability degradation  </p>
-<p>This is not theoretical — we'll show concrete code examples, architecture diagrams, and actual incident data. You'll leave with a practical toolkit for systematic reliability analysis that goes beyond traditional SRE approaches.  </p>
-<p>Whether you are dealing with microservices, serverless architectures, or hybrid cloud deployments, this methodology will help you build and maintain more resilient systems by thinking systematically about failure modes and control structures.  </p>
-<p><strong>Perfect for:</strong> SREs, Platform Engineers, and Engineering Managers who want to move beyond reactive incident response to proactive reliability engineering.<br />
-```</p></p>
+                <p><p>This is a story from the trenches of running one of India’s largest ECS fleets—serving millions of requests entirely on infrastructure that can disappear with just two minutes’ notice. We began with the “easy path” of a third-party managed solution, but as we scaled, it quickly became our biggest bottleneck and a massive cost center.  </p>
+<p>This session is our journey of taking back control. We’ll share the hard-earned lessons from hitting undocumented AWS limits, battling against opaque “black box” algorithms, and enduring production outages that forced us to innovate.  </p>
+<p><strong>You’ll learn how we:</strong><br />
+- Built custom controllers and predictive scaling<br />
+- Slashed instance boot times by 75% through EBS optimization<br />
+- Developed a “25-second miracle” shutdown process  </p>
+<p>All of this allowed us not just to survive—but to thrive—in the chaos of a 100% Spot environment, achieving <strong>99.99% uptime</strong> while cutting compute costs by <strong>60%</strong>.  </p>
+<p>This is how we transformed ECS from a simple orchestrator into a battle-hardened, intelligent platform.  </p></p>
               </div>
               <div class="desc p-2 p-lg-3">
                 <p></p>
               </div>
               <div class="desc p-2 p-lg-3">
-                <p><p>Mahesh leads innovation in the area of application of artificial intelligence, data mining and machine learning in software engineering. He has led successful implementation of natural language processing driven test automation, usage and failure modeling using log analytics, empirical analysis of technical debt and application of knowledge graphs in discovering patterns and relationships for optimizing test suites and improve decision making for system integration projects. His passion is bridging the gap between theory and practice, between academia and industry and creative thinking in software. He is a regular keynote speaker in many conferences. He is currently working on addressing uncertainty in fault prognosis and diagnosis</p></p>
+                <p><p><strong>Gaurav Chauhan</strong> is a Software Development Engineer at Zomato, with prior experience at Oracle, CRED, and Capital 2B. An alumnus of IIT Delhi, he has worked across backend systems, data science, and cloud infrastructure, and has held leadership roles driving large-scale initiatives.</p>
+<p><strong>Sudip Chakraborty</strong> is a Software Development Engineer at Zomato, working on the platform team with a focus on reliability, benchmarking, and large-scale microservice optimizations. Over the past three years at Zomato, he has contributed to ML Ops, backend systems, and platform engineering, leveraging technologies like Golang, Kubernetes, Terraform, and Kafka.</p></p>
               </div>
 
           </div><!--//card-->

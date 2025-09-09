@@ -200,24 +200,24 @@
 
 <section id="speakers-section" class="speakers-section section">
   <div class="container">
-    <h1 class="section-heading text-center mb-3">Kubernetes Under Siege: How Network Policies Defend Your Cluster</h1>
+    <h1 class="section-heading text-center mb-3">Take Control of Your Runners: Architecting a 10× Cheaper, High‐Performance CI/CD Orchestrator</h1>
     <div class="row">
 
       <div class="col-6 col-lg-3 mb-4">
         <div class="card rounded-0">
-          <img src="../speakers/Sanket Bisne.png" class="card-img-top rounded-0" alt="">
+          <img src="../speakers/Akshat Goel & Nishant Sarraff.png" class="card-img-top rounded-0" alt="">
           <div class="card-body">
-            <h5 class="card-title mb-2">Sanket Bisne</h5>
+            <h5 class="card-title mb-2">Akshat Goel & Nishant Sarraff</h5>
             <div class="card-text mb-3">
-              <div class="meta"></div>
+              <div class="meta">Zomato</div>
             </div><!--//card-text-->
           </div><!--//card-->
           <div class="card-footer text-muted">
             <ul class="social-list list-inline mb-0">
-              <li class="list-inline-item"><a  href="https://twitter.com/sanketbisne1"><i class="fab fa-twitter fa-fw"></i></a></li>
-              <li class="list-inline-item"><a  href="https://www.linkedin.com/in/sanketbisne/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
               
+              <li class="list-inline-item"><a  href="https://www.linkedin.com/in/akshat-goel-a176641b4/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
               
+              <li class="list-inline-item"><a  href="https://www.linkedin.com/in/nishant-sarraff-0602a21ab/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
             </ul><!--//social-list-->
           </div>
         </div><!--//card-->
@@ -228,15 +228,77 @@
           <div class="card-body">
 
               <div class="desc p-2 p-lg-3">
-                <p><p>This session is for SREs, DevOps engineers, and platform teams who want to strengthen Kubernetes security at the network layer. While cloud providers offer firewalls and service meshes, the last line of defense inside the cluster is Network Policies.</p>
-<p>The talk balances concepts + live demos and provides a clear journey: starting from the “default open cluster,” then step-by-step applying Network Policies to enforce strict communication.</p>
-<p>I will use Calico on GKE to illustrate examples, but the learnings apply to any Kubernetes distribution. The session ensures attendees leave with concrete policies they can apply to their workloads.</p></p>
+                <p><p>What We’ll Cover</p>
+<ul>
+<li><strong>Massive Scale Orchestration</strong></li>
+<li>Executing <strong>1M+ CI/CD jobs every month</strong> across <strong>600+ repositories</strong> in multiple GitHub organizations.</li>
+<li>Each workflow run triggers comprehensive validations, combining <strong>open‐source tools</strong> and <strong>in‐house linters</strong>.</li>
+<li>
+<p>Build-intensive repositories consuming <strong>60–70 CPU cores per run</strong>, showcasing CI/CD performance at extraordinary scale and speed.</p>
+</li>
+<li>
+<p><strong>Solving Critical Edge Cases</strong></p>
+</li>
+<li>Managing <strong>spot instance terminations</strong> seamlessly.</li>
+<li>Mitigating <strong>GitHub API throttling</strong> through <strong>dedicated Apps and bots</strong>.</li>
+<li>
+<p>Fortifying orchestration against cascading failures caused by unpredictable <strong>GitHub service outages</strong>.</p>
+</li>
+<li>
+<p><strong>Cost Optimization</strong></p>
+</li>
+<li>Running CI/CD at <strong>up to 10x lower cost</strong> compared to GitHub-hosted runners.</li>
+<li>Leveraging a mix of <strong>spot and on-demand machines</strong> with <strong>smart bin-packing</strong>.</li>
+<li>
+<p>Implementing <strong>intelligent workflow filters</strong> to eliminate unnecessary runs and maximize efficiency.</p>
+</li>
+<li>
+<p><strong>Performance Enhancements</strong></p>
+</li>
+<li>
+<p>Leveraging <strong>caching of packages and builds</strong> to speed up performance and reduce redundant work across workflows.</p>
+</li>
+<li>
+<p><strong>Operational Standards</strong></p>
+</li>
+<li>Rolling out changes across multiple environments with <strong>robust standards</strong>, ensuring stability and reliability.</li>
+</ul>
+<p>Key Takeaways</p>
+<p>For Engineers and Operators:
+- <strong>Scalable Infrastructure</strong><br />
+  Design <strong>ephemeral ECS-based self-hosted runners</strong> that handle massive CI/CD workloads effortlessly.</p>
+<ul>
+<li>
+<p><strong>Cost &amp; Performance Optimization</strong><br />
+  Unlock strategies to <strong>reduce costs</strong> and <strong>maximize efficiency</strong> with self-hosted runners.</p>
+</li>
+<li>
+<p><strong>Accelerated Job Runtimes</strong><br />
+  Improve <strong>provisioning speed</strong> and leverage <strong>caching</strong> for faster workflows.</p>
+</li>
+<li>
+<p><strong>Automation &amp; Standardization</strong><br />
+  Enforce <strong>linters</strong> and automate <strong>standards across repositories</strong>.</p>
+</li>
+<li>
+<p><strong>End-to-End Deployment Cycle</strong><br />
+  Build deployment workflows with <strong>safeguards</strong>, <strong>visibility</strong>, and <strong>approval gates</strong>.</p>
+</li>
+<li>
+<p><strong>Advanced Reliability Features</strong><br />
+  Implement automation to enhance reliability during deployments while reducing human intervention.</p>
+</li>
+</ul>
+<p>GitHub Actions as a Unified Platform
+The talk emphasizes <strong>GitHub Actions as a single platform for CI/CD</strong>, streamlining workflows, improving developer experience, and eliminating the need for multiple tools.</p>
+<p>By sharing <strong>Zomato’s journey</strong>, we aim to <strong>inspire practitioners</strong> to rethink and enhance their own CI/CD setups—making them more <strong>resilient</strong>, <strong>efficient</strong>, and <strong>developer-focused</strong>.</p></p>
               </div>
               <div class="desc p-2 p-lg-3">
                 <p></p>
               </div>
               <div class="desc p-2 p-lg-3">
-                <p><p>Sanket is a working as a Sr Devops Engineer at Lloyds Banking Group and He is a Google Developer Expert in GCP. He has worked as a cloud engineer at Searce (GCP Premium Partner) He is Google Cloud Champion Innovator in the category of Modern Architecture with Certified Kubernetes Administration (CKA) , 3X Certified in GCP and 1X in Azure . He has been helping small and mid sized startups to adopt and implement best practices in cloud and DevOps culture to fasten their software delivery process. He loves to integrate various GCP service like Vertex AI, Agents Development Kit, MCP servers,networking, compute, storage , containers, GKE etc, and likes to Implement various use cases. He loves to explore and deep dive into GCP services and also help community by creating content and writing medium blogs.</p></p>
+                <p><p><strong>Akshat Goel</strong> is a Software Engineer II at Zomato with over three years of experience in building scalable systems. He holds a Bachelor's degree in Computer Science from IIT Ropar (2018–2022) and has a strong background in backend development and distributed systems.</p>
+<p><strong>Nishant Sarraff</strong> is an SDE-2 at Zomato with over three years of experience in developing scalable software solutions. He earned his B.Tech in Computer Science from IIT Jodhpur (2018–2022) and has expertise in backend systems and performance optimization.</p></p>
               </div>
 
           </div><!--//card-->

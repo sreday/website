@@ -200,22 +200,22 @@
 
 <section id="speakers-section" class="speakers-section section">
   <div class="container">
-    <h1 class="section-heading text-center mb-3">Seeing the Unseen: Observability with OTel</h1>
+    <h1 class="section-heading text-center mb-3">Tracing under the hood: Inspecting Kubernetes cluster with Inspektor Gadget</h1>
     <div class="row">
 
       <div class="col-6 col-lg-3 mb-4">
         <div class="card rounded-0">
-          <img src="../speakers/Bikram Debnath.png" class="card-img-top rounded-0" alt="">
+          <img src="../speakers/Soham Chakraborty.png" class="card-img-top rounded-0" alt="">
           <div class="card-body">
-            <h5 class="card-title mb-2">Bikram Debnath</h5>
+            <h5 class="card-title mb-2">Soham Chakraborty</h5>
             <div class="card-text mb-3">
-              <div class="meta"></div>
+              <div class="meta">Sematext</div>
             </div><!--//card-text-->
           </div><!--//card-->
           <div class="card-footer text-muted">
             <ul class="social-list list-inline mb-0">
               
-              <li class="list-inline-item"><a  href="https://www.linkedin.com/in/debnathbikram/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+              <li class="list-inline-item"><a  href="https://www.linkedin.com/in/soham-chakraborty-31136514/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
               
               
             </ul><!--//social-list-->
@@ -228,15 +228,35 @@
           <div class="card-body">
 
               <div class="desc p-2 p-lg-3">
-                <p><p>In modern applications, observability is essential. OpenTelemetry (OTel) has emerged as the standard for telemetry data, providing a unified way to collect, process, and export logs, metrics, and traces. Beyond data collection, organizations need effective ways to store, analyze, and visualize this telemetry to drive actionable insights.</p>
-<p>This session is for developers looking to deepen their understanding of OpenTelemetry's architecture and its three key pillars: logs, metrics, and traces. We will walk through how OTel fits into an observability stack, the benefits it brings, and common integration patterns. A small demonstration will showcase how telemetry data can be captured and visualized in practice.</p>
-<p>Audience Takeaway: A clear understanding of OpenTelemetry’s core components, how it supports observability across modern applications, and hands-on insights through a live demo.</p></p>
+                <p><ul>
+<li><strong>Debugging Kubernetes workloads</strong> across ephemeral pods, nodes, and services is not straightforward, especially in real time.</li>
+<li><strong>Traditional observability tools</strong> provide high-level metrics, but lack the <strong>depth and immediacy</strong> needed to find root causes of elusive, low-level issues.</li>
+<li>This is where <strong>eBPF</strong> and <strong>Inspektor Gadget</strong> excel.</li>
+<li><a href="https://github.com/inspektor-gadget/inspektor-gadget"><strong>Inspektor Gadget</strong></a> leverages <strong>eBPF</strong> to dynamically instrument the Linux kernel, providing:</li>
+<li>Real-time insights into what’s happening inside a Kubernetes cluster</li>
+<li><strong>No need to install agents</strong></li>
+<li>The talk will cover how to use different gadgets from the <strong>Inspektor Gadget toolkit</strong> to observe:</li>
+<li>TCP connections made by a pod</li>
+<li>DNS requests</li>
+<li>POSIX signals</li>
+<li>Syscalls</li>
+<li>Files opened by a pod</li>
+<li><code>traceloop</code> — a flight recorder for syscalls</li>
+<li>And more</li>
+<li><strong>Structure of the talk:</strong></li>
+<li>Introduction to eBPF</li>
+<li>Overview of the Inspektor Gadget suite</li>
+<li>Live demos of different gadgets in action</li>
+<li>Key takeaways for the audience:</li>
+<li>How to simplify debugging difficult Kubernetes issues with Inspektor Gadget</li>
+<li>How to capture output in a <strong>user-friendly format</strong> for later parsing</li>
+</ul></p>
               </div>
               <div class="desc p-2 p-lg-3">
                 <p></p>
               </div>
               <div class="desc p-2 p-lg-3">
-                <p><p>Advisory Software Engineer at IBM Labs with a passion for Observability, APM, IoT, and Automotive solutions. A 3x Patent Holder and innovator in telemetry and distributed systems, specializing in Microservices, Kubernetes, and Cloud technologies. Expert in Java, Kafka, MongoDB, ElasticSearch, and Cassandra. Committed to building scalable, high-performance solutions that drive real-time insights and enhance system reliability.</p></p>
+                <p><p>I am a senior SRE at Sematext, where I am responsible for entire AWS/Kubernetes infrastructure that is used by hunderds of customers worldwide. We self host almost everything that we run, including Kubernetes. I love to solve challenging infrastructure problems with a focus on automation and reliability. I have spoken in several conferences, like DevopsDays, Cfgmgmtcamp before, including local meetups.</p></p>
               </div>
 
           </div><!--//card-->
