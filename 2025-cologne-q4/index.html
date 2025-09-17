@@ -535,6 +535,24 @@
           <div class="meta">
             <h4 class="time mb-3">15:30</h4>
             <div class="profile">
+              <a href="#modal-speaker-8" data-bs-toggle="modal" data-bs-target="#modal-speaker-8"><img class="profile-image rounded-circle  mb-2" src="../speakers/Ricard Bejarano.png" alt=""></a>
+              <div class="name"><a class="theme-link" href="#modal-speaker-8" data-bs-toggle="modal" data-bs-target="#modal-speaker-8">Ricard Bejarano</a></div>
+            </div><!--//profile-->
+          </div><!--//meta-->
+          <div class="content">
+            <h3 class="title mb-3">
+              <a class="theme-link" href="#modal-speaker-8" data-bs-toggle="modal" data-bs-target="#modal-speaker-8">Speeding up Terraform caching with OverlayFS</a>
+            </h3>
+            <div class="location mb-3"></i>Cisco</div>
+            <div class="desc">The Terraform plugin cache, unfortunately, does not support concurrent Terraform inits. This is a massive efficiency and performance loss for those who use Terraform at a big enough scale, since we're left with the following choices: - (A) Disable caching, and download gigabytes of providers off...<br /><br /></div>
+          </div><!--//content-->
+        </div><!--//item-->
+
+
+        <div class="item item-talk">
+          <div class="meta">
+            <h4 class="time mb-3">16:00</h4>
+            <div class="profile">
               <a href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"><img class="profile-image rounded-circle  mb-2" src="" alt=""></a>
               <div class="name"><a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"></a></div>
             </div><!--//profile-->
@@ -722,6 +740,29 @@
             <ul class="social-list list-inline mb-0">
               <li class="list-inline-item"><a  href="https://twitter.com/rajatgupta712"><i class="fab fa-twitter fa-fw"></i></a></li>
               <li class="list-inline-item"><a  href="https://www.linkedin.com/in/rajatguptarg/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+              
+              
+            </ul><!--//social-list-->
+          </div>
+        </div><!--//card-->
+      </div><!--//col-->
+
+      
+
+      <div class="col-6 col-lg-3 mb-4">
+        <div class="card rounded">
+          <a href="#modal-speaker-8" data-bs-toggle="modal" data-bs-target="#modal-speaker-8"><img src="../speakers/Ricard Bejarano.png" class="card-img-top rounded-0" alt=""></a>
+          <div class="card-body">
+            <h5 class="card-title mb-2">Ricard Bejarano</h5>
+            <div class="card-text mb-3">
+              <div class="meta">Cisco</div>
+            </div><!--//card-text-->
+            <a href="./Ricard_Bejarano_Cisco_Speeding_up_Terraform_caching_with_OverlayFS">Read more &rarr;</a>
+          </div><!--//card-->
+          <div class="card-footer text-muted">
+            <ul class="social-list list-inline mb-0">
+              
+              <li class="list-inline-item"><a  href="https://www.linkedin.com/in/ricardbejarano/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
               
               
             </ul><!--//social-list-->
@@ -1110,6 +1151,54 @@
                 <p><p>Jose is the Product Lead for VictoriaMetrics Cloud. With a focus on Observability and Sustainability, his work has been deeply related to the OpenTelemetry project, distributed tracing and power monitoring projects.</p>
 <p>His expertise has been built from previous gigs as a Software Architect, Tech Lead and Product Owner in the Telecommunications industry, all the way from the software programming trenches where agile ways of working where a sound CI, testing and observability best practices have presented themselves as the main principles that drive every successful project.</p>
 <p>With a scientific background in Physics and a PhD in Computational Materials Engineering, curiosity, openness and a pragmatic view are always expected. Beyond the boardroom, he is a C++ enthusiast and a creative force: contributing symphonic touches as a keyboardist in metal bands, when he is not playing video games or lowering lap times at the simracing cockpit. He also loves to spend time teaching Physics to Vet students in the Complutense University of Madrid, as an Associate Professor.</p></p>
+              </div>
+          </div><!--//modal-body-->
+      </div><!--//modal-content-->
+  </div><!--//modal-dialog-->
+</div><!--//modal-->
+
+<!-- Modal Speaker 8 -->
+<div class="modal modal-speaker modal-speaker-8" id="modal-speaker-8" tabindex="-1" role="dialog" aria-labelledby="speaker-8-ModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 id="speaker-8-ModalLabel" class="modal-title sr-only"
+>Ricard Bejarano</h4>
+          </div>
+          <div class="modal-body p-0">
+              <div class="theme-bg-light p-5">
+                  <div class="row">
+                      <div class="col-12 col-md-auto text-center">
+                          <img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto" src="../speakers/Ricard Bejarano.png" alt="" />
+                      </div>
+
+                      <div class="col text-center text-md-start mx-auto">
+                          <h2 class="name mb-2">Ricard Bejarano</h2>
+                          <div class="meta mb-2">Cisco</div>
+                          <ul class="social-list list-inline mb-0">
+                            
+                            <li class="list-inline-item"><a  href="https://www.linkedin.com/in/ricardbejarano/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+                            
+                            
+                          </ul><!--//social-list-->
+                      </div><!--//col-->
+                  </div><!--//row-->
+              </div>
+              <div class="desc p-2 p-lg-3">
+                <p><p>The Terraform plugin cache, unfortunately, does not support concurrent Terraform inits. This is a massive efficiency and performance loss for those who use Terraform at a big enough scale, since we're left with the following choices: - (A) Disable caching, and download gigabytes of providers off the Terraform Registry on every single init. - (B) Serialize all terraform init runs so they can safely share the cache, reducing the Terraform pipeline's throughput (and infuriating developers, been there, done that).</p>
+<p>We didn't like our options here, so we got creative.</p>
+<p>One day, everything clicked: OverlayFS!</p>
+<p>OverlayFS is a Linux filesystem which combines the contents of multiple read-only directories and one writable layer on top, into a single volume, effectively implementing a sort of read-through cache within your filesystem. If you've ever used a live linux distribution, this is what those use. Containers use OverlayFS. CoreOS used OverlayFS to provide ephemeral /etc directories.</p>
+<p>You rarely see such a low-level tool this high up the stack, so what is doing here?</p>
+<p>We tweaked our workflow so that our plugin cache is mounted once per init using OverlayFS, which makes the centralized cache read-only (and thus, concurrent-safe) and gives Terraform a writable overlay where it can write whatever providers were missing. We then added a final, non-blocking step to feed back those new providers to the central cache (in a serial fashion using filesystem locking), effectively implementing a write-back cache.</p>
+<p>After testing it on the lab, we promoted it to our production pipeline. After a couple rounds of plans to fill up the cache, we saw stunning results. Plan times dropped by -61%. Our concurrent plan capacity 10x'd because we were no longer saturating both the network (pulling) and the disk (writing providers). And after all, we didn't add much complexity to the setup anyway. We're using long-standing, reliable, kernel tech (overlayfs and flock) to address a shortcoming of a higher level tool like Terraform.</p></p>
+              </div>
+              <div class="desc p-2 p-lg-3">
+                <p></p>
+              </div>
+              <div class="desc p-2 p-lg-3">
+                <p><p>Ricard is a Lead Site Reliability Engineer at Cisco ThousandEyes' SRE team. Ricard is responsible for the Terraform pipeline of 600+ developers, managing over 110k cloud resources.</p></p>
               </div>
           </div><!--//modal-body-->
       </div><!--//modal-content-->
