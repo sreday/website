@@ -6,73 +6,73 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
   <loc>https://www.sreday.com/</loc>
-  <lastmod>2025-11-04T20:11:37.244745+00:00</lastmod>
+  <lastmod>2025-11-04T20:22:07.057932+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Joao_Freitas_PagerDuty_Keynote_The_Rise_of_AIdriven_SRE</loc>
-  <lastmod>2025-11-04T20:11:37.244745+00:00</lastmod>
+  <lastmod>2025-11-04T20:22:07.057932+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Birol_Yildiz_ilert_Keynote_When_Incidents_Fix_Themselves_AI_SRE_in_action</loc>
-  <lastmod>2025-11-04T20:11:37.244745+00:00</lastmod>
+  <lastmod>2025-11-04T20:22:07.057932+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Diogo_Cebola__Andre_Bento_Mollie_Increase_observability__not_costs_controlling_telemetry_data_ingest</loc>
-  <lastmod>2025-11-04T20:11:37.244745+00:00</lastmod>
+  <lastmod>2025-11-04T20:22:07.057932+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Ricardo_Castro_FanDuel__Blip_Architecting_Resilient_Cloud_Native_Applications_A_Practical_Guide_to_D</loc>
-  <lastmod>2025-11-04T20:11:37.244745+00:00</lastmod>
+  <lastmod>2025-11-04T20:22:07.057932+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Jorge_Luis_Castro_Toribio_NTT_DATA_The_Great_SRE_Skills_Migration_Preparing_for_PostAutomation_Caree</loc>
-  <lastmod>2025-11-04T20:11:37.244745+00:00</lastmod>
+  <lastmod>2025-11-04T20:22:07.057932+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Yuri_Oliveira_Sa_OllyGarden_Beyond_Done_Strategies_for_Improving_OpenTelemetry_Instrumentation_Quali</loc>
-  <lastmod>2025-11-04T20:11:37.244745+00:00</lastmod>
+  <lastmod>2025-11-04T20:22:07.057932+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Rajat_Gupta_Paymenttools_Building_an_Actionable_Runbook_Platform</loc>
-  <lastmod>2025-11-04T20:11:37.244745+00:00</lastmod>
+  <lastmod>2025-11-04T20:22:07.057932+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Hakoub_Esfahani_Veritas_Technologies_Modular_Terraform__Unit_Testing__IaC__and_CICD</loc>
-  <lastmod>2025-11-04T20:11:37.244745+00:00</lastmod>
+  <lastmod>2025-11-04T20:22:07.057932+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Oscar_Manzano_Roche_Diagnostics_The_Augmented_SRE_Leader_Steering_HumanMachine_Synergy_in_the_Age_of</loc>
-  <lastmod>2025-11-04T20:11:37.244745+00:00</lastmod>
+  <lastmod>2025-11-04T20:22:07.057932+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Jake_Page_MetalBear_Get_More_Bang_for_Your_Error_Budgets_Buck_3_Ways_to_Extend_Reliability_Without_C</loc>
-  <lastmod>2025-11-04T20:11:37.244745+00:00</lastmod>
+  <lastmod>2025-11-04T20:22:07.057932+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Moustafa_Aboelnaga_SolarWinds_Ops_I_Broke_Production__A_Practical_Guide_to_Chaos_Engineering</loc>
-  <lastmod>2025-11-04T20:11:37.244745+00:00</lastmod>
+  <lastmod>2025-11-04T20:22:07.057932+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
