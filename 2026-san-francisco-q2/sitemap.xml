@@ -6,19 +6,25 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
   <loc>https://www.sreday.com/</loc>
-  <lastmod>2025-12-23T13:15:17.862550+00:00</lastmod>
+  <lastmod>2025-12-23T13:16:05.975214+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Miko_Pawlikowski_SRE_Author_Keynote_7_Deadly_Traps_ofSRE</loc>
-  <lastmod>2025-12-23T13:15:17.862550+00:00</lastmod>
+  <lastmod>2025-12-23T13:16:05.975214+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Nitish_Mane_Philo_AIDriven_Platform_Engineering_with_MCP</loc>
-  <lastmod>2025-12-23T13:15:17.862550+00:00</lastmod>
+  <lastmod>2025-12-23T13:16:05.975214+00:00</lastmod>
+  <priority>0.75</priority>
+</url>
+
+<url>
+  <loc>https://www.sreday.com/Priya_Ranjan_Sahoo_Oracle_SRE_in_a_Multicloud_World_Engineering_Reliability_Beyond_a_Single_Cloud</loc>
+  <lastmod>2025-12-23T13:16:05.975214+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
