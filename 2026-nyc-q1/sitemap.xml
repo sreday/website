@@ -6,79 +6,61 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
   <loc>https://www.sreday.com/</loc>
-  <lastmod>2026-01-05T18:16:05.011923+00:00</lastmod>
+  <lastmod>2026-01-05T22:05:17.474613+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 
 <url>
-  <loc>https://www.sreday.com/Miko_Pawlikowski_SRE_Author_Keynote_7_Deadly_Traps_ofSRE</loc>
-  <lastmod>2026-01-05T18:16:05.011923+00:00</lastmod>
+  <loc>https://www.sreday.com/Lior_Schejter_MAD_About_Software_Design__When_AI_Architects_Argue</loc>
+  <lastmod>2026-01-05T22:05:17.474613+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
-  <loc>https://www.sreday.com/Birol_Yildiz_ilert_Keynote_When_Incidents_Fix_Themselves_AI_SRE_in_action</loc>
-  <lastmod>2026-01-05T18:16:05.011923+00:00</lastmod>
+  <loc>https://www.sreday.com/Ben_Savage_Veritas_Automata_Exploring_the_Convergence_of_Machine_Learning__AI__and_CloudNative_Techn</loc>
+  <lastmod>2026-01-05T22:05:17.474613+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
-  <loc>https://www.sreday.com/Rob_Charlwood_Supercharged_Stranger_Teams_Keeping_Demogorgons_out_of_production</loc>
-  <lastmod>2026-01-05T18:16:05.011923+00:00</lastmod>
+  <loc>https://www.sreday.com/Tim_Spann_Snowflake_From_TrafficAI_to_GhostBreakers_Building_Stateful_AI_Agents_with_Cortex__OpenFlo</loc>
+  <lastmod>2026-01-05T22:05:17.474613+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
-  <loc>https://www.sreday.com/Mandi_Walls_PagerDuty_Reevaluating_PostIncident_Reviews</loc>
-  <lastmod>2026-01-05T18:16:05.011923+00:00</lastmod>
+  <loc>https://www.sreday.com/Surya_Appini_Meta_Building_NextGeneration_AI_Assistants_for_Wearables</loc>
+  <lastmod>2026-01-05T22:05:17.474613+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
-  <loc>https://www.sreday.com/Marcos_Novelli_Harispe_Ephemeral_Environments_as_a_Reliability_Strategy</loc>
-  <lastmod>2026-01-05T18:16:05.011923+00:00</lastmod>
+  <loc>https://www.sreday.com/Jeremy_Curcio_Fearless_Engineering_Better_Prompts_for_AI_Assisted_Development</loc>
+  <lastmod>2026-01-05T22:05:17.474613+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
-  <loc>https://www.sreday.com/Michael_Levan_soloio_Observing_AgenticMCP_Traffic__Keeping_Cost_Low</loc>
-  <lastmod>2026-01-05T18:16:05.011923+00:00</lastmod>
+  <loc>https://www.sreday.com/Karen_Zhou_Anthropic_Building_Evaluation_Systems_for_AI_Coding_Agents_at_Scale</loc>
+  <lastmod>2026-01-05T22:05:17.474613+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
-  <loc>https://www.sreday.com/Tal_Nordan_The_Full_Picture_Visualizing_Service_Fullness_to_Rethink_Saturation_Prevention</loc>
-  <lastmod>2026-01-05T18:16:05.011923+00:00</lastmod>
+  <loc>https://www.sreday.com/Suvendu_Mohanty_Amazon_FineTuning_LLMs_for_VoiceFirst_Consumer_Experiences</loc>
+  <lastmod>2026-01-05T22:05:17.474613+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
-  <loc>https://www.sreday.com/Leon_Adato_Cribl_Looking_back_at_a_lifetime_of_poor_tech_choices</loc>
-  <lastmod>2026-01-05T18:16:05.011923+00:00</lastmod>
+  <loc>https://www.sreday.com/Shantanu_Sharma_SVAM_International_Benchmarking_trust_Engineering_AI_safety_pipelines_for_financial_</loc>
+  <lastmod>2026-01-05T22:05:17.474613+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
-  <loc>https://www.sreday.com/Adna_Zujo_Lakisic_MetalBear_Honey__the_Audience_Broke_My_App_Reproduce__Fix_Live_in_Kubernetes_with_</loc>
-  <lastmod>2026-01-05T18:16:05.011923+00:00</lastmod>
-  <priority>0.75</priority>
-</url>
-
-<url>
-  <loc>https://www.sreday.com/Chinmay_Gaikwad_Harness_Coming_soon</loc>
-  <lastmod>2026-01-05T18:16:05.011923+00:00</lastmod>
-  <priority>0.75</priority>
-</url>
-
-<url>
-  <loc>https://www.sreday.com/Matt_Schillerstrom_Harness_Coming_soon</loc>
-  <lastmod>2026-01-05T18:16:05.011923+00:00</lastmod>
-  <priority>0.75</priority>
-</url>
-
-<url>
-  <loc>https://www.sreday.com/Dewan_Ahmed_Harness_Coming_soon</loc>
-  <lastmod>2026-01-05T18:16:05.011923+00:00</lastmod>
+  <loc>https://www.sreday.com/Alisson_Sol_Capital_One_The_way_to_Edge_AI</loc>
+  <lastmod>2026-01-05T22:05:17.474613+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
