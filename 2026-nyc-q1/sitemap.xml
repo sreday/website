@@ -6,79 +6,97 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
   <loc>https://www.sreday.com/</loc>
-  <lastmod>2026-01-08T10:53:58.229672+00:00</lastmod>
+  <lastmod>2026-01-08T11:04:52.081077+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 
 <url>
-  <loc>https://www.sreday.com/Birol_Yildiz_ilert_Keynote_When_Incidents_Fix_Themselves_AI_SRE_in_action</loc>
-  <lastmod>2026-01-08T10:53:58.229672+00:00</lastmod>
+  <loc>https://www.sreday.com/Chinmay_Gaikwad_Harness_Building_Enterpriseready_CICD_Pipelines_using_Agentic_AI</loc>
+  <lastmod>2026-01-08T11:04:52.081077+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
-  <loc>https://www.sreday.com/Rob_Charlwood_Supercharged_Stranger_Teams_Keeping_Demogorgons_out_of_production</loc>
-  <lastmod>2026-01-08T10:53:58.229672+00:00</lastmod>
+  <loc>https://www.sreday.com/Brandee_Sanders_Apromore_from_Salesforce_The_Alchemists_Guide_to_AI_Ops</loc>
+  <lastmod>2026-01-08T11:04:52.081077+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
-  <loc>https://www.sreday.com/Mandi_Walls_PagerDuty_Reevaluating_PostIncident_Reviews</loc>
-  <lastmod>2026-01-08T10:53:58.229672+00:00</lastmod>
+  <loc>https://www.sreday.com/Jessica_Garson_The_DevOps_of_Live_Coding</loc>
+  <lastmod>2026-01-08T11:04:52.081077+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
-  <loc>https://www.sreday.com/Marcos_Novelli_Harispe_Ephemeral_Environments_as_a_Reliability_Strategy</loc>
-  <lastmod>2026-01-08T10:53:58.229672+00:00</lastmod>
+  <loc>https://www.sreday.com/Josh_Lee_Altinity_DevOps_is_a_Foreign_Language_or_Why_There_Are_No_Junior_SREs</loc>
+  <lastmod>2026-01-08T11:04:52.081077+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
-  <loc>https://www.sreday.com/Michael_Levan_soloio_Observing_AgenticMCP_Traffic__Keeping_Cost_Low</loc>
-  <lastmod>2026-01-08T10:53:58.229672+00:00</lastmod>
+  <loc>https://www.sreday.com/Leon_Adato_Cribl_What_Tolkien_Taught_Me_About_Being_an_SRE</loc>
+  <lastmod>2026-01-08T11:04:52.081077+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
-  <loc>https://www.sreday.com/Tal_Nordan_The_Full_Picture_Visualizing_Service_Fullness_to_Rethink_Saturation_Prevention</loc>
-  <lastmod>2026-01-08T10:53:58.229672+00:00</lastmod>
+  <loc>https://www.sreday.com/Lenin_Algubelli_Cybersource_Frictionless_Retail_at_Scale_AI__Biometrics__and_the_DevOps_Behind_It</loc>
+  <lastmod>2026-01-08T11:04:52.081077+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
-  <loc>https://www.sreday.com/Syed_Usman_Ahmad_Grafana_Labs_Cloud_Native_or_Community_based__Utilizing_the_Power_of_Grafana_Plugin</loc>
-  <lastmod>2026-01-08T10:53:58.229672+00:00</lastmod>
+  <loc>https://www.sreday.com/Nishkarsh_Raj_StatusNeo_Q_the_Savings_How_We_Built_a_2MYear_FinOps_Platform_in_2_Weeks</loc>
+  <lastmod>2026-01-08T11:04:52.081077+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
-  <loc>https://www.sreday.com/Leon_Adato_Cribl_Looking_back_at_a_lifetime_of_poor_tech_choices</loc>
-  <lastmod>2026-01-08T10:53:58.229672+00:00</lastmod>
+  <loc>https://www.sreday.com/Birol_Yildiz_ilert_When_Incidents_Fix_Themselves_AI_SRE_in_action</loc>
+  <lastmod>2026-01-08T11:04:52.081077+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
-  <loc>https://www.sreday.com/Adna_Zujo_Lakisic_MetalBear_Honey__the_Audience_Broke_My_App_Reproduce__Fix_Live_in_Kubernetes_with_</loc>
-  <lastmod>2026-01-08T10:53:58.229672+00:00</lastmod>
+  <loc>https://www.sreday.com/Akash_Thakur_Cognizant_AI_Reliability_Engineering_AIRE_Building_Systems_We_Can_Actually_Trust</loc>
+  <lastmod>2026-01-08T11:04:52.081077+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
-  <loc>https://www.sreday.com/Chinmay_Gaikwad_Harness_Coming_soon</loc>
-  <lastmod>2026-01-08T10:53:58.229672+00:00</lastmod>
+  <loc>https://www.sreday.com/Adithya_Jakkaraju_HCLTech_Predicting_Outages_Before_They_Page_You</loc>
+  <lastmod>2026-01-08T11:04:52.081077+00:00</lastmod>
+  <priority>0.75</priority>
+</url>
+
+<url>
+  <loc>https://www.sreday.com/Avinash_Sabat_Synechron__UBS_One_Repo_to_Rule_Them_All_GitOps_Across_the_Realms_of_Dev__Staging__and</loc>
+  <lastmod>2026-01-08T11:04:52.081077+00:00</lastmod>
+  <priority>0.75</priority>
+</url>
+
+<url>
+  <loc>https://www.sreday.com/Mahender_Mangalasri_Cognizant_Slaying_Dragons__Goblins_Securing_the_Code_in_the_DevSecOps_Dungeon</loc>
+  <lastmod>2026-01-08T11:04:52.081077+00:00</lastmod>
+  <priority>0.75</priority>
+</url>
+
+<url>
+  <loc>https://www.sreday.com/Nandakishor_Koka_Disney_From_Semantic_Models_to_AI_Agents_Why_DevOps_Discipline_Matters</loc>
+  <lastmod>2026-01-08T11:04:52.081077+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Matt_Schillerstrom_Harness_Coming_soon</loc>
-  <lastmod>2026-01-08T10:53:58.229672+00:00</lastmod>
+  <lastmod>2026-01-08T11:04:52.081077+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Dewan_Ahmed_Harness_Coming_soon</loc>
-  <lastmod>2026-01-08T10:53:58.229672+00:00</lastmod>
+  <lastmod>2026-01-08T11:04:52.081077+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
