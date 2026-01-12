@@ -189,7 +189,7 @@
 				</div><!--//col-->
 				<div class="col-6 col-md-3">
 					<div class="item">
-						<div class="number">2</div>
+						<div class="number">6</div>
 						<div class="unit">Tracks</div>
 					</div><!--//item-->
 				</div><!--//col-->
@@ -209,22 +209,22 @@
 
 <section id="speakers-section" class="speakers-section section">
   <div class="container">
-    <h1 class="section-heading text-center mb-3">Coming soon</h1>
+    <h1 class="section-heading text-center mb-3">Aggregating Metrics In-Flight: Challenges and Opportunities</h1>
     <div class="row">
 
       <div class="col-6 col-lg-3 mb-4">
         <div class="card rounded-0">
-          <img src="../speakers/Grzegorz Warzecha.png" class="card-img-top rounded-0" alt="">
+          <img src="../speakers/Roman Khavronenko.png" class="card-img-top rounded-0" alt="">
           <div class="card-body">
-            <h5 class="card-title mb-2">Grzegorz Warzecha</h5>
+            <h5 class="card-title mb-2">Roman Khavronenko</h5>
             <div class="card-text mb-3">
-              <div class="meta">Genotic</div>
+              <div class="meta">VictoriaMetrics</div>
             </div><!--//card-text-->
           </div><!--//card-->
           <div class="card-footer text-muted">
             <ul class="social-list list-inline mb-0">
-              
-              <li class="list-inline-item"><a  href="https://www.linkedin.com/in/greg-warzecha/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+              <li class="list-inline-item"><a  href="https://twitter.com/hagen1778"><i class="fab fa-twitter fa-fw"></i></a></li>
+              <li class="list-inline-item"><a  href="https://www.linkedin.com/in/roman-khavronenko-47b51a63/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
               
               
             </ul><!--//social-list-->
@@ -237,13 +237,14 @@
           <div class="card-body">
 
               <div class="desc p-2 p-lg-3">
-                <p></p>
+                <p><p>One of the common practices for improving the query speed in Prometheus is to create recording rules for commonly used queries. While this usually works great, recording rules have a cost: The raw metrics still need to be stored in the Prometheus, even if we don't need them Recording rule need to be executed on interval basis, putting extra pressure on the Prometheus Adding a recording rule always means storing&amp;processing more data</p>
+<p>But what if we could do the pre-aggregation before metrics get into the Prometheus? Can we aggregate on scrape time? Or could clients do the aggregation before pushing data to Prometheus? At VictoriaMetrics we already started working on something we call Stream Aggregation. An ability for metrics collector to perform in-memory aggregations before forwarding data elsewhere (Prometheus including). It has many challenges related to time series nature of aggregated samples, network delays, horizontal scaling, etc. I'd like to share our experience with the community, as this may be a life-quality improving feature.</p></p>
               </div>
               <div class="desc p-2 p-lg-3">
                 <p></p>
               </div>
               <div class="desc p-2 p-lg-3">
-                <p><p>Grzegorz Warzecha is a founder and entrepreneur with deep experience building software platforms and technology driven organizations. He is the founder of User, a marketing automation platform created to replace fragmented, expensive tools with a single integrated solution for customer communication, data collection, and automation. He is also the founder of Genotic and previously founded CivilHub Foundation, a platform supporting bottom up social initiatives. Earlier in his career, he served as CEO of Expose Sp. z o.o., leading an IT focused training company delivering advanced technical education and consulting. Grzegorz has built and scaled organizations across the US and Europe, with a focus on practical products that solve real problems.</p></p>
+                <p><p>Roman is a software engineer with experience in distributed systems, databases, monitoring, and high-performance microservices. Roman's passion is open source and he's proud to have contributions to Prometheus, Grafana, and ClickHouse. Currently, Roman is working on the open source time series database and monitoring solution VictoriaMetrics.</p></p>
               </div>
 
           </div><!--//card-->
