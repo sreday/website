@@ -6,19 +6,19 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
   <loc>https://www.sreday.com/</loc>
-  <lastmod>2026-01-20T22:28:07.416961+00:00</lastmod>
+  <lastmod>2026-01-20T22:28:53.339598+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Miko_Pawlikowski_SRE_Author_Keynote_7_Deadly_Traps_ofSRE</loc>
-  <lastmod>2026-01-20T22:28:07.416961+00:00</lastmod>
+  <lastmod>2026-01-20T22:28:53.339598+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
 <url>
   <loc>https://www.sreday.com/Nishkarsh_Raj_StatusNeo_Q_the_Savings_How_We_Built_a_2MYear_FinOps_Platform_in_2_Weeks</loc>
-  <lastmod>2026-01-20T22:28:07.416961+00:00</lastmod>
+  <lastmod>2026-01-20T22:28:53.339598+00:00</lastmod>
   <priority>0.75</priority>
 </url>
 
