@@ -348,6 +348,29 @@
 
       <div class="col-6 col-lg-3 mb-4">
         <div class="card rounded">
+          <a href="#modal-speaker-1" data-bs-toggle="modal" data-bs-target="#modal-speaker-1"><img src="../speakers/Ben Hopp.png" class="card-img-top rounded-0" alt=""></a>
+          <div class="card-body">
+            <h5 class="card-title mb-2">Ben Hopp</h5>
+            <div class="card-text mb-3">
+              <div class="meta">Imply</div>
+            </div><!--//card-text-->
+            <a href="./Ben_Hopp_Imply_Keynote_Decoupling_Observability_for_Incident_Response_at_Scale">Read more &rarr;</a>
+          </div><!--//card-->
+          <div class="card-footer text-muted">
+            <ul class="social-list list-inline mb-0">
+              
+              <li class="list-inline-item"><a  href="https://www.linkedin.com/in/benhopp/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+              
+              
+            </ul><!--//social-list-->
+          </div>
+        </div><!--//card-->
+      </div><!--//col-->
+
+      
+
+      <div class="col-6 col-lg-3 mb-4">
+        <div class="card rounded">
           <a href="#modal-speaker-0" data-bs-toggle="modal" data-bs-target="#modal-speaker-0"><img src="../speakers/Miko Pawlikowski.png" class="card-img-top rounded-0" alt=""></a>
           <div class="card-body">
             <h5 class="card-title mb-2">Miko Pawlikowski</h5>
@@ -371,7 +394,7 @@
 
       <div class="col-6 col-lg-3 mb-4">
         <div class="card rounded">
-          <a href="#modal-speaker-1" data-bs-toggle="modal" data-bs-target="#modal-speaker-1"><img src="../speakers/Nishkarsh Raj.png" class="card-img-top rounded-0" alt=""></a>
+          <a href="#modal-speaker-2" data-bs-toggle="modal" data-bs-target="#modal-speaker-2"><img src="../speakers/Nishkarsh Raj.png" class="card-img-top rounded-0" alt=""></a>
           <div class="card-body">
             <h5 class="card-title mb-2">Nishkarsh Raj</h5>
             <div class="card-text mb-3">
@@ -460,13 +483,13 @@
 
 
 
-<!-- Modal Speaker 1 -->
-<div class="modal modal-speaker modal-speaker-1" id="modal-speaker-1" tabindex="-1" role="dialog" aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
+<!-- Modal Speaker 2 -->
+<div class="modal modal-speaker modal-speaker-2" id="modal-speaker-2" tabindex="-1" role="dialog" aria-labelledby="speaker-2-ModalLabel" aria-hidden="true">
   <div class="modal-dialog">
       <div class="modal-content">
           <div class="modal-header">
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
-              <h4 id="speaker-1-ModalLabel" class="modal-title sr-only"
+              <h4 id="speaker-2-ModalLabel" class="modal-title sr-only"
 >Nishkarsh Raj</h4>
           </div>
           <div class="modal-body p-0">
@@ -540,6 +563,51 @@
               </div>
               <div class="desc p-2 p-lg-3">
                 <p><p>Miko Pawlikowski is an SRE Author and a platform engineer at Quadrature. He has led large-scale infrastructure and SRE initiatives at Citadel and Bloomberg, with deep expertise in Kubernetes, cloud computing, and chaos engineering. Passionate about building resilient systems and communities, he brings together engineers worldwide through conferences and media projects.</p></p>
+              </div>
+          </div><!--//modal-body-->
+      </div><!--//modal-content-->
+  </div><!--//modal-dialog-->
+</div><!--//modal-->
+
+<!-- Modal Speaker 1 -->
+<div class="modal modal-speaker modal-speaker-1" id="modal-speaker-1" tabindex="-1" role="dialog" aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 id="speaker-1-ModalLabel" class="modal-title sr-only"
+>Ben Hopp</h4>
+          </div>
+          <div class="modal-body p-0">
+              <div class="theme-bg-light p-5">
+                  <div class="row">
+                      <div class="col-12 col-md-auto text-center">
+                          <img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto" src="../speakers/Ben Hopp.png" alt="" />
+                      </div>
+
+                      <div class="col text-center text-md-start mx-auto">
+                          <h2 class="name mb-2">Ben Hopp</h2>
+                          <div class="meta mb-2">Imply</div>
+                          <ul class="social-list list-inline mb-0">
+                            
+                            <li class="list-inline-item"><a  href="https://www.linkedin.com/in/benhopp/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+                            
+                            
+                          </ul><!--//social-list-->
+                      </div><!--//col-->
+                  </div><!--//row-->
+              </div>
+              <div class="desc p-2 p-lg-3">
+                <p><p>On-call incidents don’t fail because teams lack dashboards. They fail because observability systems slow down under real investigative load.</p>
+<p>As telemetry volumes grow and retention windows expand, SRE teams are being asked to run deeper, broader investigations—often under time pressure—on platforms that were designed for steady-state monitoring, not bursty incident response. Tightly coupled observability stacks bind storage, compute, and query together, forcing teams to overprovision infrastructure, limit retention, or accept degraded performance during incidents.</p>
+<p>In this talk, we’ll explore why decoupling observability architectures is becoming essential for SRE teams operating at scale. Using a real incident investigation workflow, we’ll break down how separating data storage, compute, and interaction layers allows teams to keep fast, reliable monitoring while elastically scaling investigations when incidents occur.</p>
+<p>We’ll connect these patterns to lessons learned in other data-intensive systems, but stay grounded in the day-to-day realities of on-call life: faster root cause analysis, fewer tradeoffs during incidents, and observability systems that hold up when you need them most.</p></p>
+              </div>
+              <div class="desc p-2 p-lg-3">
+                <p></p>
+              </div>
+              <div class="desc p-2 p-lg-3">
+                <p><p>Ben Hopp is an Architect at Imply, where he helps organizations decouple their observability stack with Imply Lumi. Based in Denver, Ben brings an extensive background in real-time data systems and observability, having worked on some of the world's largest data platforms. He specializes in helping teams break free from legacy observability stacks, enabling them to retain flexibility and control over their observability data while reducing costs and complexity.</p></p>
               </div>
           </div><!--//modal-body-->
       </div><!--//modal-content-->
