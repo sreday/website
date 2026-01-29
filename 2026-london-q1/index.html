@@ -330,1563 +330,2090 @@
 </section>
 
 
+<style>
+  /* Track navigation */
+  .track-nav {
+    padding: 0.75rem 0;
+    margin-bottom: 1.5rem;
+  }
+  .track-nav-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .track-nav-links {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .track-nav-links a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #098dcf;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+  }
+  .track-nav-links a:hover {
+    background: #0779b3;
+    color: white;
+  }
+  .view-toggle-link {
+    color: #098dcf;
+    text-decoration: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #098dcf;
+    border-radius: 4px;
+    transition: all 0.2s;
+  }
+  .view-toggle-link:hover {
+    background: #098dcf;
+    color: white;
+  }
+  .view-toggle-link.active {
+    background: #098dcf;
+    color: white;
+  }
+  /* Table view */
+  .schedule-table-view { display: none; }
+  .schedule-table-view.active { display: block; }
+  .schedule-timeline-view { display: block; }
+  .schedule-timeline-view.hidden { display: none; }
+  .schedule-grid-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-top: 1rem;
+    table-layout: fixed;
+  }
+  .schedule-grid-table th {
+    background: linear-gradient(135deg, #098dcf 0%, #0779b3 100%);
+    color: white;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  .schedule-grid-table th:first-child {
+    width: 60px;
+  }
+  .schedule-grid-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e5ecf4;
+    vertical-align: top;
+  }
+  .schedule-grid-table td.merged-cell {
+    text-align: center;
+    font-weight: 500;
+    color: #555;
+    background: #f8fbfd;
+  }
+  .schedule-grid-table .time-cell {
+    color: #098dcf;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .schedule-grid-table .talk-cell a {
+    color: #222;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .schedule-grid-table .talk-cell a:hover {
+    color: #098dcf;
+  }
+  .schedule-grid-table .speaker-info {
+    color: #444;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+  }
+  .schedule-grid-table .speaker-info .affiliation {
+    color: #666;
+  }
+  .schedule-meta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #333;
+  }
+  .schedule-meta-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.4rem 0.8rem;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  .schedule-meta-divider {
+    color: #ccc;
+    font-weight: 300;
+  }
+  /* Track section header */
+  .track-section-header {
+    background: linear-gradient(135deg, #098dcf 0%, #0779b3 100%);
+    color: white;
+    padding: 1rem 1.5rem;
+    margin: 2rem 0 0 0;
+    border-radius: 4px 4px 0 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+  .track-section-header:first-of-type {
+    margin-top: 0;
+  }
+
+</style>
+
 <section id="schedule" class="schedule-section section theme-bg-light">
   <div class="container">
-    <h2 class="section-heading text-center mb-5">Schedule</h2>
+    <h2 class="section-heading text-center mb-4">Schedule</h2>
 
+    <!-- Schedule meta info -->
+    <div class="schedule-meta">
+      <span class="schedule-meta-item">March 12, 2026</span>
+      <span class="schedule-meta-divider">•</span>
+      <span class="schedule-meta-item">3 parallel tracks</span>
+    </div>
 
 
     <h4 class="section-heading text-center mb-5">Day 1</h4>
 
-    
-    <!-- Nav tabs -->
-    <ul class="schedule-nav nav nav-pills nav-fill" id="myTab" role="tablist">
-
-    <!-- Grid view -->
-    <li class="nav-item me-2">
-      <a
-        id="tab-0-grid"
-        role="tab"
-        data-bs-toggle="tab"
-        class="nav-link active"
-        href="#tab-0-grid-content"
-        aria-controls="tab-grid-content"
-        aria-selected="true"
-      >
-        <span class="heading">all rooms</span>
-        <span class="meta">all tracks</span>
-      </a>
-    </li>
-
-    <!-- Track view -->
-
-      <li class="nav-item me-2">
-        <a
-          id="tab-0-1"
-          role="tab"
-          data-bs-toggle="tab"
-          class="nav-link "
-          href="#tab-0-1-content"
-          aria-controls="tab-1-content"
-          aria-selected="false"
-        >
-          <span class="heading">screen 1</span>
-          <span class="meta">1</span>
-        </a>
-      </li>
-
-      <li class="nav-item me-2">
-        <a
-          id="tab-0-2"
-          role="tab"
-          data-bs-toggle="tab"
-          class="nav-link "
-          href="#tab-0-2-content"
-          aria-controls="tab-2-content"
-          aria-selected="false"
-        >
-          <span class="heading">screen 2</span>
-          <span class="meta">2</span>
-        </a>
-      </li>
-
-      <li class="nav-item me-2">
-        <a
-          id="tab-0-3"
-          role="tab"
-          data-bs-toggle="tab"
-          class="nav-link "
-          href="#tab-0-3-content"
-          aria-controls="tab-3-content"
-          aria-selected="false"
-        >
-          <span class="heading">screen 3</span>
-          <span class="meta">3</span>
-        </a>
-      </li>
-
-    </ul>
-    
-    <!-- Tab panes -->
-    <div class="schedule-tab-content tab-content">
-    
-    <!-- Grid view -->
-      <div
-        id="tab-0-grid-content"
-        class="tab-pane active"
-        role="tabpanel"
-        aria-labelledby="tab-0-grid"
-      >
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">09:00</h4>
-          </div><!--//meta-->
-          <div class="content">
-
-            <h3 class="title mb-3">
-               
-              <a class="theme-link" href="#modal-speaker-0" data-bs-toggle="modal" data-bs-target="#modal-speaker-0">Keynote: I Was Promised a Beach: Why AI Hasn’t Taken Your Pager (Yet)</a>
-              <a
-                href="#modal-speaker-0"
-                class="theme-link"
-                data-bs-toggle="modal"
-                data-bs-target="#modal-speaker-0"
-              >Miko Pawlikowski</a>
-              
-            </h3>
-
-          </div><!--//content-->
-        </div><!--//item-->
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">09:30</h4>
-          </div><!--//meta-->
-          <div class="content">
-
-            <h3 class="title mb-3">
-               
-              <a class="theme-link" href="#modal-speaker-1" data-bs-toggle="modal" data-bs-target="#modal-speaker-1">Keynote: Decoupling Observability for Incident Response at Scale</a>
-              <a
-                href="#modal-speaker-1"
-                class="theme-link"
-                data-bs-toggle="modal"
-                data-bs-target="#modal-speaker-1"
-              >Peter Marshall</a>
-              
-            </h3>
-
-          </div><!--//content-->
-        </div><!--//item-->
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">10:00</h4>
-          </div><!--//meta-->
-          <div class="content">
-
-            <h3 class="title mb-3">
-               
-              <a class="theme-link" href="#modal-speaker-2" data-bs-toggle="modal" data-bs-target="#modal-speaker-2">Keynote: Secure by Default: Building Confidence in AI-Driven Delivery</a>
-              <a
-                href="#modal-speaker-2"
-                class="theme-link"
-                data-bs-toggle="modal"
-                data-bs-target="#modal-speaker-2"
-              >Dewan Ahmed</a>
-              
-            </h3>
-
-          </div><!--//content-->
-        </div><!--//item-->
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">10:30</h4>
-          </div><!--//meta-->
-          <div class="content">
-
-            <h3 class="title mb-3">
-               
-              <a class="theme-link" href="#modal-speaker-3" data-bs-toggle="modal" data-bs-target="#modal-speaker-3">Keynote: The Immune System for Software: Lessons from Biology</a>
-              <a
-                href="#modal-speaker-3"
-                class="theme-link"
-                data-bs-toggle="modal"
-                data-bs-target="#modal-speaker-3"
-              >Matt Henderson</a>
-              
-            </h3>
-
-          </div><!--//content-->
-        </div><!--//item-->
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">11:00</h4>
-          </div><!--//meta-->
-          <div class="content">
-
-            <h3 class="title mb-3">
-               
-              <a class="theme-link" href="#modal-speaker-4" data-bs-toggle="modal" data-bs-target="#modal-speaker-4">Keynote: When Incidents Fix Themselves: AI SRE in action</a>
-              <a
-                href="#modal-speaker-4"
-                class="theme-link"
-                data-bs-toggle="modal"
-                data-bs-target="#modal-speaker-4"
-              >Birol Yildiz</a>
-              
-            </h3>
-
-          </div><!--//content-->
-        </div><!--//item-->
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">11:30</h4>
-          </div><!--//meta-->
-          <div class="content">
-
-            <h3 class="title mb-3">
-               
-              <a class="theme-link" href="#modal-speaker-5" data-bs-toggle="modal" data-bs-target="#modal-speaker-5">Keynote: Coming soon!</a>
-              <a
-                href="#modal-speaker-5"
-                class="theme-link"
-                data-bs-toggle="modal"
-                data-bs-target="#modal-speaker-5"
-              >Tyler Hannan</a>
-              
-            </h3>
-
-          </div><!--//content-->
-        </div><!--//item-->
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">12:00</h4>
-          </div><!--//meta-->
-          <div class="content">
-
-            <h3 class="title mb-3">
-              
-              Lunch & networking
-              
-            </h3>
-
-          </div><!--//content-->
-        </div><!--//item-->
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">13:00</h4>
-          </div><!--//meta-->
-          <div class="content">
-
-            <h3 class="title mb-3">
-               
-              <a class="theme-link" href="#modal-speaker-6" data-bs-toggle="modal" data-bs-target="#modal-speaker-6">SRE and Data Management</a>
-              <a
-                href="#modal-speaker-6"
-                class="theme-link"
-                data-bs-toggle="modal"
-                data-bs-target="#modal-speaker-6"
-              >Deniz Yalcin & William Ravensbergen</a>
-              
-            </h3>
-
-            <h3 class="title mb-3">
-               
-              <a class="theme-link" href="#modal-speaker-19" data-bs-toggle="modal" data-bs-target="#modal-speaker-19">SRE Management is a Hard Job. That’s Why You Should Do It Like an Engineer.</a>
-              <a
-                href="#modal-speaker-19"
-                class="theme-link"
-                data-bs-toggle="modal"
-                data-bs-target="#modal-speaker-19"
-              >William Mendes</a>
-              
-            </h3>
-
-            <h3 class="title mb-3">
-               
-              <a class="theme-link" href="#modal-speaker-27" data-bs-toggle="modal" data-bs-target="#modal-speaker-27">Catch me if you Can</a>
-              <a
-                href="#modal-speaker-27"
-                class="theme-link"
-                data-bs-toggle="modal"
-                data-bs-target="#modal-speaker-27"
-              >Jagadeesh Devaraj</a>
-              
-            </h3>
-
-          </div><!--//content-->
-        </div><!--//item-->
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">13:30</h4>
-          </div><!--//meta-->
-          <div class="content">
-
-            <h3 class="title mb-3">
-               
-              <a class="theme-link" href="#modal-speaker-7" data-bs-toggle="modal" data-bs-target="#modal-speaker-7">Observability is a Team Sport!</a>
-              <a
-                href="#modal-speaker-7"
-                class="theme-link"
-                data-bs-toggle="modal"
-                data-bs-target="#modal-speaker-7"
-              >Adriana Villela</a>
-              
-            </h3>
-
-            <h3 class="title mb-3">
-               
-              <a class="theme-link" href="#modal-speaker-20" data-bs-toggle="modal" data-bs-target="#modal-speaker-20">Two Autoscalers Walk into a Cluster: KEDA & Karpenter on Day-2 Duty</a>
-              <a
-                href="#modal-speaker-20"
-                class="theme-link"
-                data-bs-toggle="modal"
-                data-bs-target="#modal-speaker-20"
-              >Christian Melendez</a>
-              
-            </h3>
-
-            <h3 class="title mb-3">
-               
-              <a class="theme-link" href="#modal-speaker-28" data-bs-toggle="modal" data-bs-target="#modal-speaker-28">Zero Infrastructure, Zero Phishing: Building a Serverless Security Framework on GCP</a>
-              <a
-                href="#modal-speaker-28"
-                class="theme-link"
-                data-bs-toggle="modal"
-                data-bs-target="#modal-speaker-28"
-              >Goran Minov</a>
-              
-            </h3>
-
-          </div><!--//content-->
-        </div><!--//item-->
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">14:00</h4>
-          </div><!--//meta-->
-          <div class="content">
-
-            <h3 class="title mb-3">
-               
-              <a class="theme-link" href="#modal-speaker-8" data-bs-toggle="modal" data-bs-target="#modal-speaker-8">Choose Your Weapon: The Performance Testing Arsenal</a>
-              <a
-                href="#modal-speaker-8"
-                class="theme-link"
-                data-bs-toggle="modal"
-                data-bs-target="#modal-speaker-8"
-              >Heather Thacker</a>
-              
-            </h3>
-
-            <h3 class="title mb-3">
-               
-              <a class="theme-link" href="#modal-speaker-21" data-bs-toggle="modal" data-bs-target="#modal-speaker-21">AISRE: It’s Time for AI Site Reliability Engineering</a>
-              <a
-                href="#modal-speaker-21"
-                class="theme-link"
-                data-bs-toggle="modal"
-                data-bs-target="#modal-speaker-21"
-              >Ehsan Khodadadi</a>
-              
-            </h3>
-
-            <h3 class="title mb-3">
-               
-              <a class="theme-link" href="#modal-speaker-29" data-bs-toggle="modal" data-bs-target="#modal-speaker-29">From Data to Diagnosis: Leveraging Observability for Application Success</a>
-              <a
-                href="#modal-speaker-29"
-                class="theme-link"
-                data-bs-toggle="modal"
-                data-bs-target="#modal-speaker-29"
-              >Israel Blancas</a>
-              
-            </h3>
-
-          </div><!--//content-->
-        </div><!--//item-->
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">14:30</h4>
-          </div><!--//meta-->
-          <div class="content">
-
-            <h3 class="title mb-3">
-               
-              <a class="theme-link" href="#modal-speaker-9" data-bs-toggle="modal" data-bs-target="#modal-speaker-9">From Learner to Leader: My Journey into SRE and Why Reliability Is a Culture, Not a Role</a>
-              <a
-                href="#modal-speaker-9"
-                class="theme-link"
-                data-bs-toggle="modal"
-                data-bs-target="#modal-speaker-9"
-              >Tasmia Niazi</a>
-              
-            </h3>
-
-            <h3 class="title mb-3">
-               
-              <a class="theme-link" href="#modal-speaker-22" data-bs-toggle="modal" data-bs-target="#modal-speaker-22">SRE for pricing systems in Wealth & Fintech: Data‑Driven Solutions.</a>
-              <a
-                href="#modal-speaker-22"
-                class="theme-link"
-                data-bs-toggle="modal"
-                data-bs-target="#modal-speaker-22"
-              >Yury Lysak</a>
-              
-            </h3>
-
-            <h3 class="title mb-3">
-               
-              <a class="theme-link" href="#modal-speaker-30" data-bs-toggle="modal" data-bs-target="#modal-speaker-30">Overcome Disasters Using Cyber Continuity</a>
-              <a
-                href="#modal-speaker-30"
-                class="theme-link"
-                data-bs-toggle="modal"
-                data-bs-target="#modal-speaker-30"
-              >Charles Weir</a>
-              
-            </h3>
-
-          </div><!--//content-->
-        </div><!--//item-->
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">15:00</h4>
-          </div><!--//meta-->
-          <div class="content">
-
-            <h3 class="title mb-3">
-               
-              <a class="theme-link" href="#modal-speaker-10" data-bs-toggle="modal" data-bs-target="#modal-speaker-10">Building a business case for AI SRE tools</a>
-              <a
-                href="#modal-speaker-10"
-                class="theme-link"
-                data-bs-toggle="modal"
-                data-bs-target="#modal-speaker-10"
-              >Kyle Forster</a>
-              
-            </h3>
-
-            <h3 class="title mb-3">
-               
-              <a class="theme-link" href="#modal-speaker-23" data-bs-toggle="modal" data-bs-target="#modal-speaker-23">MCP is the new REST: making MCP our new API</a>
-              <a
-                href="#modal-speaker-23"
-                class="theme-link"
-                data-bs-toggle="modal"
-                data-bs-target="#modal-speaker-23"
-              >Andy Kuszyk</a>
-              
-            </h3>
-
-            <h3 class="title mb-3">
-               
-              <a class="theme-link" href="#modal-speaker-31" data-bs-toggle="modal" data-bs-target="#modal-speaker-31">How AI is redefining SRE and Customer Experience</a>
-              <a
-                href="#modal-speaker-31"
-                class="theme-link"
-                data-bs-toggle="modal"
-                data-bs-target="#modal-speaker-31"
-              >Spiros Economakis</a>
-              
-            </h3>
-
-          </div><!--//content-->
-        </div><!--//item-->
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">15:30</h4>
-          </div><!--//meta-->
-          <div class="content">
-
-            <h3 class="title mb-3">
-               
-              <a class="theme-link" href="#modal-speaker-11" data-bs-toggle="modal" data-bs-target="#modal-speaker-11">Stranger Teams: Keeping Demogorgons out of production</a>
-              <a
-                href="#modal-speaker-11"
-                class="theme-link"
-                data-bs-toggle="modal"
-                data-bs-target="#modal-speaker-11"
-              >Rob Charlwood</a>
-              
-            </h3>
-
-            <h3 class="title mb-3">
-               
-              <a class="theme-link" href="#modal-speaker-24" data-bs-toggle="modal" data-bs-target="#modal-speaker-24">Q the Savings: How We Built a $2M/Year FinOps Platform in 2 Weeks</a>
-              <a
-                href="#modal-speaker-24"
-                class="theme-link"
-                data-bs-toggle="modal"
-                data-bs-target="#modal-speaker-24"
-              >Nishkarsh Raj</a>
-              
-            </h3>
-
-            <h3 class="title mb-3">
-               
-              <a class="theme-link" href="#modal-speaker-32" data-bs-toggle="modal" data-bs-target="#modal-speaker-32">Zero-Downtime Updates: How to Evolve Fast Without Breaking Everything</a>
-              <a
-                href="#modal-speaker-32"
-                class="theme-link"
-                data-bs-toggle="modal"
-                data-bs-target="#modal-speaker-32"
-              >Ozan Kasikci</a>
-              
-            </h3>
-
-          </div><!--//content-->
-        </div><!--//item-->
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">16:00</h4>
-          </div><!--//meta-->
-          <div class="content">
-
-            <h3 class="title mb-3">
-               
-              <a class="theme-link" href="#modal-speaker-12" data-bs-toggle="modal" data-bs-target="#modal-speaker-12">Surviving the Dual-Write Problem in Distributed Systems</a>
-              <a
-                href="#modal-speaker-12"
-                class="theme-link"
-                data-bs-toggle="modal"
-                data-bs-target="#modal-speaker-12"
-              >Sohan Maheshwar</a>
-              
-            </h3>
-
-            <h3 class="title mb-3">
-               
-              <a class="theme-link" href="#modal-speaker-25" data-bs-toggle="modal" data-bs-target="#modal-speaker-25">From ransomware hostage to leader in digital government: the rebirth of Santo Domingo</a>
-              <a
-                href="#modal-speaker-25"
-                class="theme-link"
-                data-bs-toggle="modal"
-                data-bs-target="#modal-speaker-25"
-              >Juan Pablo Vidal Araya</a>
-              
-            </h3>
-
-            <h3 class="title mb-3">
-               
-              <a class="theme-link" href="#modal-speaker-33" data-bs-toggle="modal" data-bs-target="#modal-speaker-33">Beyond Terraform: Building Production Infrastructure with General-Purpose Languages</a>
-              <a
-                href="#modal-speaker-33"
-                class="theme-link"
-                data-bs-toggle="modal"
-                data-bs-target="#modal-speaker-33"
-              >Dmitrii Iniutin</a>
-              
-            </h3>
-
-          </div><!--//content-->
-        </div><!--//item-->
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">16:30</h4>
-          </div><!--//meta-->
-          <div class="content">
-
-            <h3 class="title mb-3">
-               
-              <a class="theme-link" href="#modal-speaker-13" data-bs-toggle="modal" data-bs-target="#modal-speaker-13">Honey, the Audience Broke My App: Reproduce & Fix Live in Kubernetes with mirrord</a>
-              <a
-                href="#modal-speaker-13"
-                class="theme-link"
-                data-bs-toggle="modal"
-                data-bs-target="#modal-speaker-13"
-              >Jake Page</a>
-              
-            </h3>
-
-            <h3 class="title mb-3">
-               
-              <a class="theme-link" href="#modal-speaker-26" data-bs-toggle="modal" data-bs-target="#modal-speaker-26">Reverse-Engineering PromQL Usage: A Proxy’s Tale</a>
-              <a
-                href="#modal-speaker-26"
-                class="theme-link"
-                data-bs-toggle="modal"
-                data-bs-target="#modal-speaker-26"
-              >Nicolas Takashi</a>
-              
-            </h3>
-
-            <h3 class="title mb-3">
-               
-              <a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-">Happy Hour by Imply -- grab a beer!</a>
-              <a
-                href="#modal-speaker-"
-                class="theme-link"
-                data-bs-toggle="modal"
-                data-bs-target="#modal-speaker-"
-              ></a>
-              
-            </h3>
-
-          </div><!--//content-->
-        </div><!--//item-->
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">17:00</h4>
-          </div><!--//meta-->
-          <div class="content">
-
-            <h3 class="title mb-3">
-              
-              Wrap up
-              
-            </h3>
-
-          </div><!--//content-->
-        </div><!--//item-->
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">17:30</h4>
-          </div><!--//meta-->
-          <div class="content">
-
-            <h3 class="title mb-3">
-               
-              <a class="theme-link" href="#modal-speaker-14" data-bs-toggle="modal" data-bs-target="#modal-speaker-14">Coming soon!</a>
-              <a
-                href="#modal-speaker-14"
-                class="theme-link"
-                data-bs-toggle="modal"
-                data-bs-target="#modal-speaker-14"
-              >_ClickHouse Meetup - After SREday</a>
-              
-            </h3>
-
-            <h3 class="title mb-3">
-               
-              <a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-">Wrap up</a>
-              <a
-                href="#modal-speaker-"
-                class="theme-link"
-                data-bs-toggle="modal"
-                data-bs-target="#modal-speaker-"
-              ></a>
-              
-            </h3>
-
-          </div><!--//content-->
-        </div><!--//item-->
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">18:00</h4>
-          </div><!--//meta-->
-          <div class="content">
-
-            <h3 class="title mb-3">
-               
-              <a class="theme-link" href="#modal-speaker-15" data-bs-toggle="modal" data-bs-target="#modal-speaker-15">Coming soon!</a>
-              <a
-                href="#modal-speaker-15"
-                class="theme-link"
-                data-bs-toggle="modal"
-                data-bs-target="#modal-speaker-15"
-              >_ClickHouse Meetup - After SREday</a>
-              
-            </h3>
-
-          </div><!--//content-->
-        </div><!--//item-->
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">18:30</h4>
-          </div><!--//meta-->
-          <div class="content">
-
-            <h3 class="title mb-3">
-               
-              <a class="theme-link" href="#modal-speaker-16" data-bs-toggle="modal" data-bs-target="#modal-speaker-16">Coming soon!</a>
-              <a
-                href="#modal-speaker-16"
-                class="theme-link"
-                data-bs-toggle="modal"
-                data-bs-target="#modal-speaker-16"
-              >_ClickHouse Meetup - After SREday</a>
-              
-            </h3>
-
-          </div><!--//content-->
-        </div><!--//item-->
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">19:00</h4>
-          </div><!--//meta-->
-          <div class="content">
-
-            <h3 class="title mb-3">
-               
-              <a class="theme-link" href="#modal-speaker-17" data-bs-toggle="modal" data-bs-target="#modal-speaker-17">Coming soon!</a>
-              <a
-                href="#modal-speaker-17"
-                class="theme-link"
-                data-bs-toggle="modal"
-                data-bs-target="#modal-speaker-17"
-              >_ClickHouse Meetup - After SREday</a>
-              
-            </h3>
-
-          </div><!--//content-->
-        </div><!--//item-->
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">19:30</h4>
-          </div><!--//meta-->
-          <div class="content">
-
-            <h3 class="title mb-3">
-               
-              <a class="theme-link" href="#modal-speaker-18" data-bs-toggle="modal" data-bs-target="#modal-speaker-18">Coming soon!</a>
-              <a
-                href="#modal-speaker-18"
-                class="theme-link"
-                data-bs-toggle="modal"
-                data-bs-target="#modal-speaker-18"
-              >_ClickHouse Meetup - After SREday</a>
-              
-            </h3>
-
-          </div><!--//content-->
-        </div><!--//item-->
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">20:00</h4>
-          </div><!--//meta-->
-          <div class="content">
-
-            <h3 class="title mb-3">
-              
-              Wrap up
-              
-            </h3>
-
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-      </div><!--//tab-1-content-->
-
-    <!-- Track view -->
-
-      <div
-        id="tab-0-1-content"
-        class="tab-pane"
-        role="tabpanel"
-        aria-labelledby="tab-0-1"
-      >
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">09:00</h4>
-            <div class="profile">
-              <a href="#modal-speaker-0" data-bs-toggle="modal" data-bs-target="#modal-speaker-0"><img class="profile-image rounded-circle  mb-2" src="../speakers/Miko Pawlikowski.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-0" data-bs-toggle="modal" data-bs-target="#modal-speaker-0">Miko Pawlikowski</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-0" data-bs-toggle="modal" data-bs-target="#modal-speaker-0">Keynote: I Was Promised a Beach: Why AI Hasn’t Taken Your Pager (Yet)</a>
-            </h3>
-            <div class="location mb-3"></i>SRE Author</div>
-            <div class="desc">By now, the algorithm was supposed to be fixing the outage. According to the hype, SREs should be obsolete, incident management should be fully autonomous, and we should all be collecting Universal Basic Income on a tropical island. But here we are. The pager is still loud, Kubernetes is still...<br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">09:30</h4>
-            <div class="profile">
-              <a href="#modal-speaker-1" data-bs-toggle="modal" data-bs-target="#modal-speaker-1"><img class="profile-image rounded-circle  mb-2" src="../speakers/Peter Marshall.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-1" data-bs-toggle="modal" data-bs-target="#modal-speaker-1">Peter Marshall</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-1" data-bs-toggle="modal" data-bs-target="#modal-speaker-1">Keynote: Decoupling Observability for Incident Response at Scale</a>
-            </h3>
-            <div class="location mb-3"></i>Imply</div>
-            <div class="desc">On-call incidents don’t fail because teams lack dashboards. They fail because observability systems slow down under real investigative load. As telemetry volumes grow and retention windows expand, SRE teams are being asked to run deeper, broader investigations—often under time pressure—on...<br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">10:00</h4>
-            <div class="profile">
-              <a href="#modal-speaker-2" data-bs-toggle="modal" data-bs-target="#modal-speaker-2"><img class="profile-image rounded-circle  mb-2" src="../speakers/Dewan Ahmed.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-2" data-bs-toggle="modal" data-bs-target="#modal-speaker-2">Dewan Ahmed</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-2" data-bs-toggle="modal" data-bs-target="#modal-speaker-2">Keynote: Secure by Default: Building Confidence in AI-Driven Delivery</a>
-            </h3>
-            <div class="location mb-3"></i>Harness</div>
-            <div class="desc">The fastest way to break trust in DevSecOps is to automate insecurity at scale. As AI takes a central role in our pipelines, it is time to rethink what "secure by default" really means. In this keynote, Dewan Ahmed will challenge the audience to look beyond vulnerability scanners and compliance...<br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">10:30</h4>
-            <div class="profile">
-              <a href="#modal-speaker-3" data-bs-toggle="modal" data-bs-target="#modal-speaker-3"><img class="profile-image rounded-circle  mb-2" src="../speakers/Matt Henderson.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-3" data-bs-toggle="modal" data-bs-target="#modal-speaker-3">Matt Henderson</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-3" data-bs-toggle="modal" data-bs-target="#modal-speaker-3">Keynote: The Immune System for Software: Lessons from Biology</a>
-            </h3>
-            <div class="location mb-3"></i>Phoebe</div>
-            <div class="desc">Most reliability work today is still centred on reactive troubleshooting: diagnosing a multitude of alerts, pulling large groups into incidents, and engineers scrambling to understand what’s happening. To truly change that pattern, we need systems that can predict and prevent failures before they...<br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">11:00</h4>
-            <div class="profile">
-              <a href="#modal-speaker-4" data-bs-toggle="modal" data-bs-target="#modal-speaker-4"><img class="profile-image rounded-circle  mb-2" src="../speakers/Birol Yildiz.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-4" data-bs-toggle="modal" data-bs-target="#modal-speaker-4">Birol Yildiz</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-4" data-bs-toggle="modal" data-bs-target="#modal-speaker-4">Keynote: When Incidents Fix Themselves: AI SRE in action</a>
-            </h3>
-            <div class="location mb-3"></i>ilert</div>
-            <div class="desc">The next evolution of incident response isn’t faster alerts, it’s autonomous resolution. Join ilert CEO Birol Yildiz as he shows how AI SRE agents now diagnose and remediate outages without waking anyone up. Learn how these systems combine observability data, deployment context, and code...<br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">11:30</h4>
-            <div class="profile">
-              <a href="#modal-speaker-5" data-bs-toggle="modal" data-bs-target="#modal-speaker-5"><img class="profile-image rounded-circle  mb-2" src="../speakers/Tyler Hannan.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-5" data-bs-toggle="modal" data-bs-target="#modal-speaker-5">Tyler Hannan</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-5" data-bs-toggle="modal" data-bs-target="#modal-speaker-5">Keynote: Coming soon!</a>
-            </h3>
-            <div class="location mb-3"></i>ClickHouse</div>
-            <div class="desc"><br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">12:00</h4>
-            <div class="profile">
-              <a href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"><img class="profile-image rounded-circle  mb-2" src="" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"></a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-">Lunch & networking</a>
-            </h3>
-            <div class="location mb-3"></i>Main lobby</div>
-            <div class="desc"><br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">13:00</h4>
-            <div class="profile">
-              <a href="#modal-speaker-6" data-bs-toggle="modal" data-bs-target="#modal-speaker-6"><img class="profile-image rounded-circle  mb-2" src="../speakers/Deniz Yalcin & William Ravensbergen.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-6" data-bs-toggle="modal" data-bs-target="#modal-speaker-6">Deniz Yalcin & William Ravensbergen</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-6" data-bs-toggle="modal" data-bs-target="#modal-speaker-6">SRE and Data Management</a>
-            </h3>
-            <div class="location mb-3"></i>ING</div>
-            <div class="desc"><br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">13:30</h4>
-            <div class="profile">
-              <a href="#modal-speaker-7" data-bs-toggle="modal" data-bs-target="#modal-speaker-7"><img class="profile-image rounded-circle  mb-2" src="../speakers/Adriana Villela.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-7" data-bs-toggle="modal" data-bs-target="#modal-speaker-7">Adriana Villela</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-7" data-bs-toggle="modal" data-bs-target="#modal-speaker-7">Observability is a Team Sport!</a>
-            </h3>
-            <div class="location mb-3"></i>Dynatrace</div>
-            <div class="desc">Observability may have been a newcomer few years ago, but it's safe to say that it's a pretty well-established part of our tech lives today. But as organizations embrace Observability, they run the risk of creating Yet Another Silo, in much the same way that DevOps created more silos, instead of...<br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">14:00</h4>
-            <div class="profile">
-              <a href="#modal-speaker-8" data-bs-toggle="modal" data-bs-target="#modal-speaker-8"><img class="profile-image rounded-circle  mb-2" src="../speakers/Heather Thacker.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-8" data-bs-toggle="modal" data-bs-target="#modal-speaker-8">Heather Thacker</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-8" data-bs-toggle="modal" data-bs-target="#modal-speaker-8">Choose Your Weapon: The Performance Testing Arsenal</a>
-            </h3>
-            <div class="location mb-3"></i>Gatling</div>
-            <div class="desc">Your app works great on your laptop, in the dev environment. Then production hits 10x expected traffic during a marketing campaign and everything falls apart. Or maybe not, instead six months of data accumulates, causing the response times to be painfully slow. Load testing, stress testing, soak...<br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">14:30</h4>
-            <div class="profile">
-              <a href="#modal-speaker-9" data-bs-toggle="modal" data-bs-target="#modal-speaker-9"><img class="profile-image rounded-circle  mb-2" src="../speakers/Tasmia Niazi.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-9" data-bs-toggle="modal" data-bs-target="#modal-speaker-9">Tasmia Niazi</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-9" data-bs-toggle="modal" data-bs-target="#modal-speaker-9">From Learner to Leader: My Journey into SRE and Why Reliability Is a Culture, Not a Role</a>
-            </h3>
-            <div class="location mb-3"></i></div>
-            <div class="desc">Explore how SRE is more than tools and dashboards: it is a mindset, a culture, and a way of thinking that transforms teams. Attendees will learn how adopting an SRE state of mind empowers individuals, improves engineering outcomes, and builds high-trust, resilient organisations.<br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">15:00</h4>
-            <div class="profile">
-              <a href="#modal-speaker-10" data-bs-toggle="modal" data-bs-target="#modal-speaker-10"><img class="profile-image rounded-circle  mb-2" src="../speakers/Kyle Forster.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-10" data-bs-toggle="modal" data-bs-target="#modal-speaker-10">Kyle Forster</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-10" data-bs-toggle="modal" data-bs-target="#modal-speaker-10">Building a business case for AI SRE tools</a>
-            </h3>
-            <div class="location mb-3"></i>RunWhen</div>
-            <div class="desc">Interested in AI SRE to investigate your alerts? Pipeline failures? Help with developer questions? Building a business case your CFO will love WITHOUT losing headcount is key to making these projects successful. We can share what learned from the last year of helping teams do this.<br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">15:30</h4>
-            <div class="profile">
-              <a href="#modal-speaker-11" data-bs-toggle="modal" data-bs-target="#modal-speaker-11"><img class="profile-image rounded-circle  mb-2" src="../speakers/Rob Charlwood.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-11" data-bs-toggle="modal" data-bs-target="#modal-speaker-11">Rob Charlwood</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-11" data-bs-toggle="modal" data-bs-target="#modal-speaker-11">Stranger Teams: Keeping Demogorgons out of production</a>
-            </h3>
-            <div class="location mb-3"></i>Supercharged</div>
-            <div class="desc">Build SRE teams like 80s kids on bikes! With high trust, shared missions, honesty, and the ability to tackle monsters together. Learn why your SRE might be broken and how to fix it with psychological safety, teamwork, and better practices.<br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">16:00</h4>
-            <div class="profile">
-              <a href="#modal-speaker-12" data-bs-toggle="modal" data-bs-target="#modal-speaker-12"><img class="profile-image rounded-circle  mb-2" src="../speakers/Sohan Maheshwar.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-12" data-bs-toggle="modal" data-bs-target="#modal-speaker-12">Sohan Maheshwar</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-12" data-bs-toggle="modal" data-bs-target="#modal-speaker-12">Surviving the Dual-Write Problem in Distributed Systems</a>
-            </h3>
-            <div class="location mb-3"></i>AuthZed</div>
-            <div class="desc">Dual writes are one of the most common sources of data inconsistency in distributed systems. This talk demystifies why dual writes cannot be made safe inside a single process, then walks through modern architectural patterns that teams use in production to eliminate or mitigate the problem.<br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">16:30</h4>
-            <div class="profile">
-              <a href="#modal-speaker-13" data-bs-toggle="modal" data-bs-target="#modal-speaker-13"><img class="profile-image rounded-circle  mb-2" src="../speakers/Jake Page.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-13" data-bs-toggle="modal" data-bs-target="#modal-speaker-13">Jake Page</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-13" data-bs-toggle="modal" data-bs-target="#modal-speaker-13">Honey, the Audience Broke My App: Reproduce & Fix Live in Kubernetes with mirrord</a>
-            </h3>
-            <div class="location mb-3"></i>MetalBear</div>
-            <div class="desc">A room of engineers breaks my live app and we fix it together. They scan a QR code which triggers a real failure in a Kubernetes staging environment. Together we reproduce, trace, patch, and validate the fix with kubectl debug and mirrord. A real breakage repaired live.<br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">17:00</h4>
-            <div class="profile">
-              <a href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"><img class="profile-image rounded-circle  mb-2" src="" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"></a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-">Happy Hour by Imply -- grab a beer!</a>
-            </h3>
-            <div class="location mb-3"></i>Main lobby</div>
-            <div class="desc"><br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">17:30</h4>
-            <div class="profile">
-              <a href="#modal-speaker-14" data-bs-toggle="modal" data-bs-target="#modal-speaker-14"><img class="profile-image rounded-circle  mb-2" src="../speakers/ClickHouse Meetup.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-14" data-bs-toggle="modal" data-bs-target="#modal-speaker-14">_ClickHouse Meetup - After SREday</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-14" data-bs-toggle="modal" data-bs-target="#modal-speaker-14">Coming soon!</a>
-            </h3>
-            <div class="location mb-3"></i></div>
-            <div class="desc"><br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">18:00</h4>
-            <div class="profile">
-              <a href="#modal-speaker-15" data-bs-toggle="modal" data-bs-target="#modal-speaker-15"><img class="profile-image rounded-circle  mb-2" src="../speakers/ClickHouse Meetup.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-15" data-bs-toggle="modal" data-bs-target="#modal-speaker-15">_ClickHouse Meetup - After SREday</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-15" data-bs-toggle="modal" data-bs-target="#modal-speaker-15">Coming soon!</a>
-            </h3>
-            <div class="location mb-3"></i></div>
-            <div class="desc"><br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">18:30</h4>
-            <div class="profile">
-              <a href="#modal-speaker-16" data-bs-toggle="modal" data-bs-target="#modal-speaker-16"><img class="profile-image rounded-circle  mb-2" src="../speakers/ClickHouse Meetup.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-16" data-bs-toggle="modal" data-bs-target="#modal-speaker-16">_ClickHouse Meetup - After SREday</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-16" data-bs-toggle="modal" data-bs-target="#modal-speaker-16">Coming soon!</a>
-            </h3>
-            <div class="location mb-3"></i></div>
-            <div class="desc"><br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">19:00</h4>
-            <div class="profile">
-              <a href="#modal-speaker-17" data-bs-toggle="modal" data-bs-target="#modal-speaker-17"><img class="profile-image rounded-circle  mb-2" src="../speakers/ClickHouse Meetup.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-17" data-bs-toggle="modal" data-bs-target="#modal-speaker-17">_ClickHouse Meetup - After SREday</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-17" data-bs-toggle="modal" data-bs-target="#modal-speaker-17">Coming soon!</a>
-            </h3>
-            <div class="location mb-3"></i></div>
-            <div class="desc"><br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">19:30</h4>
-            <div class="profile">
-              <a href="#modal-speaker-18" data-bs-toggle="modal" data-bs-target="#modal-speaker-18"><img class="profile-image rounded-circle  mb-2" src="../speakers/ClickHouse Meetup.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-18" data-bs-toggle="modal" data-bs-target="#modal-speaker-18">_ClickHouse Meetup - After SREday</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-18" data-bs-toggle="modal" data-bs-target="#modal-speaker-18">Coming soon!</a>
-            </h3>
-            <div class="location mb-3"></i></div>
-            <div class="desc"><br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">20:00</h4>
-            <div class="profile">
-              <a href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"><img class="profile-image rounded-circle  mb-2" src="" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"></a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-">Wrap up</a>
-            </h3>
-            <div class="location mb-3"></i>Scan each other's QR codes & head to a nearby pub!</div>
-            <div class="desc"><br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-
-      </div><!--//tab-1-content-->
-
-
-      <div
-        id="tab-0-2-content"
-        class="tab-pane"
-        role="tabpanel"
-        aria-labelledby="tab-0-2"
-      >
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">12:00</h4>
-            <div class="profile">
-              <a href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"><img class="profile-image rounded-circle  mb-2" src="" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"></a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-">Lunch & networking</a>
-            </h3>
-            <div class="location mb-3"></i>Main lobby</div>
-            <div class="desc"><br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">13:00</h4>
-            <div class="profile">
-              <a href="#modal-speaker-19" data-bs-toggle="modal" data-bs-target="#modal-speaker-19"><img class="profile-image rounded-circle  mb-2" src="../speakers/William Mendes.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-19" data-bs-toggle="modal" data-bs-target="#modal-speaker-19">William Mendes</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-19" data-bs-toggle="modal" data-bs-target="#modal-speaker-19">SRE Management is a Hard Job. That’s Why You Should Do It Like an Engineer.</a>
-            </h3>
-            <div class="location mb-3"></i>Coralogix</div>
-            <div class="desc">Management feels messy, but it’s just another complex system, full of incidents, dependencies, and feedback loops. In this talk, you’ll learn how to apply engineering principles to leadership: observability, reliability, and iterative improvement for people instead of servers.<br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">13:30</h4>
-            <div class="profile">
-              <a href="#modal-speaker-20" data-bs-toggle="modal" data-bs-target="#modal-speaker-20"><img class="profile-image rounded-circle  mb-2" src="../speakers/Christian Melendez.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-20" data-bs-toggle="modal" data-bs-target="#modal-speaker-20">Christian Melendez</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-20" data-bs-toggle="modal" data-bs-target="#modal-speaker-20">Two Autoscalers Walk into a Cluster: KEDA & Karpenter on Day-2 Duty</a>
-            </h3>
-            <div class="location mb-3"></i>AWS</div>
-            <div class="desc">Two autoscalers enter, one cluster wins! Master KEDA + Karpenter Day-2 magic to dynamically scale pods AND nodes. Cut waste, handle spikes, save $$$. Walk away with configs that make your cluster be as efficient and cost-optimized as possible.<br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">14:00</h4>
-            <div class="profile">
-              <a href="#modal-speaker-21" data-bs-toggle="modal" data-bs-target="#modal-speaker-21"><img class="profile-image rounded-circle  mb-2" src="../speakers/Ehsan Khodadadi.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-21" data-bs-toggle="modal" data-bs-target="#modal-speaker-21">Ehsan Khodadadi</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-21" data-bs-toggle="modal" data-bs-target="#modal-speaker-21">AISRE: It’s Time for AI Site Reliability Engineering</a>
-            </h3>
-            <div class="location mb-3"></i>ING</div>
-            <div class="desc">Your API monitoring was green. Dashboards calm. Then a quiet spike: cost per task up 40%, grounded answer rate down 8%, and users start regenerating responses twice as often. Infra metrics say “all good” , but the model silently shifted behavior after a prompt tweak plus a vendor embedding...<br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">14:30</h4>
-            <div class="profile">
-              <a href="#modal-speaker-22" data-bs-toggle="modal" data-bs-target="#modal-speaker-22"><img class="profile-image rounded-circle  mb-2" src="../speakers/Yury Lysak.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-22" data-bs-toggle="modal" data-bs-target="#modal-speaker-22">Yury Lysak</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-22" data-bs-toggle="modal" data-bs-target="#modal-speaker-22">SRE for pricing systems in Wealth & Fintech: Data‑Driven Solutions.</a>
-            </h3>
-            <div class="location mb-3"></i>Independent</div>
-            <div class="desc">How to use simple but powerful data concepts to design smarter, more transparent pricing for wealth and fintech products without over engineering.<br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">15:00</h4>
-            <div class="profile">
-              <a href="#modal-speaker-23" data-bs-toggle="modal" data-bs-target="#modal-speaker-23"><img class="profile-image rounded-circle  mb-2" src="../speakers/Andy Kuszyk.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-23" data-bs-toggle="modal" data-bs-target="#modal-speaker-23">Andy Kuszyk</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-23" data-bs-toggle="modal" data-bs-target="#modal-speaker-23">MCP is the new REST: making MCP our new API</a>
-            </h3>
-            <div class="location mb-3"></i>Typeform</div>
-            <div class="desc">Typeform is fast becoming an AI-native platform. This means we're transforming our REST API into a platform that LLMs can easily discover and operate. In this talk, I'll share the architectural patterns we're using to achieve this, as well as real life examples of how we're making MCP our new API.<br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">15:30</h4>
-            <div class="profile">
-              <a href="#modal-speaker-24" data-bs-toggle="modal" data-bs-target="#modal-speaker-24"><img class="profile-image rounded-circle  mb-2" src="../speakers/Nishkarsh Raj.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-24" data-bs-toggle="modal" data-bs-target="#modal-speaker-24">Nishkarsh Raj</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-24" data-bs-toggle="modal" data-bs-target="#modal-speaker-24">Q the Savings: How We Built a $2M/Year FinOps Platform in 2 Weeks</a>
-            </h3>
-            <div class="location mb-3"></i>StatusNeo</div>
-            <div class="desc">We built a AI FinOps platform in 2 weeks with Kiro and AWS Bedrock that found $2M in annual AWS waste— without buying expensive tools. 13 automated scanners, gamified leaderboards, AI recommendations, and one-click cleanup. I'll show you exactly how we did it and how you can too.<br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">16:00</h4>
-            <div class="profile">
-              <a href="#modal-speaker-25" data-bs-toggle="modal" data-bs-target="#modal-speaker-25"><img class="profile-image rounded-circle  mb-2" src="../speakers/Juan Pablo Vidal Araya.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-25" data-bs-toggle="modal" data-bs-target="#modal-speaker-25">Juan Pablo Vidal Araya</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-25" data-bs-toggle="modal" data-bs-target="#modal-speaker-25">From ransomware hostage to leader in digital government: the rebirth of Santo Domingo</a>
-            </h3>
-            <div class="location mb-3"></i>Ilustre Municipalidad de Santo Domingo</div>
-            <div class="desc">A Chilean municipality was brought to a standstill by a ransomware attack and emerged as a benchmark in digital government. This talk reveals how Santo Domingo turned a cyber crisis into a national model for cybersecurity and digital transformation.<br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">16:30</h4>
-            <div class="profile">
-              <a href="#modal-speaker-26" data-bs-toggle="modal" data-bs-target="#modal-speaker-26"><img class="profile-image rounded-circle  mb-2" src="../speakers/Nicolas Takashi.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-26" data-bs-toggle="modal" data-bs-target="#modal-speaker-26">Nicolas Takashi</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-26" data-bs-toggle="modal" data-bs-target="#modal-speaker-26">Reverse-Engineering PromQL Usage: A Proxy’s Tale</a>
-            </h3>
-            <div class="location mb-3"></i>Coralogix</div>
-            <div class="desc">Prometheus shows metrics but hides how queries are used. We built Prom Analytics Proxy to reveal who runs which PromQL queries, what slows them down, and which dashboards overload the backend, all without touching Prometheus, giving teams real visibility and control.<br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">17:00</h4>
-            <div class="profile">
-              <a href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"><img class="profile-image rounded-circle  mb-2" src="" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"></a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-">Happy Hour by Imply -- grab a beer!</a>
-            </h3>
-            <div class="location mb-3"></i>Main lobby</div>
-            <div class="desc"><br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">17:30</h4>
-            <div class="profile">
-              <a href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"><img class="profile-image rounded-circle  mb-2" src="" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"></a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-">Wrap up</a>
-            </h3>
-            <div class="location mb-3"></i>Scan each other's QR codes & head to a nearby pub!</div>
-            <div class="desc"><br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-
-      </div><!--//tab-2-content-->
-
-
-      <div
-        id="tab-0-3-content"
-        class="tab-pane"
-        role="tabpanel"
-        aria-labelledby="tab-0-3"
-      >
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">12:00</h4>
-            <div class="profile">
-              <a href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"><img class="profile-image rounded-circle  mb-2" src="" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"></a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-">Lunch & networking</a>
-            </h3>
-            <div class="location mb-3"></i>Main lobby</div>
-            <div class="desc"><br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">13:00</h4>
-            <div class="profile">
-              <a href="#modal-speaker-27" data-bs-toggle="modal" data-bs-target="#modal-speaker-27"><img class="profile-image rounded-circle  mb-2" src="../speakers/Jagadeesh Devaraj.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-27" data-bs-toggle="modal" data-bs-target="#modal-speaker-27">Jagadeesh Devaraj</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-27" data-bs-toggle="modal" data-bs-target="#modal-speaker-27">Catch me if you Can</a>
-            </h3>
-            <div class="location mb-3"></i>ING</div>
-            <div class="desc"><br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">13:30</h4>
-            <div class="profile">
-              <a href="#modal-speaker-28" data-bs-toggle="modal" data-bs-target="#modal-speaker-28"><img class="profile-image rounded-circle  mb-2" src="../speakers/Goran Minov.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-28" data-bs-toggle="modal" data-bs-target="#modal-speaker-28">Goran Minov</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-28" data-bs-toggle="modal" data-bs-target="#modal-speaker-28">Zero Infrastructure, Zero Phishing: Building a Serverless Security Framework on GCP</a>
-            </h3>
-            <div class="location mb-3"></i>Okta</div>
-            <div class="desc">This is an intermediate talk suitable for backend developers and cloud architects. It includes a code walkthrough of the Cloud Run Functions and a data analysis segment comparing the solution's effectiveness.<br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">14:00</h4>
-            <div class="profile">
-              <a href="#modal-speaker-29" data-bs-toggle="modal" data-bs-target="#modal-speaker-29"><img class="profile-image rounded-circle  mb-2" src="../speakers/Israel Blancas.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-29" data-bs-toggle="modal" data-bs-target="#modal-speaker-29">Israel Blancas</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-29" data-bs-toggle="modal" data-bs-target="#modal-speaker-29">From Data to Diagnosis: Leveraging Observability for Application Success</a>
-            </h3>
-            <div class="location mb-3"></i>Coralogix</div>
-            <div class="desc">This talk combines multiple open source projects and show how some real environments are environments are observed on production: OpenTelemetry, Prometheus, Jaeger, Istio, Kiali and Kubernetes. What else can you ask for?<br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">14:30</h4>
-            <div class="profile">
-              <a href="#modal-speaker-30" data-bs-toggle="modal" data-bs-target="#modal-speaker-30"><img class="profile-image rounded-circle  mb-2" src="../speakers/Charles Weir.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-30" data-bs-toggle="modal" data-bs-target="#modal-speaker-30">Charles Weir</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-30" data-bs-toggle="modal" data-bs-target="#modal-speaker-30">Overcome Disasters Using Cyber Continuity</a>
-            </h3>
-            <div class="location mb-3"></i>Lancaster University</div>
-            <div class="desc">Major software disasters may be almost inevitable, but organisations and ecosystems can survive them. Learn how cyber continuity techniques can prepare your systems to limit damage and support recovery.<br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">15:00</h4>
-            <div class="profile">
-              <a href="#modal-speaker-31" data-bs-toggle="modal" data-bs-target="#modal-speaker-31"><img class="profile-image rounded-circle  mb-2" src="../speakers/Spiros Economakis.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-31" data-bs-toggle="modal" data-bs-target="#modal-speaker-31">Spiros Economakis</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-31" data-bs-toggle="modal" data-bs-target="#modal-speaker-31">How AI is redefining SRE and Customer Experience</a>
-            </h3>
-            <div class="location mb-3"></i>NOFire AI</div>
-            <div class="desc">AI is reshaping SRE, but the real opportunity isn’t faster RCA, it’s building proactive, customer-centered reliability. This talk explores how AI and culture together move us from firefighting to foresight.<br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">15:30</h4>
-            <div class="profile">
-              <a href="#modal-speaker-32" data-bs-toggle="modal" data-bs-target="#modal-speaker-32"><img class="profile-image rounded-circle  mb-2" src="../speakers/Ozan Kasikci.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-32" data-bs-toggle="modal" data-bs-target="#modal-speaker-32">Ozan Kasikci</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-32" data-bs-toggle="modal" data-bs-target="#modal-speaker-32">Zero-Downtime Updates: How to Evolve Fast Without Breaking Everything</a>
-            </h3>
-            <div class="location mb-3"></i>Longhorn Games</div>
-            <div class="desc">How do you ship multiple times a week without your users noticing — except for improvements? This talk explores modern zero-downtime deployment strategies and observability patterns that let teams move fast while keeping uptime close to 100%.<br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">16:00</h4>
-            <div class="profile">
-              <a href="#modal-speaker-33" data-bs-toggle="modal" data-bs-target="#modal-speaker-33"><img class="profile-image rounded-circle  mb-2" src="../speakers/Dmitrii Iniutin.png" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-33" data-bs-toggle="modal" data-bs-target="#modal-speaker-33">Dmitrii Iniutin</a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-33" data-bs-toggle="modal" data-bs-target="#modal-speaker-33">Beyond Terraform: Building Production Infrastructure with General-Purpose Languages</a>
-            </h3>
-            <div class="location mb-3"></i>Seamflow</div>
-            <div class="desc">Infrastructure as Code has transformed how we manage systems — but the tools we use define how far we can scale. While Terraform remains the industry standard, its domain-specific language limits flexibility and maintainability at scale. In this session, Dmitry shares lessons from building...<br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">16:30</h4>
-            <div class="profile">
-              <a href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"><img class="profile-image rounded-circle  mb-2" src="" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"></a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-">Happy Hour by Imply -- grab a beer!</a>
-            </h3>
-            <div class="location mb-3"></i>Main lobby</div>
-            <div class="desc"><br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-        <div class="item item-talk">
-          <div class="meta">
-            <h4 class="time mb-3">17:00</h4>
-            <div class="profile">
-              <a href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"><img class="profile-image rounded-circle  mb-2" src="" alt=""></a>
-              <div class="name"><a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"></a></div>
-            </div><!--//profile-->
-          </div><!--//meta-->
-          <div class="content">
-            <h3 class="title mb-3">
-              <a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-">Wrap up</a>
-            </h3>
-            <div class="location mb-3"></i>Scan each other's QR codes & head to a nearby pub!</div>
-            <div class="desc"><br /><br /></div>
-          </div><!--//content-->
-        </div><!--//item-->
-
-
-
-      </div><!--//tab-3-content-->
-
-
-    </div><!--//schedule-tab-content-->
-
-
-
-    <div class="schedule-cta text-center mx-auto"><a href="#tickets" class="btn btn-secondary btn-lg d-block d-md-inline-block">Buy Tickets</a></div>
+    <!-- Track navigation -->
+    <div class="track-nav">
+      <div class="track-nav-inner">
+        <div class="track-nav-links" id="track-links-0">
+
+          <a href="#track-0-1">screen 1</a>
+
+          <a href="#track-0-2">screen 2</a>
+
+          <a href="#track-0-3">screen 3</a>
+
+        </div>
+        <span class="view-toggle-link" id="view-toggle-0" onclick="toggleView(0)">view as table</span>
+      </div>
+    </div>
+
+    <!-- Timeline View (default) -->
+    <div id="timeline-view-0" class="schedule-timeline-view">
+
+      <div class="track-section-header" id="track-0-1">screen 1 &bull; Track 1</div>
+      <div class="schedule-tab-content">
+        <div class="tab-pane active">
+
+          <div class="item item-talk">
+            <div class="meta">
+              <h4 class="time mb-3">09:00</h4>
+              <div class="profile">
+                <a href="#modal-speaker-0" data-bs-toggle="modal" data-bs-target="#modal-speaker-0"><img class="profile-image rounded-circle mb-2" src="../speakers/Miko Pawlikowski.png" alt=""></a>
+                <div class="name"><a class="theme-link" href="#modal-speaker-0" data-bs-toggle="modal" data-bs-target="#modal-speaker-0">Miko Pawlikowski</a></div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="title mb-3">
+                <a class="theme-link" href="#modal-speaker-0" data-bs-toggle="modal" data-bs-target="#modal-speaker-0">Keynote: I Was Promised a Beach: Why AI Hasn’t Taken Your Pager (Yet)</a>
+              </h3>
+              <div class="location mb-3">SRE Author</div>
+              <div class="desc">By now, the algorithm was supposed to be fixing the outage. According to the hype, SREs should be obsolete, incident management should be fully autonomous, and we should all be collecting Universal Basic Income on a tropical island. But here we are. The pager is still loud, Kubernetes is still...<br /><br /></div>
+            </div>
+          </div>
+
+          <div class="item item-talk">
+            <div class="meta">
+              <h4 class="time mb-3">09:30</h4>
+              <div class="profile">
+                <a href="#modal-speaker-1" data-bs-toggle="modal" data-bs-target="#modal-speaker-1"><img class="profile-image rounded-circle mb-2" src="../speakers/Peter Marshall.png" alt=""></a>
+                <div class="name"><a class="theme-link" href="#modal-speaker-1" data-bs-toggle="modal" data-bs-target="#modal-speaker-1">Peter Marshall</a></div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="title mb-3">
+                <a class="theme-link" href="#modal-speaker-1" data-bs-toggle="modal" data-bs-target="#modal-speaker-1">Keynote: Decoupling Observability for Incident Response at Scale</a>
+              </h3>
+              <div class="location mb-3">Imply</div>
+              <div class="desc">On-call incidents don’t fail because teams lack dashboards. They fail because observability systems slow down under real investigative load. As telemetry volumes grow and retention windows expand, SRE teams are being asked to run deeper, broader investigations—often under time pressure—on...<br /><br /></div>
+            </div>
+          </div>
+
+          <div class="item item-talk">
+            <div class="meta">
+              <h4 class="time mb-3">10:00</h4>
+              <div class="profile">
+                <a href="#modal-speaker-2" data-bs-toggle="modal" data-bs-target="#modal-speaker-2"><img class="profile-image rounded-circle mb-2" src="../speakers/Dewan Ahmed.png" alt=""></a>
+                <div class="name"><a class="theme-link" href="#modal-speaker-2" data-bs-toggle="modal" data-bs-target="#modal-speaker-2">Dewan Ahmed</a></div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="title mb-3">
+                <a class="theme-link" href="#modal-speaker-2" data-bs-toggle="modal" data-bs-target="#modal-speaker-2">Keynote: Secure by Default: Building Confidence in AI-Driven Delivery</a>
+              </h3>
+              <div class="location mb-3">Harness</div>
+              <div class="desc">The fastest way to break trust in DevSecOps is to automate insecurity at scale. As AI takes a central role in our pipelines, it is time to rethink what "secure by default" really means. In this keynote, Dewan Ahmed will challenge the audience to look beyond vulnerability scanners and compliance...<br /><br /></div>
+            </div>
+          </div>
+
+          <div class="item item-talk">
+            <div class="meta">
+              <h4 class="time mb-3">10:30</h4>
+              <div class="profile">
+                <a href="#modal-speaker-3" data-bs-toggle="modal" data-bs-target="#modal-speaker-3"><img class="profile-image rounded-circle mb-2" src="../speakers/Matt Henderson.png" alt=""></a>
+                <div class="name"><a class="theme-link" href="#modal-speaker-3" data-bs-toggle="modal" data-bs-target="#modal-speaker-3">Matt Henderson</a></div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="title mb-3">
+                <a class="theme-link" href="#modal-speaker-3" data-bs-toggle="modal" data-bs-target="#modal-speaker-3">Keynote: The Immune System for Software: Lessons from Biology</a>
+              </h3>
+              <div class="location mb-3">Phoebe</div>
+              <div class="desc">Most reliability work today is still centred on reactive troubleshooting: diagnosing a multitude of alerts, pulling large groups into incidents, and engineers scrambling to understand what’s happening. To truly change that pattern, we need systems that can predict and prevent failures before they...<br /><br /></div>
+            </div>
+          </div>
+
+          <div class="item item-talk">
+            <div class="meta">
+              <h4 class="time mb-3">11:00</h4>
+              <div class="profile">
+                <a href="#modal-speaker-4" data-bs-toggle="modal" data-bs-target="#modal-speaker-4"><img class="profile-image rounded-circle mb-2" src="../speakers/Birol Yildiz.png" alt=""></a>
+                <div class="name"><a class="theme-link" href="#modal-speaker-4" data-bs-toggle="modal" data-bs-target="#modal-speaker-4">Birol Yildiz</a></div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="title mb-3">
+                <a class="theme-link" href="#modal-speaker-4" data-bs-toggle="modal" data-bs-target="#modal-speaker-4">Keynote: When Incidents Fix Themselves: AI SRE in action</a>
+              </h3>
+              <div class="location mb-3">ilert</div>
+              <div class="desc">The next evolution of incident response isn’t faster alerts, it’s autonomous resolution. Join ilert CEO Birol Yildiz as he shows how AI SRE agents now diagnose and remediate outages without waking anyone up. Learn how these systems combine observability data, deployment context, and code...<br /><br /></div>
+            </div>
+          </div>
+
+          <div class="item item-talk">
+            <div class="meta">
+              <h4 class="time mb-3">11:30</h4>
+              <div class="profile">
+                <a href="#modal-speaker-5" data-bs-toggle="modal" data-bs-target="#modal-speaker-5"><img class="profile-image rounded-circle mb-2" src="../speakers/Tyler Hannan.png" alt=""></a>
+                <div class="name"><a class="theme-link" href="#modal-speaker-5" data-bs-toggle="modal" data-bs-target="#modal-speaker-5">Tyler Hannan</a></div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="title mb-3">
+                <a class="theme-link" href="#modal-speaker-5" data-bs-toggle="modal" data-bs-target="#modal-speaker-5">Keynote: Coming soon!</a>
+              </h3>
+              <div class="location mb-3">ClickHouse</div>
+              <div class="desc"><br /><br /></div>
+            </div>
+          </div>
+
+          <div class="item item-talk">
+            <div class="meta">
+              <h4 class="time mb-3">12:00</h4>
+              <div class="profile">
+                <a href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"><img class="profile-image rounded-circle mb-2" src="" alt=""></a>
+                <div class="name"><a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"></a></div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="title mb-3">
+                <a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-">Lunch & networking</a>
+              </h3>
+              <div class="location mb-3">Main lobby</div>
+              <div class="desc"><br /><br /></div>
+            </div>
+          </div>
+
+          <div class="item item-talk">
+            <div class="meta">
+              <h4 class="time mb-3">13:00</h4>
+              <div class="profile">
+                <a href="#modal-speaker-6" data-bs-toggle="modal" data-bs-target="#modal-speaker-6"><img class="profile-image rounded-circle mb-2" src="../speakers/Deniz Yalcin & William Ravensbergen.png" alt=""></a>
+                <div class="name"><a class="theme-link" href="#modal-speaker-6" data-bs-toggle="modal" data-bs-target="#modal-speaker-6">Deniz Yalcin & William Ravensbergen</a></div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="title mb-3">
+                <a class="theme-link" href="#modal-speaker-6" data-bs-toggle="modal" data-bs-target="#modal-speaker-6">SRE and Data Management</a>
+              </h3>
+              <div class="location mb-3">ING</div>
+              <div class="desc"><br /><br /></div>
+            </div>
+          </div>
+
+          <div class="item item-talk">
+            <div class="meta">
+              <h4 class="time mb-3">13:30</h4>
+              <div class="profile">
+                <a href="#modal-speaker-7" data-bs-toggle="modal" data-bs-target="#modal-speaker-7"><img class="profile-image rounded-circle mb-2" src="../speakers/Adriana Villela.png" alt=""></a>
+                <div class="name"><a class="theme-link" href="#modal-speaker-7" data-bs-toggle="modal" data-bs-target="#modal-speaker-7">Adriana Villela</a></div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="title mb-3">
+                <a class="theme-link" href="#modal-speaker-7" data-bs-toggle="modal" data-bs-target="#modal-speaker-7">Observability is a Team Sport!</a>
+              </h3>
+              <div class="location mb-3">Dynatrace</div>
+              <div class="desc">Observability may have been a newcomer few years ago, but it's safe to say that it's a pretty well-established part of our tech lives today. But as organizations embrace Observability, they run the risk of creating Yet Another Silo, in much the same way that DevOps created more silos, instead of...<br /><br /></div>
+            </div>
+          </div>
+
+          <div class="item item-talk">
+            <div class="meta">
+              <h4 class="time mb-3">14:00</h4>
+              <div class="profile">
+                <a href="#modal-speaker-8" data-bs-toggle="modal" data-bs-target="#modal-speaker-8"><img class="profile-image rounded-circle mb-2" src="../speakers/Heather Thacker.png" alt=""></a>
+                <div class="name"><a class="theme-link" href="#modal-speaker-8" data-bs-toggle="modal" data-bs-target="#modal-speaker-8">Heather Thacker</a></div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="title mb-3">
+                <a class="theme-link" href="#modal-speaker-8" data-bs-toggle="modal" data-bs-target="#modal-speaker-8">Choose Your Weapon: The Performance Testing Arsenal</a>
+              </h3>
+              <div class="location mb-3">Gatling</div>
+              <div class="desc">Your app works great on your laptop, in the dev environment. Then production hits 10x expected traffic during a marketing campaign and everything falls apart. Or maybe not, instead six months of data accumulates, causing the response times to be painfully slow. Load testing, stress testing, soak...<br /><br /></div>
+            </div>
+          </div>
+
+          <div class="item item-talk">
+            <div class="meta">
+              <h4 class="time mb-3">14:30</h4>
+              <div class="profile">
+                <a href="#modal-speaker-9" data-bs-toggle="modal" data-bs-target="#modal-speaker-9"><img class="profile-image rounded-circle mb-2" src="../speakers/Tasmia Niazi.png" alt=""></a>
+                <div class="name"><a class="theme-link" href="#modal-speaker-9" data-bs-toggle="modal" data-bs-target="#modal-speaker-9">Tasmia Niazi</a></div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="title mb-3">
+                <a class="theme-link" href="#modal-speaker-9" data-bs-toggle="modal" data-bs-target="#modal-speaker-9">From Learner to Leader: My Journey into SRE and Why Reliability Is a Culture, Not a Role</a>
+              </h3>
+              <div class="location mb-3"></div>
+              <div class="desc">Explore how SRE is more than tools and dashboards: it is a mindset, a culture, and a way of thinking that transforms teams. Attendees will learn how adopting an SRE state of mind empowers individuals, improves engineering outcomes, and builds high-trust, resilient organisations.<br /><br /></div>
+            </div>
+          </div>
+
+          <div class="item item-talk">
+            <div class="meta">
+              <h4 class="time mb-3">15:00</h4>
+              <div class="profile">
+                <a href="#modal-speaker-10" data-bs-toggle="modal" data-bs-target="#modal-speaker-10"><img class="profile-image rounded-circle mb-2" src="../speakers/Kyle Forster.png" alt=""></a>
+                <div class="name"><a class="theme-link" href="#modal-speaker-10" data-bs-toggle="modal" data-bs-target="#modal-speaker-10">Kyle Forster</a></div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="title mb-3">
+                <a class="theme-link" href="#modal-speaker-10" data-bs-toggle="modal" data-bs-target="#modal-speaker-10">Building a business case for AI SRE tools</a>
+              </h3>
+              <div class="location mb-3">RunWhen</div>
+              <div class="desc">Interested in AI SRE to investigate your alerts? Pipeline failures? Help with developer questions? Building a business case your CFO will love WITHOUT losing headcount is key to making these projects successful. We can share what learned from the last year of helping teams do this.<br /><br /></div>
+            </div>
+          </div>
+
+          <div class="item item-talk">
+            <div class="meta">
+              <h4 class="time mb-3">15:30</h4>
+              <div class="profile">
+                <a href="#modal-speaker-11" data-bs-toggle="modal" data-bs-target="#modal-speaker-11"><img class="profile-image rounded-circle mb-2" src="../speakers/Rob Charlwood.png" alt=""></a>
+                <div class="name"><a class="theme-link" href="#modal-speaker-11" data-bs-toggle="modal" data-bs-target="#modal-speaker-11">Rob Charlwood</a></div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="title mb-3">
+                <a class="theme-link" href="#modal-speaker-11" data-bs-toggle="modal" data-bs-target="#modal-speaker-11">Stranger Teams: Keeping Demogorgons out of production</a>
+              </h3>
+              <div class="location mb-3">Supercharged</div>
+              <div class="desc">Build SRE teams like 80s kids on bikes! With high trust, shared missions, honesty, and the ability to tackle monsters together. Learn why your SRE might be broken and how to fix it with psychological safety, teamwork, and better practices.<br /><br /></div>
+            </div>
+          </div>
+
+          <div class="item item-talk">
+            <div class="meta">
+              <h4 class="time mb-3">16:00</h4>
+              <div class="profile">
+                <a href="#modal-speaker-12" data-bs-toggle="modal" data-bs-target="#modal-speaker-12"><img class="profile-image rounded-circle mb-2" src="../speakers/Sohan Maheshwar.png" alt=""></a>
+                <div class="name"><a class="theme-link" href="#modal-speaker-12" data-bs-toggle="modal" data-bs-target="#modal-speaker-12">Sohan Maheshwar</a></div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="title mb-3">
+                <a class="theme-link" href="#modal-speaker-12" data-bs-toggle="modal" data-bs-target="#modal-speaker-12">Surviving the Dual-Write Problem in Distributed Systems</a>
+              </h3>
+              <div class="location mb-3">AuthZed</div>
+              <div class="desc">Dual writes are one of the most common sources of data inconsistency in distributed systems. This talk demystifies why dual writes cannot be made safe inside a single process, then walks through modern architectural patterns that teams use in production to eliminate or mitigate the problem.<br /><br /></div>
+            </div>
+          </div>
+
+          <div class="item item-talk">
+            <div class="meta">
+              <h4 class="time mb-3">16:30</h4>
+              <div class="profile">
+                <a href="#modal-speaker-13" data-bs-toggle="modal" data-bs-target="#modal-speaker-13"><img class="profile-image rounded-circle mb-2" src="../speakers/Jake Page.png" alt=""></a>
+                <div class="name"><a class="theme-link" href="#modal-speaker-13" data-bs-toggle="modal" data-bs-target="#modal-speaker-13">Jake Page</a></div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="title mb-3">
+                <a class="theme-link" href="#modal-speaker-13" data-bs-toggle="modal" data-bs-target="#modal-speaker-13">Honey, the Audience Broke My App: Reproduce & Fix Live in Kubernetes with mirrord</a>
+              </h3>
+              <div class="location mb-3">MetalBear</div>
+              <div class="desc">A room of engineers breaks my live app and we fix it together. They scan a QR code which triggers a real failure in a Kubernetes staging environment. Together we reproduce, trace, patch, and validate the fix with kubectl debug and mirrord. A real breakage repaired live.<br /><br /></div>
+            </div>
+          </div>
+
+          <div class="item item-talk">
+            <div class="meta">
+              <h4 class="time mb-3">17:00</h4>
+              <div class="profile">
+                <a href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"><img class="profile-image rounded-circle mb-2" src="" alt=""></a>
+                <div class="name"><a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"></a></div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="title mb-3">
+                <a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-">Happy Hour by Imply -- grab a beer!</a>
+              </h3>
+              <div class="location mb-3">Main lobby</div>
+              <div class="desc"><br /><br /></div>
+            </div>
+          </div>
+
+          <div class="item item-talk">
+            <div class="meta">
+              <h4 class="time mb-3">17:30</h4>
+              <div class="profile">
+                <a href="#modal-speaker-14" data-bs-toggle="modal" data-bs-target="#modal-speaker-14"><img class="profile-image rounded-circle mb-2" src="../speakers/ClickHouse Meetup.png" alt=""></a>
+                <div class="name"><a class="theme-link" href="#modal-speaker-14" data-bs-toggle="modal" data-bs-target="#modal-speaker-14">_ClickHouse Meetup - After SREday</a></div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="title mb-3">
+                <a class="theme-link" href="#modal-speaker-14" data-bs-toggle="modal" data-bs-target="#modal-speaker-14">Coming soon!</a>
+              </h3>
+              <div class="location mb-3"></div>
+              <div class="desc"><br /><br /></div>
+            </div>
+          </div>
+
+          <div class="item item-talk">
+            <div class="meta">
+              <h4 class="time mb-3">18:00</h4>
+              <div class="profile">
+                <a href="#modal-speaker-15" data-bs-toggle="modal" data-bs-target="#modal-speaker-15"><img class="profile-image rounded-circle mb-2" src="../speakers/ClickHouse Meetup.png" alt=""></a>
+                <div class="name"><a class="theme-link" href="#modal-speaker-15" data-bs-toggle="modal" data-bs-target="#modal-speaker-15">_ClickHouse Meetup - After SREday</a></div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="title mb-3">
+                <a class="theme-link" href="#modal-speaker-15" data-bs-toggle="modal" data-bs-target="#modal-speaker-15">Coming soon!</a>
+              </h3>
+              <div class="location mb-3"></div>
+              <div class="desc"><br /><br /></div>
+            </div>
+          </div>
+
+          <div class="item item-talk">
+            <div class="meta">
+              <h4 class="time mb-3">18:30</h4>
+              <div class="profile">
+                <a href="#modal-speaker-16" data-bs-toggle="modal" data-bs-target="#modal-speaker-16"><img class="profile-image rounded-circle mb-2" src="../speakers/ClickHouse Meetup.png" alt=""></a>
+                <div class="name"><a class="theme-link" href="#modal-speaker-16" data-bs-toggle="modal" data-bs-target="#modal-speaker-16">_ClickHouse Meetup - After SREday</a></div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="title mb-3">
+                <a class="theme-link" href="#modal-speaker-16" data-bs-toggle="modal" data-bs-target="#modal-speaker-16">Coming soon!</a>
+              </h3>
+              <div class="location mb-3"></div>
+              <div class="desc"><br /><br /></div>
+            </div>
+          </div>
+
+          <div class="item item-talk">
+            <div class="meta">
+              <h4 class="time mb-3">19:00</h4>
+              <div class="profile">
+                <a href="#modal-speaker-17" data-bs-toggle="modal" data-bs-target="#modal-speaker-17"><img class="profile-image rounded-circle mb-2" src="../speakers/ClickHouse Meetup.png" alt=""></a>
+                <div class="name"><a class="theme-link" href="#modal-speaker-17" data-bs-toggle="modal" data-bs-target="#modal-speaker-17">_ClickHouse Meetup - After SREday</a></div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="title mb-3">
+                <a class="theme-link" href="#modal-speaker-17" data-bs-toggle="modal" data-bs-target="#modal-speaker-17">Coming soon!</a>
+              </h3>
+              <div class="location mb-3"></div>
+              <div class="desc"><br /><br /></div>
+            </div>
+          </div>
+
+          <div class="item item-talk">
+            <div class="meta">
+              <h4 class="time mb-3">19:30</h4>
+              <div class="profile">
+                <a href="#modal-speaker-18" data-bs-toggle="modal" data-bs-target="#modal-speaker-18"><img class="profile-image rounded-circle mb-2" src="../speakers/ClickHouse Meetup.png" alt=""></a>
+                <div class="name"><a class="theme-link" href="#modal-speaker-18" data-bs-toggle="modal" data-bs-target="#modal-speaker-18">_ClickHouse Meetup - After SREday</a></div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="title mb-3">
+                <a class="theme-link" href="#modal-speaker-18" data-bs-toggle="modal" data-bs-target="#modal-speaker-18">Coming soon!</a>
+              </h3>
+              <div class="location mb-3"></div>
+              <div class="desc"><br /><br /></div>
+            </div>
+          </div>
+
+          <div class="item item-talk">
+            <div class="meta">
+              <h4 class="time mb-3">20:00</h4>
+              <div class="profile">
+                <a href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"><img class="profile-image rounded-circle mb-2" src="" alt=""></a>
+                <div class="name"><a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"></a></div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="title mb-3">
+                <a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-">Wrap up</a>
+              </h3>
+              <div class="location mb-3">Scan each other's QR codes & head to a nearby pub!</div>
+              <div class="desc"><br /><br /></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="track-section-header" id="track-0-2">screen 2 &bull; Track 2</div>
+      <div class="schedule-tab-content">
+        <div class="tab-pane active">
+
+          <div class="item item-talk">
+            <div class="meta">
+              <h4 class="time mb-3">12:00</h4>
+              <div class="profile">
+                <a href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"><img class="profile-image rounded-circle mb-2" src="" alt=""></a>
+                <div class="name"><a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"></a></div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="title mb-3">
+                <a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-">Lunch & networking</a>
+              </h3>
+              <div class="location mb-3">Main lobby</div>
+              <div class="desc"><br /><br /></div>
+            </div>
+          </div>
+
+          <div class="item item-talk">
+            <div class="meta">
+              <h4 class="time mb-3">13:00</h4>
+              <div class="profile">
+                <a href="#modal-speaker-19" data-bs-toggle="modal" data-bs-target="#modal-speaker-19"><img class="profile-image rounded-circle mb-2" src="../speakers/William Mendes.png" alt=""></a>
+                <div class="name"><a class="theme-link" href="#modal-speaker-19" data-bs-toggle="modal" data-bs-target="#modal-speaker-19">William Mendes</a></div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="title mb-3">
+                <a class="theme-link" href="#modal-speaker-19" data-bs-toggle="modal" data-bs-target="#modal-speaker-19">SRE Management is a Hard Job. That’s Why You Should Do It Like an Engineer.</a>
+              </h3>
+              <div class="location mb-3">Coralogix</div>
+              <div class="desc">Management feels messy, but it’s just another complex system, full of incidents, dependencies, and feedback loops. In this talk, you’ll learn how to apply engineering principles to leadership: observability, reliability, and iterative improvement for people instead of servers.<br /><br /></div>
+            </div>
+          </div>
+
+          <div class="item item-talk">
+            <div class="meta">
+              <h4 class="time mb-3">13:30</h4>
+              <div class="profile">
+                <a href="#modal-speaker-20" data-bs-toggle="modal" data-bs-target="#modal-speaker-20"><img class="profile-image rounded-circle mb-2" src="../speakers/Christian Melendez.png" alt=""></a>
+                <div class="name"><a class="theme-link" href="#modal-speaker-20" data-bs-toggle="modal" data-bs-target="#modal-speaker-20">Christian Melendez</a></div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="title mb-3">
+                <a class="theme-link" href="#modal-speaker-20" data-bs-toggle="modal" data-bs-target="#modal-speaker-20">Two Autoscalers Walk into a Cluster: KEDA & Karpenter on Day-2 Duty</a>
+              </h3>
+              <div class="location mb-3">AWS</div>
+              <div class="desc">Two autoscalers enter, one cluster wins! Master KEDA + Karpenter Day-2 magic to dynamically scale pods AND nodes. Cut waste, handle spikes, save $$$. Walk away with configs that make your cluster be as efficient and cost-optimized as possible.<br /><br /></div>
+            </div>
+          </div>
+
+          <div class="item item-talk">
+            <div class="meta">
+              <h4 class="time mb-3">14:00</h4>
+              <div class="profile">
+                <a href="#modal-speaker-21" data-bs-toggle="modal" data-bs-target="#modal-speaker-21"><img class="profile-image rounded-circle mb-2" src="../speakers/Ehsan Khodadadi.png" alt=""></a>
+                <div class="name"><a class="theme-link" href="#modal-speaker-21" data-bs-toggle="modal" data-bs-target="#modal-speaker-21">Ehsan Khodadadi</a></div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="title mb-3">
+                <a class="theme-link" href="#modal-speaker-21" data-bs-toggle="modal" data-bs-target="#modal-speaker-21">AISRE: It’s Time for AI Site Reliability Engineering</a>
+              </h3>
+              <div class="location mb-3">ING</div>
+              <div class="desc">Your API monitoring was green. Dashboards calm. Then a quiet spike: cost per task up 40%, grounded answer rate down 8%, and users start regenerating responses twice as often. Infra metrics say “all good” , but the model silently shifted behavior after a prompt tweak plus a vendor embedding...<br /><br /></div>
+            </div>
+          </div>
+
+          <div class="item item-talk">
+            <div class="meta">
+              <h4 class="time mb-3">14:30</h4>
+              <div class="profile">
+                <a href="#modal-speaker-22" data-bs-toggle="modal" data-bs-target="#modal-speaker-22"><img class="profile-image rounded-circle mb-2" src="../speakers/Yury Lysak.png" alt=""></a>
+                <div class="name"><a class="theme-link" href="#modal-speaker-22" data-bs-toggle="modal" data-bs-target="#modal-speaker-22">Yury Lysak</a></div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="title mb-3">
+                <a class="theme-link" href="#modal-speaker-22" data-bs-toggle="modal" data-bs-target="#modal-speaker-22">SRE for pricing systems in Wealth & Fintech: Data‑Driven Solutions.</a>
+              </h3>
+              <div class="location mb-3">Independent</div>
+              <div class="desc">How to use simple but powerful data concepts to design smarter, more transparent pricing for wealth and fintech products without over engineering.<br /><br /></div>
+            </div>
+          </div>
+
+          <div class="item item-talk">
+            <div class="meta">
+              <h4 class="time mb-3">15:00</h4>
+              <div class="profile">
+                <a href="#modal-speaker-23" data-bs-toggle="modal" data-bs-target="#modal-speaker-23"><img class="profile-image rounded-circle mb-2" src="../speakers/Andy Kuszyk.png" alt=""></a>
+                <div class="name"><a class="theme-link" href="#modal-speaker-23" data-bs-toggle="modal" data-bs-target="#modal-speaker-23">Andy Kuszyk</a></div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="title mb-3">
+                <a class="theme-link" href="#modal-speaker-23" data-bs-toggle="modal" data-bs-target="#modal-speaker-23">MCP is the new REST: making MCP our new API</a>
+              </h3>
+              <div class="location mb-3">Typeform</div>
+              <div class="desc">Typeform is fast becoming an AI-native platform. This means we're transforming our REST API into a platform that LLMs can easily discover and operate. In this talk, I'll share the architectural patterns we're using to achieve this, as well as real life examples of how we're making MCP our new API.<br /><br /></div>
+            </div>
+          </div>
+
+          <div class="item item-talk">
+            <div class="meta">
+              <h4 class="time mb-3">15:30</h4>
+              <div class="profile">
+                <a href="#modal-speaker-24" data-bs-toggle="modal" data-bs-target="#modal-speaker-24"><img class="profile-image rounded-circle mb-2" src="../speakers/Nishkarsh Raj.png" alt=""></a>
+                <div class="name"><a class="theme-link" href="#modal-speaker-24" data-bs-toggle="modal" data-bs-target="#modal-speaker-24">Nishkarsh Raj</a></div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="title mb-3">
+                <a class="theme-link" href="#modal-speaker-24" data-bs-toggle="modal" data-bs-target="#modal-speaker-24">Q the Savings: How We Built a $2M/Year FinOps Platform in 2 Weeks</a>
+              </h3>
+              <div class="location mb-3">StatusNeo</div>
+              <div class="desc">We built a AI FinOps platform in 2 weeks with Kiro and AWS Bedrock that found $2M in annual AWS waste— without buying expensive tools. 13 automated scanners, gamified leaderboards, AI recommendations, and one-click cleanup. I'll show you exactly how we did it and how you can too.<br /><br /></div>
+            </div>
+          </div>
+
+          <div class="item item-talk">
+            <div class="meta">
+              <h4 class="time mb-3">16:00</h4>
+              <div class="profile">
+                <a href="#modal-speaker-25" data-bs-toggle="modal" data-bs-target="#modal-speaker-25"><img class="profile-image rounded-circle mb-2" src="../speakers/Juan Pablo Vidal Araya.png" alt=""></a>
+                <div class="name"><a class="theme-link" href="#modal-speaker-25" data-bs-toggle="modal" data-bs-target="#modal-speaker-25">Juan Pablo Vidal Araya</a></div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="title mb-3">
+                <a class="theme-link" href="#modal-speaker-25" data-bs-toggle="modal" data-bs-target="#modal-speaker-25">From ransomware hostage to leader in digital government: the rebirth of Santo Domingo</a>
+              </h3>
+              <div class="location mb-3">Ilustre Municipalidad de Santo Domingo</div>
+              <div class="desc">A Chilean municipality was brought to a standstill by a ransomware attack and emerged as a benchmark in digital government. This talk reveals how Santo Domingo turned a cyber crisis into a national model for cybersecurity and digital transformation.<br /><br /></div>
+            </div>
+          </div>
+
+          <div class="item item-talk">
+            <div class="meta">
+              <h4 class="time mb-3">16:30</h4>
+              <div class="profile">
+                <a href="#modal-speaker-26" data-bs-toggle="modal" data-bs-target="#modal-speaker-26"><img class="profile-image rounded-circle mb-2" src="../speakers/Nicolas Takashi.png" alt=""></a>
+                <div class="name"><a class="theme-link" href="#modal-speaker-26" data-bs-toggle="modal" data-bs-target="#modal-speaker-26">Nicolas Takashi</a></div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="title mb-3">
+                <a class="theme-link" href="#modal-speaker-26" data-bs-toggle="modal" data-bs-target="#modal-speaker-26">Reverse-Engineering PromQL Usage: A Proxy’s Tale</a>
+              </h3>
+              <div class="location mb-3">Coralogix</div>
+              <div class="desc">Prometheus shows metrics but hides how queries are used. We built Prom Analytics Proxy to reveal who runs which PromQL queries, what slows them down, and which dashboards overload the backend, all without touching Prometheus, giving teams real visibility and control.<br /><br /></div>
+            </div>
+          </div>
+
+          <div class="item item-talk">
+            <div class="meta">
+              <h4 class="time mb-3">17:00</h4>
+              <div class="profile">
+                <a href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"><img class="profile-image rounded-circle mb-2" src="" alt=""></a>
+                <div class="name"><a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"></a></div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="title mb-3">
+                <a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-">Happy Hour by Imply -- grab a beer!</a>
+              </h3>
+              <div class="location mb-3">Main lobby</div>
+              <div class="desc"><br /><br /></div>
+            </div>
+          </div>
+
+          <div class="item item-talk">
+            <div class="meta">
+              <h4 class="time mb-3">17:30</h4>
+              <div class="profile">
+                <a href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"><img class="profile-image rounded-circle mb-2" src="" alt=""></a>
+                <div class="name"><a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"></a></div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="title mb-3">
+                <a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-">Wrap up</a>
+              </h3>
+              <div class="location mb-3">Scan each other's QR codes & head to a nearby pub!</div>
+              <div class="desc"><br /><br /></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="track-section-header" id="track-0-3">screen 3 &bull; Track 3</div>
+      <div class="schedule-tab-content">
+        <div class="tab-pane active">
+
+          <div class="item item-talk">
+            <div class="meta">
+              <h4 class="time mb-3">12:00</h4>
+              <div class="profile">
+                <a href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"><img class="profile-image rounded-circle mb-2" src="" alt=""></a>
+                <div class="name"><a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"></a></div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="title mb-3">
+                <a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-">Lunch & networking</a>
+              </h3>
+              <div class="location mb-3">Main lobby</div>
+              <div class="desc"><br /><br /></div>
+            </div>
+          </div>
+
+          <div class="item item-talk">
+            <div class="meta">
+              <h4 class="time mb-3">13:00</h4>
+              <div class="profile">
+                <a href="#modal-speaker-27" data-bs-toggle="modal" data-bs-target="#modal-speaker-27"><img class="profile-image rounded-circle mb-2" src="../speakers/Jagadeesh Devaraj.png" alt=""></a>
+                <div class="name"><a class="theme-link" href="#modal-speaker-27" data-bs-toggle="modal" data-bs-target="#modal-speaker-27">Jagadeesh Devaraj</a></div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="title mb-3">
+                <a class="theme-link" href="#modal-speaker-27" data-bs-toggle="modal" data-bs-target="#modal-speaker-27">Catch me if you Can</a>
+              </h3>
+              <div class="location mb-3">ING</div>
+              <div class="desc"><br /><br /></div>
+            </div>
+          </div>
+
+          <div class="item item-talk">
+            <div class="meta">
+              <h4 class="time mb-3">13:30</h4>
+              <div class="profile">
+                <a href="#modal-speaker-28" data-bs-toggle="modal" data-bs-target="#modal-speaker-28"><img class="profile-image rounded-circle mb-2" src="../speakers/Goran Minov.png" alt=""></a>
+                <div class="name"><a class="theme-link" href="#modal-speaker-28" data-bs-toggle="modal" data-bs-target="#modal-speaker-28">Goran Minov</a></div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="title mb-3">
+                <a class="theme-link" href="#modal-speaker-28" data-bs-toggle="modal" data-bs-target="#modal-speaker-28">Zero Infrastructure, Zero Phishing: Building a Serverless Security Framework on GCP</a>
+              </h3>
+              <div class="location mb-3">Okta</div>
+              <div class="desc">This is an intermediate talk suitable for backend developers and cloud architects. It includes a code walkthrough of the Cloud Run Functions and a data analysis segment comparing the solution's effectiveness.<br /><br /></div>
+            </div>
+          </div>
+
+          <div class="item item-talk">
+            <div class="meta">
+              <h4 class="time mb-3">14:00</h4>
+              <div class="profile">
+                <a href="#modal-speaker-29" data-bs-toggle="modal" data-bs-target="#modal-speaker-29"><img class="profile-image rounded-circle mb-2" src="../speakers/Israel Blancas.png" alt=""></a>
+                <div class="name"><a class="theme-link" href="#modal-speaker-29" data-bs-toggle="modal" data-bs-target="#modal-speaker-29">Israel Blancas</a></div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="title mb-3">
+                <a class="theme-link" href="#modal-speaker-29" data-bs-toggle="modal" data-bs-target="#modal-speaker-29">From Data to Diagnosis: Leveraging Observability for Application Success</a>
+              </h3>
+              <div class="location mb-3">Coralogix</div>
+              <div class="desc">This talk combines multiple open source projects and show how some real environments are environments are observed on production: OpenTelemetry, Prometheus, Jaeger, Istio, Kiali and Kubernetes. What else can you ask for?<br /><br /></div>
+            </div>
+          </div>
+
+          <div class="item item-talk">
+            <div class="meta">
+              <h4 class="time mb-3">14:30</h4>
+              <div class="profile">
+                <a href="#modal-speaker-30" data-bs-toggle="modal" data-bs-target="#modal-speaker-30"><img class="profile-image rounded-circle mb-2" src="../speakers/Charles Weir.png" alt=""></a>
+                <div class="name"><a class="theme-link" href="#modal-speaker-30" data-bs-toggle="modal" data-bs-target="#modal-speaker-30">Charles Weir</a></div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="title mb-3">
+                <a class="theme-link" href="#modal-speaker-30" data-bs-toggle="modal" data-bs-target="#modal-speaker-30">Overcome Disasters Using Cyber Continuity</a>
+              </h3>
+              <div class="location mb-3">Lancaster University</div>
+              <div class="desc">Major software disasters may be almost inevitable, but organisations and ecosystems can survive them. Learn how cyber continuity techniques can prepare your systems to limit damage and support recovery.<br /><br /></div>
+            </div>
+          </div>
+
+          <div class="item item-talk">
+            <div class="meta">
+              <h4 class="time mb-3">15:00</h4>
+              <div class="profile">
+                <a href="#modal-speaker-31" data-bs-toggle="modal" data-bs-target="#modal-speaker-31"><img class="profile-image rounded-circle mb-2" src="../speakers/Spiros Economakis.png" alt=""></a>
+                <div class="name"><a class="theme-link" href="#modal-speaker-31" data-bs-toggle="modal" data-bs-target="#modal-speaker-31">Spiros Economakis</a></div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="title mb-3">
+                <a class="theme-link" href="#modal-speaker-31" data-bs-toggle="modal" data-bs-target="#modal-speaker-31">How AI is redefining SRE and Customer Experience</a>
+              </h3>
+              <div class="location mb-3">NOFire AI</div>
+              <div class="desc">AI is reshaping SRE, but the real opportunity isn’t faster RCA, it’s building proactive, customer-centered reliability. This talk explores how AI and culture together move us from firefighting to foresight.<br /><br /></div>
+            </div>
+          </div>
+
+          <div class="item item-talk">
+            <div class="meta">
+              <h4 class="time mb-3">15:30</h4>
+              <div class="profile">
+                <a href="#modal-speaker-32" data-bs-toggle="modal" data-bs-target="#modal-speaker-32"><img class="profile-image rounded-circle mb-2" src="../speakers/Ozan Kasikci.png" alt=""></a>
+                <div class="name"><a class="theme-link" href="#modal-speaker-32" data-bs-toggle="modal" data-bs-target="#modal-speaker-32">Ozan Kasikci</a></div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="title mb-3">
+                <a class="theme-link" href="#modal-speaker-32" data-bs-toggle="modal" data-bs-target="#modal-speaker-32">Zero-Downtime Updates: How to Evolve Fast Without Breaking Everything</a>
+              </h3>
+              <div class="location mb-3">Longhorn Games</div>
+              <div class="desc">How do you ship multiple times a week without your users noticing — except for improvements? This talk explores modern zero-downtime deployment strategies and observability patterns that let teams move fast while keeping uptime close to 100%.<br /><br /></div>
+            </div>
+          </div>
+
+          <div class="item item-talk">
+            <div class="meta">
+              <h4 class="time mb-3">16:00</h4>
+              <div class="profile">
+                <a href="#modal-speaker-33" data-bs-toggle="modal" data-bs-target="#modal-speaker-33"><img class="profile-image rounded-circle mb-2" src="../speakers/Dmitrii Iniutin.png" alt=""></a>
+                <div class="name"><a class="theme-link" href="#modal-speaker-33" data-bs-toggle="modal" data-bs-target="#modal-speaker-33">Dmitrii Iniutin</a></div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="title mb-3">
+                <a class="theme-link" href="#modal-speaker-33" data-bs-toggle="modal" data-bs-target="#modal-speaker-33">Beyond Terraform: Building Production Infrastructure with General-Purpose Languages</a>
+              </h3>
+              <div class="location mb-3">Seamflow</div>
+              <div class="desc">Infrastructure as Code has transformed how we manage systems — but the tools we use define how far we can scale. While Terraform remains the industry standard, its domain-specific language limits flexibility and maintainability at scale. In this session, Dmitry shares lessons from building...<br /><br /></div>
+            </div>
+          </div>
+
+          <div class="item item-talk">
+            <div class="meta">
+              <h4 class="time mb-3">16:30</h4>
+              <div class="profile">
+                <a href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"><img class="profile-image rounded-circle mb-2" src="" alt=""></a>
+                <div class="name"><a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"></a></div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="title mb-3">
+                <a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-">Happy Hour by Imply -- grab a beer!</a>
+              </h3>
+              <div class="location mb-3">Main lobby</div>
+              <div class="desc"><br /><br /></div>
+            </div>
+          </div>
+
+          <div class="item item-talk">
+            <div class="meta">
+              <h4 class="time mb-3">17:00</h4>
+              <div class="profile">
+                <a href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"><img class="profile-image rounded-circle mb-2" src="" alt=""></a>
+                <div class="name"><a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-"></a></div>
+              </div>
+            </div>
+            <div class="content">
+              <h3 class="title mb-3">
+                <a class="theme-link" href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-">Wrap up</a>
+              </h3>
+              <div class="location mb-3">Scan each other's QR codes & head to a nearby pub!</div>
+              <div class="desc"><br /><br /></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Table View -->
+    <div id="table-view-0" class="schedule-table-view">
+      <table class="schedule-grid-table">
+        <thead>
+          <tr>
+            <th>Time</th>
+
+            <th style="width: calc((100% - 60px) / 3)">screen 1</th>
+
+            <th style="width: calc((100% - 60px) / 3)">screen 2</th>
+
+            <th style="width: calc((100% - 60px) / 3)">screen 3</th>
+
+          </tr>
+        </thead>
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <tr>
+            <td class="time-cell">09:00</td>
+
+            <td class="talk-cell">
+
+              <a href="#modal-speaker-0" data-bs-toggle="modal" data-bs-target="#modal-speaker-0">Keynote: I Was Promised a Beach: Why AI Hasn’t Taken Your Pager (Yet)</a>
+              <div class="speaker-info">Miko Pawlikowski <span class="affiliation">• SRE Author</span></div>
+
+            </td>
+
+            <td class="talk-cell">
+
+            </td>
+
+            <td class="talk-cell">
+
+            </td>
+
+          </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <tr>
+            <td class="time-cell">09:30</td>
+
+            <td class="talk-cell">
+
+              <a href="#modal-speaker-1" data-bs-toggle="modal" data-bs-target="#modal-speaker-1">Keynote: Decoupling Observability for Incident Response at Scale</a>
+              <div class="speaker-info">Peter Marshall <span class="affiliation">• Imply</span></div>
+
+            </td>
+
+            <td class="talk-cell">
+
+            </td>
+
+            <td class="talk-cell">
+
+            </td>
+
+          </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <tr>
+            <td class="time-cell">10:00</td>
+
+            <td class="talk-cell">
+
+              <a href="#modal-speaker-2" data-bs-toggle="modal" data-bs-target="#modal-speaker-2">Keynote: Secure by Default: Building Confidence in AI-Driven Delivery</a>
+              <div class="speaker-info">Dewan Ahmed <span class="affiliation">• Harness</span></div>
+
+            </td>
+
+            <td class="talk-cell">
+
+            </td>
+
+            <td class="talk-cell">
+
+            </td>
+
+          </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <tr>
+            <td class="time-cell">10:30</td>
+
+            <td class="talk-cell">
+
+              <a href="#modal-speaker-3" data-bs-toggle="modal" data-bs-target="#modal-speaker-3">Keynote: The Immune System for Software: Lessons from Biology</a>
+              <div class="speaker-info">Matt Henderson <span class="affiliation">• Phoebe</span></div>
+
+            </td>
+
+            <td class="talk-cell">
+
+            </td>
+
+            <td class="talk-cell">
+
+            </td>
+
+          </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <tr>
+            <td class="time-cell">11:00</td>
+
+            <td class="talk-cell">
+
+              <a href="#modal-speaker-4" data-bs-toggle="modal" data-bs-target="#modal-speaker-4">Keynote: When Incidents Fix Themselves: AI SRE in action</a>
+              <div class="speaker-info">Birol Yildiz <span class="affiliation">• ilert</span></div>
+
+            </td>
+
+            <td class="talk-cell">
+
+            </td>
+
+            <td class="talk-cell">
+
+            </td>
+
+          </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <tr>
+            <td class="time-cell">11:30</td>
+
+            <td class="talk-cell">
+
+              <a href="#modal-speaker-5" data-bs-toggle="modal" data-bs-target="#modal-speaker-5">Keynote: Coming soon!</a>
+              <div class="speaker-info">Tyler Hannan <span class="affiliation">• ClickHouse</span></div>
+
+            </td>
+
+            <td class="talk-cell">
+
+            </td>
+
+            <td class="talk-cell">
+
+            </td>
+
+          </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <tr>
+            <td class="time-cell">12:00</td>
+            <td class="talk-cell merged-cell" colspan="3">Lunch & networking</td>
+          </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <tr>
+            <td class="time-cell">13:00</td>
+
+            <td class="talk-cell">
+
+              <a href="#modal-speaker-6" data-bs-toggle="modal" data-bs-target="#modal-speaker-6">SRE and Data Management</a>
+              <div class="speaker-info">Deniz Yalcin & William Ravensbergen <span class="affiliation">• ING</span></div>
+
+            </td>
+
+            <td class="talk-cell">
+
+              <a href="#modal-speaker-19" data-bs-toggle="modal" data-bs-target="#modal-speaker-19">SRE Management is a Hard Job. That’s Why You Should Do It Like an Engineer.</a>
+              <div class="speaker-info">William Mendes <span class="affiliation">• Coralogix</span></div>
+
+            </td>
+
+            <td class="talk-cell">
+
+              <a href="#modal-speaker-27" data-bs-toggle="modal" data-bs-target="#modal-speaker-27">Catch me if you Can</a>
+              <div class="speaker-info">Jagadeesh Devaraj <span class="affiliation">• ING</span></div>
+
+            </td>
+
+          </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <tr>
+            <td class="time-cell">13:30</td>
+
+            <td class="talk-cell">
+
+              <a href="#modal-speaker-7" data-bs-toggle="modal" data-bs-target="#modal-speaker-7">Observability is a Team Sport!</a>
+              <div class="speaker-info">Adriana Villela <span class="affiliation">• Dynatrace</span></div>
+
+            </td>
+
+            <td class="talk-cell">
+
+              <a href="#modal-speaker-20" data-bs-toggle="modal" data-bs-target="#modal-speaker-20">Two Autoscalers Walk into a Cluster: KEDA & Karpenter on Day-2 Duty</a>
+              <div class="speaker-info">Christian Melendez <span class="affiliation">• AWS</span></div>
+
+            </td>
+
+            <td class="talk-cell">
+
+              <a href="#modal-speaker-28" data-bs-toggle="modal" data-bs-target="#modal-speaker-28">Zero Infrastructure, Zero Phishing: Building a Serverless Security Framework on GCP</a>
+              <div class="speaker-info">Goran Minov <span class="affiliation">• Okta</span></div>
+
+            </td>
+
+          </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <tr>
+            <td class="time-cell">14:00</td>
+
+            <td class="talk-cell">
+
+              <a href="#modal-speaker-8" data-bs-toggle="modal" data-bs-target="#modal-speaker-8">Choose Your Weapon: The Performance Testing Arsenal</a>
+              <div class="speaker-info">Heather Thacker <span class="affiliation">• Gatling</span></div>
+
+            </td>
+
+            <td class="talk-cell">
+
+              <a href="#modal-speaker-21" data-bs-toggle="modal" data-bs-target="#modal-speaker-21">AISRE: It’s Time for AI Site Reliability Engineering</a>
+              <div class="speaker-info">Ehsan Khodadadi <span class="affiliation">• ING</span></div>
+
+            </td>
+
+            <td class="talk-cell">
+
+              <a href="#modal-speaker-29" data-bs-toggle="modal" data-bs-target="#modal-speaker-29">From Data to Diagnosis: Leveraging Observability for Application Success</a>
+              <div class="speaker-info">Israel Blancas <span class="affiliation">• Coralogix</span></div>
+
+            </td>
+
+          </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <tr>
+            <td class="time-cell">14:30</td>
+
+            <td class="talk-cell">
+
+              <a href="#modal-speaker-9" data-bs-toggle="modal" data-bs-target="#modal-speaker-9">From Learner to Leader: My Journey into SRE and Why Reliability Is a Culture, Not a Role</a>
+              <div class="speaker-info">Tasmia Niazi</div>
+
+            </td>
+
+            <td class="talk-cell">
+
+              <a href="#modal-speaker-22" data-bs-toggle="modal" data-bs-target="#modal-speaker-22">SRE for pricing systems in Wealth & Fintech: Data‑Driven Solutions.</a>
+              <div class="speaker-info">Yury Lysak <span class="affiliation">• Independent</span></div>
+
+            </td>
+
+            <td class="talk-cell">
+
+              <a href="#modal-speaker-30" data-bs-toggle="modal" data-bs-target="#modal-speaker-30">Overcome Disasters Using Cyber Continuity</a>
+              <div class="speaker-info">Charles Weir <span class="affiliation">• Lancaster University</span></div>
+
+            </td>
+
+          </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <tr>
+            <td class="time-cell">15:00</td>
+
+            <td class="talk-cell">
+
+              <a href="#modal-speaker-10" data-bs-toggle="modal" data-bs-target="#modal-speaker-10">Building a business case for AI SRE tools</a>
+              <div class="speaker-info">Kyle Forster <span class="affiliation">• RunWhen</span></div>
+
+            </td>
+
+            <td class="talk-cell">
+
+              <a href="#modal-speaker-23" data-bs-toggle="modal" data-bs-target="#modal-speaker-23">MCP is the new REST: making MCP our new API</a>
+              <div class="speaker-info">Andy Kuszyk <span class="affiliation">• Typeform</span></div>
+
+            </td>
+
+            <td class="talk-cell">
+
+              <a href="#modal-speaker-31" data-bs-toggle="modal" data-bs-target="#modal-speaker-31">How AI is redefining SRE and Customer Experience</a>
+              <div class="speaker-info">Spiros Economakis <span class="affiliation">• NOFire AI</span></div>
+
+            </td>
+
+          </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <tr>
+            <td class="time-cell">15:30</td>
+
+            <td class="talk-cell">
+
+              <a href="#modal-speaker-11" data-bs-toggle="modal" data-bs-target="#modal-speaker-11">Stranger Teams: Keeping Demogorgons out of production</a>
+              <div class="speaker-info">Rob Charlwood <span class="affiliation">• Supercharged</span></div>
+
+            </td>
+
+            <td class="talk-cell">
+
+              <a href="#modal-speaker-24" data-bs-toggle="modal" data-bs-target="#modal-speaker-24">Q the Savings: How We Built a $2M/Year FinOps Platform in 2 Weeks</a>
+              <div class="speaker-info">Nishkarsh Raj <span class="affiliation">• StatusNeo</span></div>
+
+            </td>
+
+            <td class="talk-cell">
+
+              <a href="#modal-speaker-32" data-bs-toggle="modal" data-bs-target="#modal-speaker-32">Zero-Downtime Updates: How to Evolve Fast Without Breaking Everything</a>
+              <div class="speaker-info">Ozan Kasikci <span class="affiliation">• Longhorn Games</span></div>
+
+            </td>
+
+          </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <tr>
+            <td class="time-cell">16:00</td>
+
+            <td class="talk-cell">
+
+              <a href="#modal-speaker-12" data-bs-toggle="modal" data-bs-target="#modal-speaker-12">Surviving the Dual-Write Problem in Distributed Systems</a>
+              <div class="speaker-info">Sohan Maheshwar <span class="affiliation">• AuthZed</span></div>
+
+            </td>
+
+            <td class="talk-cell">
+
+              <a href="#modal-speaker-25" data-bs-toggle="modal" data-bs-target="#modal-speaker-25">From ransomware hostage to leader in digital government: the rebirth of Santo Domingo</a>
+              <div class="speaker-info">Juan Pablo Vidal Araya <span class="affiliation">• Ilustre Municipalidad de Santo Domingo</span></div>
+
+            </td>
+
+            <td class="talk-cell">
+
+              <a href="#modal-speaker-33" data-bs-toggle="modal" data-bs-target="#modal-speaker-33">Beyond Terraform: Building Production Infrastructure with General-Purpose Languages</a>
+              <div class="speaker-info">Dmitrii Iniutin <span class="affiliation">• Seamflow</span></div>
+
+            </td>
+
+          </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <tr>
+            <td class="time-cell">16:30</td>
+
+            <td class="talk-cell">
+
+              <a href="#modal-speaker-13" data-bs-toggle="modal" data-bs-target="#modal-speaker-13">Honey, the Audience Broke My App: Reproduce & Fix Live in Kubernetes with mirrord</a>
+              <div class="speaker-info">Jake Page <span class="affiliation">• MetalBear</span></div>
+
+            </td>
+
+            <td class="talk-cell">
+
+              <a href="#modal-speaker-26" data-bs-toggle="modal" data-bs-target="#modal-speaker-26">Reverse-Engineering PromQL Usage: A Proxy’s Tale</a>
+              <div class="speaker-info">Nicolas Takashi <span class="affiliation">• Coralogix</span></div>
+
+            </td>
+
+            <td class="talk-cell">
+
+              <a href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-">Happy Hour by Imply -- grab a beer!</a>
+              <div class="speaker-info"></div>
+
+            </td>
+
+          </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <tr>
+            <td class="time-cell">17:00</td>
+
+            <td class="talk-cell">
+
+              <a href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-">Happy Hour by Imply -- grab a beer!</a>
+              <div class="speaker-info"></div>
+
+            </td>
+
+            <td class="talk-cell">
+
+              <a href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-">Happy Hour by Imply -- grab a beer!</a>
+              <div class="speaker-info"></div>
+
+            </td>
+
+            <td class="talk-cell">
+
+              <a href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-">Wrap up</a>
+              <div class="speaker-info"></div>
+
+            </td>
+
+          </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <tr>
+            <td class="time-cell">17:30</td>
+
+            <td class="talk-cell">
+
+              <a href="#modal-speaker-14" data-bs-toggle="modal" data-bs-target="#modal-speaker-14">Coming soon!</a>
+              <div class="speaker-info">_ClickHouse Meetup - After SREday</div>
+
+            </td>
+
+            <td class="talk-cell">
+
+              <a href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-">Wrap up</a>
+              <div class="speaker-info"></div>
+
+            </td>
+
+            <td class="talk-cell">
+
+            </td>
+
+          </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <tr>
+            <td class="time-cell">18:00</td>
+
+            <td class="talk-cell">
+
+              <a href="#modal-speaker-15" data-bs-toggle="modal" data-bs-target="#modal-speaker-15">Coming soon!</a>
+              <div class="speaker-info">_ClickHouse Meetup - After SREday</div>
+
+            </td>
+
+            <td class="talk-cell">
+
+            </td>
+
+            <td class="talk-cell">
+
+            </td>
+
+          </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <tr>
+            <td class="time-cell">18:30</td>
+
+            <td class="talk-cell">
+
+              <a href="#modal-speaker-16" data-bs-toggle="modal" data-bs-target="#modal-speaker-16">Coming soon!</a>
+              <div class="speaker-info">_ClickHouse Meetup - After SREday</div>
+
+            </td>
+
+            <td class="talk-cell">
+
+            </td>
+
+            <td class="talk-cell">
+
+            </td>
+
+          </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <tr>
+            <td class="time-cell">19:00</td>
+
+            <td class="talk-cell">
+
+              <a href="#modal-speaker-17" data-bs-toggle="modal" data-bs-target="#modal-speaker-17">Coming soon!</a>
+              <div class="speaker-info">_ClickHouse Meetup - After SREday</div>
+
+            </td>
+
+            <td class="talk-cell">
+
+            </td>
+
+            <td class="talk-cell">
+
+            </td>
+
+          </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <tr>
+            <td class="time-cell">19:30</td>
+
+            <td class="talk-cell">
+
+              <a href="#modal-speaker-18" data-bs-toggle="modal" data-bs-target="#modal-speaker-18">Coming soon!</a>
+              <div class="speaker-info">_ClickHouse Meetup - After SREday</div>
+
+            </td>
+
+            <td class="talk-cell">
+
+            </td>
+
+            <td class="talk-cell">
+
+            </td>
+
+          </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <tr>
+            <td class="time-cell">20:00</td>
+
+            <td class="talk-cell">
+
+              <a href="#modal-speaker-" data-bs-toggle="modal" data-bs-target="#modal-speaker-">Wrap up</a>
+              <div class="speaker-info"></div>
+
+            </td>
+
+            <td class="talk-cell">
+
+            </td>
+
+            <td class="talk-cell">
+
+            </td>
+
+          </tr>
+
+
+        </tbody>
+      </table>
+    </div>
+
+
+
+    <script>
+    function toggleView(day) {
+      const timelineView = document.getElementById('timeline-view-' + day);
+      const tableView = document.getElementById('table-view-' + day);
+      const toggleBtn = document.getElementById('view-toggle-' + day);
+      const trackLinks = document.getElementById('track-links-' + day);
+
+      if (tableView.classList.contains('active')) {
+        tableView.classList.remove('active');
+        timelineView.classList.remove('hidden');
+        toggleBtn.textContent = 'view as table';
+        toggleBtn.classList.remove('active');
+        trackLinks.style.display = 'flex';
+      } else {
+        tableView.classList.add('active');
+        timelineView.classList.add('hidden');
+        toggleBtn.textContent = 'view as timeline';
+        toggleBtn.classList.add('active');
+        trackLinks.style.display = 'none';
+      }
+    }
+    </script>
+
+    <div class="schedule-cta text-center mx-auto mt-4"><a href="#tickets" class="btn btn-secondary btn-lg d-block d-md-inline-block">Buy Tickets</a></div>
   </div>
 </section>
 
